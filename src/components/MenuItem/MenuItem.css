@@ -1,0 +1,17 @@
+.menu-item {
+    text-align: center;
+    
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    justify-items: center;
+    flex-grow: 1;
+}
+
+.menu-item .menu-item-text button{
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: #479dc4;
+    border-style: none;
+}
