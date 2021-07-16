@@ -3,11 +3,12 @@ import React, { useState } from 'react';
 import './MenuItem.css';
 import OEE from './../../assets/icons/OEE.svg';
 import ItemGenerator from './../ItemGenerator/ItemGenerator';
+
+/*
 import {
   EuiContextMenu,
   EuiPopover,
   EuiButton,
-  /*   
   EuiFormRow,
   EuiSwitch,
   EuiSpacer,
@@ -16,27 +17,87 @@ import {
   EuiToken,
   EuiContextMenuPanel,
   EuiContextMenuItem, 
-  */
-} from '@elastic/eui';
+} from '@elastic/eui';*/
+
 
 let itemGenerated;
 itemGenerated = <ItemGenerator />;
 itemGenerated = itemGenerated.type;
-console.log(itemGenerated);
 
 export default ({item})=> {
-
-    const [isPopoverOpen, setPopover] = useState(false);
-
-    const onButtonClick = () => {
-        setPopover(!isPopoverOpen);
+    const buttonOnClick = (itemGenerated)=>{
+      let itemshtml="";
+      for(let items of itemGenerated) 
+      {
+        itemshtml+=`<h1>${items.label}</h1>`        
+      }
+      const node = document.querySelector("#menu-item-opciones");
+      node.innerHTML = itemshtml;
     };
+    return(
+        <div className="menu-item">
+          <button className="menu-item-button" onClick={()=>{buttonOnClick(itemGenerated)}}>
 
-    const closePopover = () => {
-        setPopover(false);
-    };
+            <div className="menu-item-icon">
+                <img src={OEE} alt="Sin Logo"></img>
+            </div>
 
-    const OEE_items=[
+            <div className="menu-item-text">
+                {item}
+            </div>
+            <div className="menu-item-opciones"></div>
+          </button>
+        </div>    
+    )
+};
+
+
+
+/*<EuiPopover
+            id="contextMenuExample"
+            button={button}
+            isOpen={isPopoverOpen}
+            closePopover={closePopover}
+            panelPaddingSize="l"
+            anchorPosition="downCenter"
+            paddingSize="l">
+                <EuiContextMenu initialPanelId={0} panels={OEE_items} />
+            </EuiPopover>*/
+/*const OEE_items = [
+
+        <EuiContextMenuItem key="treeview" onClick={closePopover}>
+          <TreeList />
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="overview" onClick={closePopover}>
+          Overview
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="angular" onClick={closePopover}>
+          Angular
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="c#" onClick={closePopover}>
+          C#
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="nelson" onClick={closePopover}>
+          Nelson
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="maxim" onClick={closePopover}>
+          maxim
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="ionic" onClick={closePopover}>
+          IONIC
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="react" onClick={closePopover}>
+          React
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="typescript" onClick={closePopover}>
+          Typescript
+        </EuiContextMenuItem>,
+        <EuiContextMenuItem key="redux" onClick={closePopover}>
+          Redux
+        </EuiContextMenuItem>,
+    ];*/
+
+    /*const OEE_items=[
       {
         id: 0,
         title: "Items",
@@ -269,65 +330,4 @@ export default ({item})=> {
           },
         ],
       },
-    ]
-
-    const button = (
-        <EuiButton iconType="arrowDown" iconSide="right" onClick={onButtonClick}>
-          {item}
-        </EuiButton>
-    );
-
-    return(
-        <div className="menu-item">
-            <div className="menu-item-icon">
-                <img src={OEE} alt="Sin Logo"></img>
-            </div>
-            <div className="menu-item-text">
-            <EuiPopover
-            id="contextMenuExample"
-            button={button}
-            isOpen={isPopoverOpen}
-            closePopover={closePopover}
-            panelPaddingSize="l"
-            anchorPosition="downCenter"
-            paddingSize="l">
-                <EuiContextMenu initialPanelId={0} panels={OEE_items} />
-            </EuiPopover>
-            </div>
-        </div>    
-    )
-};
-
-/*const OEE_items = [
-
-        <EuiContextMenuItem key="treeview" onClick={closePopover}>
-          <TreeList />
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="overview" onClick={closePopover}>
-          Overview
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="angular" onClick={closePopover}>
-          Angular
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="c#" onClick={closePopover}>
-          C#
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="nelson" onClick={closePopover}>
-          Nelson
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="maxim" onClick={closePopover}>
-          maxim
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="ionic" onClick={closePopover}>
-          IONIC
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="react" onClick={closePopover}>
-          React
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="typescript" onClick={closePopover}>
-          Typescript
-        </EuiContextMenuItem>,
-        <EuiContextMenuItem key="redux" onClick={closePopover}>
-          Redux
-        </EuiContextMenuItem>,
-    ];*/
+    ]*/
