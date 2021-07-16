@@ -1,0 +1,15 @@
+.TreeList{
+    list-style: none;
+    width: 100%;
+    height: auto;
+}
+
+.TreeList button {
+    border:none;
+    background-color: white;
+    text-decoration: none;
+}
+
+.TreeList button:hover {
+    text-decoration: none;
+}
