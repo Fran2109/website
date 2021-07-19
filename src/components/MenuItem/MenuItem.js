@@ -31,16 +31,40 @@ export default ({item})=> {
       setVisibility(!visibility);
     };
 
+
+    const hasChildren = (children) => {
+      if(children != undefined) {
+        return true;
+      }
+      else
+      {
+        return false;
+      }
+    };
+
+
     const buttonOnClick = (itemGenerated)=>{
       return itemGenerated.map((item ) =>{
+        if(hasChildren(item.children))
+        {
           return (
             <div className="option">
-              {item.label}
-              {/* <div className={visibility ? 'visible' : 'hidden'}>  */}
+              <div className="option-button" onClick={changeVisibility}>
+                {item.label}
+              </div>
+              {/* {changeVisibility()} */}
+              <div className={visibility ? 'visible' : 'hidden'}>
                 {buttonOnClick(item.children)}
-              {/* </div> */}
+              </div>
             </div>
           )
+        }
+        else
+        return(
+          <div className="option">
+              {item.label}
+          </div>
+        )
       });
     };
     return(
