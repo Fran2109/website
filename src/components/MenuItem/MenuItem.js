@@ -29,6 +29,7 @@ export default ({item})=> {
 
     const changeVisibility = () => {
       setVisibility(!visibility);
+      console.log(visibility);
     };
 
 
@@ -52,7 +53,6 @@ export default ({item})=> {
               <div className="option-button" onClick={changeVisibility}>
                 {item.label}
               </div>
-              {/* {changeVisibility()} */}
               <div className={visibility ? 'visible' : 'hidden'}>
                 {buttonOnClick(item.children)}
               </div>
@@ -62,7 +62,9 @@ export default ({item})=> {
         else
         return(
           <div className="option">
-              {item.label}
+              <div className="option-button" onClick={changeVisibility}>
+                {item.label}
+              </div>
           </div>
         )
       });

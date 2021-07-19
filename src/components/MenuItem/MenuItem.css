@@ -40,7 +40,7 @@
     transition-delay: 0s;
 }
 
-.menu-item.menu-iten-button .menu-item-icon{
+.menu-item .menu-item-button .menu-item-icon{
     padding: 5px;
 }
 .menu-item .menu-item-button .menu-item-icon img{
@@ -50,11 +50,15 @@
 
 .menu-item .visible{
     visibility: visible;
-/*     display: none;
-    position: relative; */
+    display: block;
+    position: relative;
+    z-index: 1;
     
 }
 
 .menu-item .hidden{
     visibility: hidden;
+    display: none;
+    position: relative;
+    z-index: 1;
 }
