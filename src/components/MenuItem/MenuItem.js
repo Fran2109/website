@@ -25,7 +25,6 @@ itemGenerated = <ItemGenerator />;
 itemGenerated = itemGenerated.type;
 
 export default ({item})=> {
-  
     const [visibility, setVisibility] = useState(false);
 
     const changeVisibility = () => {
@@ -35,7 +34,12 @@ export default ({item})=> {
     const buttonOnClick = (itemGenerated)=>{
       return itemGenerated.map((item ) =>{
           return (
-            <div className="option">{item.label}</div>
+            <div className="option">
+              {item.label}
+              {/* <div className={visibility ? 'visible' : 'hidden'}>  */}
+                {buttonOnClick(item.children)}
+              {/* </div> */}
+            </div>
           )
       });
     };

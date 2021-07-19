@@ -50,8 +50,9 @@
 
 .menu-item .visible{
     visibility: visible;
-    display: none;
-    position: relative;
+/*     display: none;
+    position: relative; */
+    
 }
 
 .menu-item .hidden{

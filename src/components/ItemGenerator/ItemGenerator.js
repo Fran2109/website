@@ -2,7 +2,7 @@ import { EuiIcon, EuiToken } from '@elastic/eui';
 import {items} from './Object.json';
 
 function ItemGenerator(){	
-  let i=1;
+  let i=0;
   let itemsGenerated;
 
   const hasSubtype = (subType) => {
@@ -19,6 +19,7 @@ function ItemGenerator(){
     let subTypesGenerated = [];
     for(let subType of itemSubType)
     {
+      i++;
       let subTypeGenerated = {
         label: subType.name,
         id: i,
@@ -27,7 +28,7 @@ function ItemGenerator(){
       if(subTypeGenerated.children == null) {
         delete subTypeGenerated.children;
       }
-      i++;
+      
       subTypesGenerated.push(subTypeGenerated);
     }
     return subTypesGenerated;
@@ -36,7 +37,7 @@ function ItemGenerator(){
   itemsGenerated = [];
   itemsGenerated=subTypeGenerator(items);
 
-  /*console.log(itemsGenerated); */
+  console.log(itemsGenerated);
   return itemsGenerated;
 }
 
