@@ -2,7 +2,7 @@ import '@elastic/eui/dist/eui_theme_amsterdam_light.css';
 import React, { useState } from 'react';
 import './MenuItem.css';
 import OEE from './../../assets/icons/OEE.svg';
-import ItemGenerator from './../ItemGenerator/ItemGenerator';
+import ItemGenerator from '../ItemGenerator/ItemGenerator';
 
 /*
 import {
@@ -24,69 +24,71 @@ let itemGenerated;
 itemGenerated = <ItemGenerator />;
 itemGenerated = itemGenerated.type;
 
-export default ({item})=> {
-    const [visibility, setVisibility] = useState(false);
+export default ({item})=>{
+  const [visibility, setVisibility] = useState(false);
+  const [visibility2, setVisibility2] = useState(false);
 
-    const changeVisibility = () => {
-      setVisibility(!visibility);
-      console.log(visibility);
-    };
+  const changeVisibility = () => {
+    setVisibility(!visibility);
+    console.log(visibility);
+  }
+
+  const changeVisibility2 = () => {
+    setVisibility2(!visibility2);
+    console.log(visibility2);
+  }
+
+  const hasChildren = (children) => {
+    return children != undefined? true :  false;
+  };
 
 
-    const hasChildren = (children) => {
-      if(children != undefined) {
-        return true;
+  const showSubOptions = (itemGenerated)=>{
+    return itemGenerated.map((item ) =>{
+      return(
+          <li>  {item.label} N </li>
+        )
+    });
+  }
+
+
+  const showOptions = (itemGenerated) => {
+    return itemGenerated.map((item ) =>{
+      if(hasChildren(item.children))
+      {
+        return(
+          <div>
+            <li onClick={changeVisibility2}>  {item.label} S </li>
+            <lu className={visibility2 ? 'visible' : 'hidden'}>
+              {showSubOptions(item.children)}
+            </lu>
+          </div>
+        )
       }
       else
       {
-        return false;
-      }
-    };
-
-
-    const buttonOnClick = (itemGenerated)=>{
-      return itemGenerated.map((item ) =>{
-        if(hasChildren(item.children))
-        {
-          return (
-            <div className="option">
-              <div className="option-button" onClick={changeVisibility}>
-                {item.label}
-              </div>
-              <div className={visibility ? 'visible' : 'hidden'}>
-                {buttonOnClick(item.children)}
-              </div>
-            </div>
-          )
-        }
-        else
         return(
-          <div className="option">
-              <div className="option-button" onClick={changeVisibility}>
-                {item.label}
-              </div>
-          </div>
+          <li onClick={changeVisibility}>  {item.label} N </li>
         )
-      });
-    };
-    return(
-        <div className="menu-item">
-          <button className="menu-item-button" onClick={changeVisibility}>
-            <div className="menu-item-icon">
-                <img src={OEE} alt="Sin Logo"></img>
-            </div>
-            <div className="menu-item-text">
-                {item}
-            </div>
-          </button>
-          <div className={visibility ? 'visible' : 'hidden'}> 
-            {buttonOnClick(itemGenerated)}
-          </div>
+      }
+    });
+  }
+  return(
+    <div className="menu-item">
+      <button className="menu-item-button" onClick={changeVisibility}>
+        <div className="menu-item-icon">
+            <img src={OEE} alt="Sin Logo"></img>
         </div>
-    )
+        <div className="menu-item-text">
+            {item}
+        </div>
+      </button>
+      <lu className={visibility ? 'visible' : 'hidden'}>
+        {showOptions(itemGenerated)}
+      </lu>
+    </div>
+)
 };
-
-
 
 /*<EuiPopover
             id="contextMenuExample"

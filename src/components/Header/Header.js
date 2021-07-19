@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './Header.css';
-import MenuItem from './../MenuItem/MenuItem';
+import MenuItem from '../MenuItem/MenuItem';
 
 
 export default () => {
