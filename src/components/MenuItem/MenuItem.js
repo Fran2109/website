@@ -25,29 +25,34 @@ itemGenerated = <ItemGenerator />;
 itemGenerated = itemGenerated.type;
 
 export default ({item})=> {
+  
+    const [visibility, setVisibility] = useState(false);
+
+    const changeVisibility = () => {
+      setVisibility(!visibility);
+    };
+
     const buttonOnClick = (itemGenerated)=>{
-      let itemshtml="";
-      for(let items of itemGenerated) 
-      {
-        itemshtml+=`<h1>${items.label}</h1>`        
-      }
-      const node = document.querySelector("#menu-item-opciones");
-      node.innerHTML = itemshtml;
+      return itemGenerated.map((item ) =>{
+          return (
+            <div className="option">{item.label}</div>
+          )
+      });
     };
     return(
         <div className="menu-item">
-          <button className="menu-item-button" onClick={()=>{buttonOnClick(itemGenerated)}}>
-
+          <button className="menu-item-button" onClick={changeVisibility}>
             <div className="menu-item-icon">
                 <img src={OEE} alt="Sin Logo"></img>
             </div>
-
             <div className="menu-item-text">
                 {item}
             </div>
-            <div className="menu-item-opciones"></div>
           </button>
-        </div>    
+          <div className={visibility ? 'visible' : 'hidden'}> 
+            {buttonOnClick(itemGenerated)}
+          </div>
+        </div>
     )
 };
 
