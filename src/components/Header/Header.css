@@ -1,15 +1,13 @@
 .header{
-    position: relative;
+    /* position: relative; */
     padding: 0;
     margin: 0;
-    height: auto; /*px*/
+    height: 50px; /*px*/
     width: 100%;
     background-color: #479dc4;
     border-bottom: 1px solid #e5e5e5;
-    border-top: 1px solid #e5e5e5;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    overflow: hidden;
+    z-index: 3;
 
     /* FLEX */
     display: flex;
@@ -20,9 +18,12 @@
 
 .header .headerLeft{
     width:50%;
+    list-style: none;
+    /* overflow: hidden; */
 
     /* FLEX */
     display: flex;
+    justify-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -32,6 +33,7 @@
         height: auto;
     }
     .header .headerLeft{
+        flex-direction: column;
         width:100%;
     }
 }

@@ -8,12 +8,12 @@ export default () => {
 
     return (
     <div className="header">
-        <div className="headerLeft">
+        <ul className="headerLeft">
             <MenuItem item={"OEE"}/>
             <MenuItem item={"Delays"}/>
             <MenuItem item={"Schedule"}/>   
             <MenuItem item={"Reports"}/>
-        </div>
+        </ul>
     </div>
     )
 };
