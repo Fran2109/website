@@ -11,7 +11,11 @@ options = options.type;
 console.log(options);
 
 const MenuItem = ({item}) => {
-
+  const [visibility, setVisibility] = useState(false);
+  const changeVisibility = () => {
+    setVisibility(!visibility);
+    console.log(visibility);
+  }
   /*
   const [options, setOptions] = useState([]);
 
@@ -35,6 +39,7 @@ const MenuItem = ({item}) => {
         )
     }, []);
     */
+
   return(
     <>
       <li className="dropdown-parent"><span><img src={OEE}/>{item}</span>

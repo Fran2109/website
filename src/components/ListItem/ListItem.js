@@ -1,16 +1,21 @@
 import React, { useEffect,useState } from 'react';
-/* import './MenuItem.css'; */
+import './ListItem.css';
 
 const ListItem = ({itemList}) => {
-  /* console.log(itemList); */
+  /* const [visibilitySon, setVisibilitySon] = useState(false); */
+  let visibilitySon=false;
+  const ChangeVisibilitySon = () => {
+    /* setVisibilitySon(!visibilitySon); */
+    visibilitySon = !visibilitySon;
+    console.log(visibilitySon);
+  }
   return itemList.map((option) => {
-    console.log(option);
     return (
       <>
-        <li className="dropdown-parent"><span>{option.label}</span>
-          {option.children != undefined ?
-            <ul className="dropdown-menu">
-              <ListItem itemList={option.children} />
+        <li className="dropdown-parent" onClick={ChangeVisibilitySon}><span>{option.label}</span>
+          {option.children != undefined  && visibilitySon===true ?
+            <ul className="dropdown-menu-visible">
+              <ListItem itemList={option.children}/>
             </ul>
           : null}
         </li>
@@ -18,7 +23,6 @@ const ListItem = ({itemList}) => {
     )
   })
 }
-
 export default ListItem;
 
 
