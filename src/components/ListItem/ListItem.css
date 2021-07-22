@@ -1,9 +1,12 @@
-.visible{
+
+
+
+/*.visible{
     /* visibility: visible;
     *//* display: block; *//*
     position: relative;
     z-index: 1; */
-    position: relative;
+    /*position: relative;
     top: 10px; left: 10px;
     visibility: visible;
 
@@ -16,4 +19,4 @@
     display: none;
     position: relative;
     z-index: 1;
-}
+}*/

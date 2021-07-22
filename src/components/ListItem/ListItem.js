@@ -1,4 +1,29 @@
-import '@elastic/eui/dist/eui_theme_amsterdam_light.css';
+import React, { useEffect,useState } from 'react';
+/* import './MenuItem.css'; */
+
+const ListItem = ({itemList}) => {
+  /* console.log(itemList); */
+  return itemList.map((option) => {
+    console.log(option);
+    return (
+      <>
+        <li className="dropdown-parent"><span>{option.label}</span>
+          {option.children != undefined ?
+            <ul className="dropdown-menu">
+              <ListItem itemList={option.children} />
+            </ul>
+          : null}
+        </li>
+      </>
+    )
+  })
+}
+
+export default ListItem;
+
+
+
+/*import '@elastic/eui/dist/eui_theme_amsterdam_light.css';
 import React, { useState } from 'react';
 
 
@@ -51,4 +76,4 @@ const Items = ({itemList, visible=false})=>{
     });
 }
 
-export default Items;
+export default Items;*/

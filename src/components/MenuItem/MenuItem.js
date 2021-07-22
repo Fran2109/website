@@ -1,8 +1,18 @@
 import React, { useEffect,useState } from 'react';
 import './MenuItem.css';
 import OEE from './../../assets/icons/OEE.svg';
+import ListItem from '../ListItem/ListItem';
+import ItemGenerated from './../ItemGenerator/ItemGenerator';
+
+let options;
+options = <ItemGenerated />;
+console.log(options);
+options = options.type;
+console.log(options);
 
 const MenuItem = ({item}) => {
+
+  /*
   const [options, setOptions] = useState([]);
 
   const getOptions = new Promise((resolve, reject) => {
@@ -16,7 +26,7 @@ const MenuItem = ({item}) => {
             ])
         }, 100);
     })
-
+    
     useEffect(() => {
         getOptions.then(
             result => {
@@ -24,23 +34,12 @@ const MenuItem = ({item}) => {
             }
         )
     }, []);
+    */
   return(
     <>
       <li className="dropdown-parent"><span><img src={OEE}/>{item}</span>
         <ul className="dropdown-menu">
-            {options.map((option) => {
-                return (
-                  <>
-                    <li className="dropdown-parent"><span>{option.name}</span>
-                      <ul className="dropdown-menu">
-                        {option.children.map((child) => {
-                            return (<li><span>{child.name}</span></li>)
-                        })}
-                      </ul>
-                    </li>
-                  </>
-                  )
-            })}
+          <ListItem itemList={options}/>
         </ul>
       </li>
     </>
