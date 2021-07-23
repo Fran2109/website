@@ -2,11 +2,9 @@ import React, { useEffect,useState } from 'react';
 import './ListItem.css';
 
 const ListItem = ({itemList}) => {
-  /* const [visibilitySon, setVisibilitySon] = useState(false); */
-  let visibilitySon=false;
+  const [visibilitySon, setVisibilitySon] = useState(false);
   const ChangeVisibilitySon = () => {
-    /* setVisibilitySon(!visibilitySon); */
-    visibilitySon = !visibilitySon;
+    setVisibilitySon(!visibilitySon);
     console.log(visibilitySon);
   }
   return itemList.map((option) => {
