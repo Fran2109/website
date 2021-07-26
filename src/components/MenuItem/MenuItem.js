@@ -2,15 +2,11 @@ import React, { useEffect,useState } from 'react';
 import './MenuItem.css';
 import OEE from './../../assets/icons/OEE.svg';
 import ListItem from '../ListItem/ListItem';
-import ItemGenerated from './../ItemGenerator/ItemGenerator';
+import TreeView from './../TreeView/TreeView';
 
-let options;
-options = <ItemGenerated />;
-console.log(options);
-options = options.type;
-console.log(options);
 
-const MenuItem = ({item}) => {
+
+const MenuItem = ({item, option}) => {
   const [visibility, setVisibility] = useState(false);
   const changeVisibility = () => {
     setVisibility(!visibility);
@@ -42,9 +38,10 @@ const MenuItem = ({item}) => {
 
   return(
     <>
-      <li className="dropdown-parent"><span><img src={OEE}/>{item}</span>
-        <ul className="dropdown-menu">
-          <ListItem itemList={options}/>
+      <li className="dropdown-parent" ><span onClick={changeVisibility}><img src={OEE}/>{item}</span>
+        <ul className={visibility? "dropdown-menu-visible" : "dropdown-menu"}>
+          {/* <ListItem itemList={options}/> */}
+          <TreeView list={option.children}/>
         </ul>
       </li>
     </>

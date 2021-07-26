@@ -6,10 +6,17 @@
 
 .TreeList button {
     border:none;
-    background-color: white;
+    background-color: #479dc4;
     text-decoration: none;
+    padding: 0px;
+    
 }
 
 .TreeList button:hover {
     text-decoration: none;
+    background-color: #6193aa;
+}
+
+.TreeList ul.euiTreeView {
+    padding: 5px 0px 5px 2px;
 }

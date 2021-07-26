@@ -1,20 +1,14 @@
-import './TreeView.css';
 import React from 'react';
 import '@elastic/eui/dist/eui_theme_amsterdam_light.css';
-import ItemGenerator from './../ItemGenerator/ItemGenerator';
+import './TreeView.css';
 import {EuiTreeView} from '@elastic/eui';
 
-let itemsGenerated;
-
-itemsGenerated = <ItemGenerator />;
-
-
-export default () => {
+export default ({list}) => {
   return (
     <div className="TreeList">
-      {<EuiTreeView items={itemsGenerated.type} 
+      {<EuiTreeView items={list} 
       expandByDefault={false}
-      showExpansionArrows={true}
+      showExpansionArrows={false}
       display="default"
       aria-label="Sample Folder Tree"/>}     
     </div>
