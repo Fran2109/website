@@ -8,7 +8,7 @@ export default ({list}) => {
     <div className="TreeList">
       {<EuiTreeView items={list} 
       expandByDefault={false}
-      showExpansionArrows={false}
+      showExpansionArrows={true}
       display="default"
       aria-label="Sample Folder Tree"/>}     
     </div>
