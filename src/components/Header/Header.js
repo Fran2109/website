@@ -4,7 +4,11 @@ import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
 import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
 import objectToGenerate from './../../utils/ItemGenerator/Object.json';
+import User from './../../assets/icons/user.png';
+import Graphic from './../../assets/icons/graphic.png';
 import Clock from './../Clock/Clock';
+import Gear from './../../assets/icons/gear.png';
+import Idiom from './../../assets/icons/idiom.png';
 
 const Header = () => {
     let options;
@@ -43,7 +47,11 @@ const Header = () => {
             })}
         </ul>
         <div className="headerRight">
+            <img src={Graphic} alt="graphic"/>
+            <span><img src={User} alt="user"/>ADMIN</span>
             <Clock/>
+            <img src={Idiom} alt="idiom"/>
+            <img src={Gear} alt="gear"/>
         </div>
     </div>
     )

@@ -20,7 +20,7 @@ class Clock extends Component {
         date: new Date()
       });
     }
-render() {
+  render() {
     return (
       <span className="clock">{this.state.date.getHours()+":"+this.state.date.getMinutes()} </span>
     );

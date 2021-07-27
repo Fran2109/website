@@ -13,6 +13,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
 .header .headerLeft{
@@ -32,15 +33,26 @@
     width: 25%;
 }
 .header .headerRight{
-    width: 50%;
+    width: 25%;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-
 }
 
-@media screen and (max-width: 1000px){
+.header .headerRight span{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header .headerRight img{
+    width: 20px;
+    height: 20px;
+}
+
+
+@media screen and (max-width: 800px){
     .header{
         height: auto;
     }

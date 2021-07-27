@@ -20,9 +20,9 @@
 }
 .TreeList button:hover {
     text-decoration: none;
-    background-color: #6193aa;
+    background-color: #3789af;
 }
 
 .TreeList ul.euiTreeView {
-    padding: 5px 0px 5px 2px;
+    padding: 5px 0px 5px 10px;
 }
