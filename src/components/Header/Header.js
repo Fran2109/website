@@ -36,7 +36,7 @@ const Header = () => {
         <ul className="headerLeft">
             {categories.map((category) => {
                 return( 
-                    <div key={category.id}>
+                    <div className="items" key={category.id}>
                         <MenuItem item={category.name} option={category.children}/>
                     </div>
                 )

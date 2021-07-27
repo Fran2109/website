@@ -1,7 +1,7 @@
 li.dropdown-parent {
     display:flex;
     flex-direction:column;
-    width:25%;
+    width:100%;
 }
 
 li.dropdown-parent span{
@@ -16,10 +16,6 @@ li.dropdown-parent span img{
     height:30px;
     padding-right: 5px;
 }
-
-/* li.dropdown-parent > ul.dropdown-menu > li.dropdown-parent {
-    width:100%;
-} */
 
 ul.dropdown-menu{
     position: relative;
@@ -54,10 +50,4 @@ li > span {
 li > span:hover{
     background-color: #1d2325;
     cursor: pointer;
-}
-
-@media screen and (max-width: 1000px){
-    li.dropdown-parent {
-        width:100%;
-    }
 }
