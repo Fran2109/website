@@ -1,18 +1,11 @@
-import { EuiIcon, EuiToken } from '@elastic/eui';
+import { EuiIcon/* , EuiToken */ } from '@elastic/eui';
 
 const ItemGenerator = (props) => {	
-  let i=0;
+  var i=0;
   let itemsGenerated = [];
 
-  console.log(props);
   const hasSubtype = (subType) => {
-    if(subType != undefined) {
-      return true;
-    }
-    else
-    {
-      return false;
-    }
+    return subType !== undefined? true : false;
   };
 
   const subTypeGenerator=(itemSubType)=>{
@@ -22,13 +15,15 @@ const ItemGenerator = (props) => {
       i++;
       let subTypeGenerated = {
         label: subType.name,
-        id: i,
+        id: i.toString(),
         children: hasSubtype(subType.subTypes) ? subTypeGenerator(subType.subTypes) : null,
-        useEmptyIcon: false,
-        icon: <EuiIcon type="empty" />,
+        icon: hasSubtype(subType.subTypes)? <EuiIcon type="arrowDown" size="s"/> : null,
+        /* useEmptyIcon: false, */
+        /* icon: <EuiIcon type="empty" />, */
       }
       if(subTypeGenerated.children == null) {
         delete subTypeGenerated.children;
+        delete subTypeGenerated.icon;
       }
       
       subTypesGenerated.push(subTypeGenerated);
@@ -37,7 +32,7 @@ const ItemGenerator = (props) => {
   };
 
   itemsGenerated=subTypeGenerator(props);
-  console.log(itemsGenerated);
+
   return itemsGenerated;
 }
 

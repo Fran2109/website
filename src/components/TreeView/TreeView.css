@@ -10,8 +10,14 @@
     text-decoration: none;
     padding: 0px;
     
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
 }
 
+.TreeList button span{
+    padding:5px;
+}
 .TreeList button:hover {
     text-decoration: none;
     background-color: #6193aa;

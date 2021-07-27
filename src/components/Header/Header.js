@@ -1,41 +1,52 @@
 import {React, useState, useEffect} from 'react';
-import ReactDOM from 'react-dom';
+/* import ReactDOM from 'react-dom'; */
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
 import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
 import objectToGenerate from './../../utils/ItemGenerator/Object.json';
+import Clock from './../Clock/Clock';
 
-export default () => {
+const Header = () => {
     let options;
-    options= ItemGenerator(objectToGenerate.items)
-    const [categorys, setCategorys] = useState([]);
-    console.log(options);
 
-    const getCategorys = new Promise((resolve, reject) => {
+    options = ItemGenerator(objectToGenerate)
+
+    const [categories, setCategories] = useState([]);
+    
+    const getCategories = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve([ 
-                {name: "OEE", children: options[0] }, 
-                {name: "Delays", children: options[1]}, 
-                {name: "Schedule", children: options[2]}, 
-                {name: "Reports", children: options[3]} ])
-        }, 100);
+                {id: "1", name: "OEE", children: options[0] }, 
+                {id: "2", name: "Delays", children: options[1] }, 
+                {id: "3", name: "Schedule", children: options[2] }, 
+                {id: "4", name: "Reports", children: options[3] } ])
+        }, 1000);
     });
 
     useEffect(() => {
-        getCategorys.then(
+        getCategories.then(
             result => {
-                setCategorys(result);
+                setCategories(result);
             }
         )
-    }, []);
-console.log(categorys);
+    }/* , [] */);
+
     return (
     <div className="header">
         <ul className="headerLeft">
-            {categorys.map((category) => {
-                return <MenuItem item={category.name} option={category.children}/>
+            {categories.map((category) => {
+                return( 
+                    <div key={category.id}>
+                        <MenuItem item={category.name} option={category.children}/>
+                    </div>
+                )
             })}
         </ul>
+        <div className="headerRight">
+            <Clock/>
+        </div>
     </div>
     )
 };
+
+export default Header;
