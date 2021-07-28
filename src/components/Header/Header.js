@@ -1,5 +1,6 @@
 import {React, useState, useEffect} from 'react';
 /* import ReactDOM from 'react-dom'; */
+
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
 import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
@@ -9,6 +10,8 @@ import Graphic from './../../assets/icons/graphic.png';
 import Clock from './../Clock/Clock';
 import Gear from './../../assets/icons/gear.png';
 import Idiom from './../../assets/icons/idiom.png';
+import MenuOpen from './../../assets/icons/menuOpen.png';
+import MenuClose from './../../assets/icons/menuClose.png';
 
 const Header = () => {
     let options;
@@ -33,27 +36,60 @@ const Header = () => {
                 setCategories(result);
             }
         )
-    }/* , [] */);
+    }, [] );
+
+    const [visibility, setVisibility] = useState(false);
+    const changeVisibility = () => {
+        setVisibility(!visibility);
+    }
+
+    const HeaderBasic = () => {
+        return (
+            <>
+                <ul className="headerLeft">
+                    {categories.map((category) => {
+                        return( 
+                            <div className="items" key={category.id}>
+                                <MenuItem item={category.name} option={category.children}/>
+                            </div>
+                        )
+                    })}
+                </ul>
+                <div className="headerRight">
+                    <img src={Graphic} alt="graphic"/>
+                    <span><img src={User} alt="user"/>ADMIN</span>
+                    <Clock/>
+                    <img src={Idiom} alt="idiom"/>
+                    <img src={Gear} alt="gear"/>
+                </div>
+            </>
+        )
+    }
 
     return (
-    <div className="header">
-        <ul className="headerLeft">
-            {categories.map((category) => {
-                return( 
-                    <div className="items" key={category.id}>
-                        <MenuItem item={category.name} option={category.children}/>
+        <div className="header">
+            { window.innerWidth > 1000? 
+                <HeaderBasic />
+                :
+                <>
+                    {visibility?
+                        <HeaderBasic />
+                    :
+                        null
+                    }
+                    <div className="headerMobile">
+                        <button className="menu" onClick={changeVisibility}>
+                            {!visibility?
+                                <img src={MenuOpen} alt="menuOpen"/>
+                            :
+                                <img src={MenuClose} alt="menuClose"/>
+                            }
+                        </button>
                     </div>
-                )
-            })}
-        </ul>
-        <div className="headerRight">
-            <img src={Graphic} alt="graphic"/>
-            <span><img src={User} alt="user"/>ADMIN</span>
-            <Clock/>
-            <img src={Idiom} alt="idiom"/>
-            <img src={Gear} alt="gear"/>
+                    
+                </>
+            }
         </div>
-    </div>
     )
 };
 

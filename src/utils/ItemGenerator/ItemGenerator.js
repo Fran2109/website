@@ -18,8 +18,6 @@ const ItemGenerator = (props) => {
         id: i.toString(),
         children: hasSubtype(subType.subTypes) ? subTypeGenerator(subType.subTypes) : null,
         icon: hasSubtype(subType.subTypes)? <EuiIcon type="arrowDown" size="s"/> : null,
-        /* useEmptyIcon: false, */
-        /* icon: <EuiIcon type="empty" />, */
       }
       if(subTypeGenerated.children == null) {
         delete subTypeGenerated.children;

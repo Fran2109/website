@@ -229,13 +229,343 @@
                     ]
                 },
                 {
-                    "name": "Motorola"
+                    "name": "Motorola",
+                    "subTypes": [
+                        {
+                            "name": "64GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "32GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "16GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "name": "LG"
+                    "name": "LG",
+                    "subTypes": [
+                        {
+                            "name": "64GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "32GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "16GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "name": "IPhone"
+                    "name": "IPhone",
+                    "subTypes": [
+                        {
+                            "name": "64GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "32GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "16GB",
+                            "subTypes": [
+                                {
+                                    "name": "5.8 Pulgadas",
+                                    "subTypes": [
+                                        {
+                                            "name": "5.8 Pulgadas",
+                                            "subTypes": [
+                                                {
+                                                    "name": "5.8 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.1 Pulgadas"
+                                                },
+                                                {
+                                                    "name": "6.2 Pulgadas"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "name": "6.1 Pulgadas"
+                                        },
+                                        {
+                                            "name": "6.2 Pulgadas"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "6.1 Pulgadas"
+                                },
+                                {
+                                    "name": "6.2 Pulgadas"
+                                }
+                            ]
+                        }
+                    ]
                 }
         ]
     },

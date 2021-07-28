@@ -10,7 +10,7 @@ const MenuItem = ({item, option}) => {
   }
   return(
     <>
-      <li className="dropdown-parent"><span onClick={ window.innerWidth < 800? changeVisibility : ()=>{}}><img src={OEE} alt=""/>{item}</span>
+      <li className="dropdown-parent"><span onClick={ window.innerWidth < 1000? changeVisibility : ()=>{}}><img src={OEE} alt=""/>{item}</span>
         <ul className={visibility? "dropdown-menu-visible" : "dropdown-menu"}>
           <TreeView list={option.children}/>
         </ul>
