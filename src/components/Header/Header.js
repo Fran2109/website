@@ -7,8 +7,8 @@ import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
 import objectToGenerate from './../../utils/ItemGenerator/Object.json';
 import Clock from './../Clock/Clock';
 import Trending from './../Trending/Trending';
+import Language from './../Language/Language';
 import Gear from './../../assets/icons/gear.png';
-import Idiom from './../../assets/icons/idiom.png';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
@@ -17,6 +17,7 @@ const Header = () => {
     let options;
     const [users, setUsers] = useState([]);
     const [categories, setCategories] = useState([]);
+    const [languages, setLanguages] = useState([]);
 
     options = ItemGenerator(objectToGenerate);
     
@@ -39,10 +40,24 @@ const Header = () => {
                 { id: 3, name: "User 3" },
                 { id: 4, name: "User 4" },
                 { id: 5, name: "User 5" } ])
-        }, 1000);
+        }, 0);
     }); 
 
+    const getLanguages = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([
+                { id: 0, name: "ES" },
+                { id: 1, name: "EN" },
+                { id: 2, name: "PT" }])
+        }, 0);
+    });
+
     useEffect(() => {
+        getLanguages.then(
+            result => {
+                setLanguages(result);
+            }
+        )
         getCategories.then(
             result => {
                 setCategories(result);
@@ -53,6 +68,7 @@ const Header = () => {
                 setUsers(result);
             }
         )
+        
     }, [] );
 
     const [visibility, setVisibility] = useState(false);
@@ -76,10 +92,9 @@ const Header = () => {
 
                 <div className="headerRight">
                     <Trending/>
-
                     <User listUsers={users}/>
                     <Clock/>
-                    <img src={Idiom} alt="idiom"/>
+                    <Language listLanguages={languages}/>
                     <img src={Gear} alt="gear"/>
                 </div>
             </>
