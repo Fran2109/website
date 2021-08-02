@@ -1,0 +1,58 @@
+li.user{
+    width: 20%;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+}
+
+li.user span{
+    height: 50px;
+    position: absolute;
+    font-weight: bold;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+li.user span img{
+    margin-right: 10px;
+}
+
+li.user:hover{
+    background-color: #3789af;
+    cursor: pointer;
+}
+
+li.user > ul.userOptions{
+    list-style-type: none;
+    background-color: #479dc4;
+    padding: 5px 0px 5px 2px;
+    display: none;
+    border-radius: 0px 0px 10px 10px;
+    min-width: 100%;
+}
+
+li.user:hover > ul.userOptions{
+    position: relative;
+    top: 50px;
+    display: block;
+}
+
+li.user > ul.userOptions > li{
+    color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
+@media screen and (max-width: 1000px){
+    li.user{
+        width: auto;
+        padding: 5px;
+    }
+
+    li.user:hover > ul.userOptions{
+        display: none;
+    }
+    li.user span{
+        position: relative;
+    }
+}

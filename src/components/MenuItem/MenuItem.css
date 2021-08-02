@@ -1,53 +1,79 @@
 li.dropdown-parent {
-    display:flex;
-    flex-direction:column;
-    width:100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
 }
 
-li.dropdown-parent span{
+li.dropdown-parent button{
+    background-color: #ffffff;
+}
+
+li.dropdown-parent > span{
+    height: 50px;
     font-weight: bold;
+    padding: 5px 5px;
+    text-decoration: none;
+    transition: all 1s;
+    display: block;
+
     display:flex;
-    flex-direction:row;
+    justify-content:flex-start;
     align-items:center;
+}
+
+li.dropdown-parent > span:hover{
+    background-color: #3789af;
+    cursor: pointer;
 }
 
 li.dropdown-parent span img{
     width:30px;
     height:30px;
-    padding-right: 5px;
+    margin-right: 10px;
 }
 
-ul.dropdown-menu{
+li.dropdown-parent > ul.dropdown-menu{
+    color: rgb(0, 0, 0);
     position: relative;
     list-style-type: none;
-    background-color: #479dc4;
+    background-color: #ffffff;
     padding: 5px 0px 5px 2px;
     display: none;
-
+    top: 0px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-ul.dropdown-menu-visible{
+li.dropdown-parent > ul.dropdown-menu-visible{
+    color: rgb(0, 0, 0);
     position: relative;
     list-style-type: none;
-    background-color: #479dc4;
+    background-color: #ffffff;
     padding: 5px 0px 5px 2px;
     display: block;
+    top: 50px;
 }
 
 li.dropdown-parent:hover > ul.dropdown-menu{
     display: block !important;
-    background-color: #479dc4;
 } 
-li > span {
-    display: block;
-    color: #fff;
-    text-align: start;
-    padding: 5px 5px;
-    text-decoration: none;
-    transition: all 1s;
-}
 
-li > span:hover{
-    background-color: #3789af;
-    cursor: pointer;
+@media screen and (max-width: 1000px){
+    li.user{
+        width: auto;
+    }
+
+    li.dropdown-parent > ul.dropdown-menu-visible{
+        top: 0px;
+    }
+
+    li.user:hover > ul.userOptions{
+        display: none;
+    }
+    li.user span{
+        position: relative;
+    }
 }

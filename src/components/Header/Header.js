@@ -5,20 +5,20 @@ import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
 import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
 import objectToGenerate from './../../utils/ItemGenerator/Object.json';
-import User from './../../assets/icons/user.png';
-import Graphic from './../../assets/icons/graphic.png';
 import Clock from './../Clock/Clock';
+import Trending from './../Trending/Trending';
 import Gear from './../../assets/icons/gear.png';
 import Idiom from './../../assets/icons/idiom.png';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
+import User from './../User/User';
 
 const Header = () => {
     let options;
-
-    options = ItemGenerator(objectToGenerate)
-
+    const [users, setUsers] = useState([]);
     const [categories, setCategories] = useState([]);
+
+    options = ItemGenerator(objectToGenerate);
     
     const getCategories = new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -28,7 +28,19 @@ const Header = () => {
                 {id: "3", name: "Schedule", children: options[2] }, 
                 {id: "4", name: "Reports", children: options[3] } ])
         }, 1000);
-    });
+    }); 
+
+    const getUsers = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve([ 
+                { id: 0, name: "Unsigned" },
+                { id: 1, name: "User 1" },
+                { id: 2, name: "User 2" },
+                { id: 3, name: "User 3" },
+                { id: 4, name: "User 4" },
+                { id: 5, name: "User 5" } ])
+        }, 1000);
+    }); 
 
     useEffect(() => {
         getCategories.then(
@@ -36,9 +48,15 @@ const Header = () => {
                 setCategories(result);
             }
         )
+        getUsers.then(
+            result => {
+                setUsers(result);
+            }
+        )
     }, [] );
 
     const [visibility, setVisibility] = useState(false);
+    
     const changeVisibility = () => {
         setVisibility(!visibility);
     }
@@ -55,9 +73,11 @@ const Header = () => {
                         )
                     })}
                 </ul>
+
                 <div className="headerRight">
-                    <img src={Graphic} alt="graphic"/>
-                    <span><img src={User} alt="user"/>ADMIN</span>
+                    <Trending/>
+
+                    <User listUsers={users}/>
                     <Clock/>
                     <img src={Idiom} alt="idiom"/>
                     <img src={Gear} alt="gear"/>
@@ -72,11 +92,6 @@ const Header = () => {
                 <HeaderBasic />
                 :
                 <>
-                    {visibility?
-                        <HeaderBasic />
-                    :
-                        null
-                    }
                     <div className="headerMobile">
                         <button className="menu" onClick={changeVisibility}>
                             {!visibility?
@@ -86,7 +101,11 @@ const Header = () => {
                             }
                         </button>
                     </div>
-                    
+                    {visibility?
+                        <HeaderBasic />
+                    :
+                        null
+                    }
                 </>
             }
         </div>

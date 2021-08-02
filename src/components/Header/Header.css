@@ -1,13 +1,11 @@
 .header{
-    /* position: relative; */
-    padding: 0;
+    padding: 0px;
     margin: 0px;
-    height: 50px; /*px*/
+    height: 50px;
     width: 100%;
     background-color: #479dc4;
     border-bottom: 1px solid #e5e5e5;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    z-index: 3;
 
     /* FLEX */
     display: flex;
@@ -17,33 +15,23 @@
 }
 
 .header .headerLeft{
-    margin: 5px;
     width:50%;
     list-style: none;
-    /* overflow: hidden; */
 
     /* FLEX */
     display: flex;
-    /* justify-items: center; */
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .header .headerLeft .items{
     width: 25%;
 }
+
 .header .headerRight{
-    width: 25%;
+    width: 40%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
-}
-
-.header .headerRight span{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 .header .headerRight img{
@@ -68,20 +56,25 @@
 @media screen and (max-width: 1000px){
     .header{
         height: auto;
-        flex-direction: column-reverse;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
     }
+    
     .header .headerLeft{
         flex-direction: column;
-        width:100%;
+        width:80%;
     }
+
     .header .headerLeft .items{
         width: 100%;
     }
+
     .header .headerRight{
-        width: 80%;
-        margin: 25px;
+        width: 20%;
+        height: 200px;
+        flex-direction: column;
+        align-items: center;
     }
 }
 
