@@ -1,20 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { EuiPopover, EuiButton, EuiText } from '@elastic/eui';
 import './Clock.css';
+import { useTranslation } from "react-i18next";
 
-export default () => {
+const Clock = () => {
 
-  const [hour, setHour] = useState(new Date().getHours()+":"+new Date().getMinutes());
-  setInterval(()=>{setHour(new Date().getHours()+":"+new Date().getMinutes())}, 1000);
+  const [time, setTime] = useState(new Date().getHours()+":"+new Date().getMinutes());
+  const [tick, setTick] = useState(new Date().getSeconds())
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
+  const[t/* , i18n */] = useTranslation("global");
 
   const onButtonClick = () =>
     setIsPopoverOpen((isPopoverOpen) => !isPopoverOpen);
   const closePopover = () => setIsPopoverOpen(false);
 
+  let minutes = new Date().getMinutes();
+  let hours = new Date().getHours();
+  
+  setInterval(() => {setTick(new Date().getSeconds())}, 1000);
+
+  useEffect(() => {
+    hours = new Date().getHours()<10?
+          "0"+new Date().getHours()
+          :
+          new Date().getHours()
+    minutes = new Date().getMinutes()<10?
+            "0"+new Date().getMinutes()
+            :
+            new Date().getMinutes()
+    setTime(hours+":"+minutes)
+  }, [tick])
+  
   const button = (
     <EuiButton style={{backgroundColor: "#479dc4"}} onMouseEnter={onButtonClick} onMouseLeave={closePopover}>
-      <p style={{color: "white", fontWeight: "bold"}}>{hour}</p>
+      <p style={{color: "white", fontWeight: "bold"}}>{time}</p>
     </EuiButton>
   );
 
@@ -26,9 +45,11 @@ export default () => {
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
         <EuiText style={{ width: 120, textAlign: "center", color: "white", fontSize:12 }}>
-          Time sincronized with server
+          {t("Header.Time")}
         </EuiText>
       </EuiPopover>
     </div>
   );
 };
+
+export default Clock;

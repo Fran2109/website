@@ -1,0 +1,16 @@
+{
+    "Header": {
+        "Label": {
+            "OEE-label": "OEE",
+            "Delays-label": "Paradas",
+            "Schedule-label": "Producción",
+            "Reports-label": "Reportes"
+        },
+        "User" : {
+            "Logged-out": "Sin identificarse",
+            "Log-out": "Cerrar Sesión"
+        },
+        "Trending": "Tendencia",
+        "Time": "Hora sincronizada con el servidor"
+    }
+}

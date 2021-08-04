@@ -14,7 +14,6 @@ li.dropdown-parent > span{
     font-weight: bold;
     padding: 5px 5px;
     text-decoration: none;
-    transition: all 1s;
     display: block;
 
     display:flex;
@@ -31,6 +30,7 @@ li.dropdown-parent span img{
     width:30px;
     height:30px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 li.dropdown-parent > ul.dropdown-menu{
@@ -39,7 +39,6 @@ li.dropdown-parent > ul.dropdown-menu{
     list-style-type: none;
     background-color: #ffffff;
     padding: 5px 0px 5px 2px;
-    display: none;
     top: 0px;
     border-style: solid;
     border-width: 0.5px;
@@ -47,19 +46,13 @@ li.dropdown-parent > ul.dropdown-menu{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-li.dropdown-parent > ul.dropdown-menu-visible{
-    color: rgb(0, 0, 0);
-    position: relative;
-    list-style-type: none;
-    background-color: #ffffff;
-    padding: 5px 0px 5px 2px;
+.visible{
     display: block;
-    top: 50px;
 }
 
-li.dropdown-parent:hover > ul.dropdown-menu{
-    display: block !important;
-} 
+.hidden{
+    display: none;
+}
 
 @media screen and (max-width: 1000px){
     li.user{

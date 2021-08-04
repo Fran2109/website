@@ -1,0 +1,16 @@
+{
+    "Header": {
+        "Label": {
+            "OEE-label": "OEE",
+            "Delays-label": "Delays",
+            "Schedule-label": "Schedule",
+            "Reports-label": "Reports"
+        },
+        "User" : {
+            "Logged-out": "Unsigned",
+            "Log-out": "Log Out"
+        },
+        "Trending": "Trending",
+        "Time": "Time sinchronized with server"
+    }
+}

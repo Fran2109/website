@@ -8,48 +8,44 @@ import objectToGenerate from './../../utils/ItemGenerator/Object.json';
 import Clock from './../Clock/Clock';
 import Trending from './../Trending/Trending';
 import Language from './../Language/Language';
-import Gear from './../../assets/icons/gear.png';
+import Configuration from '../Configuration/Configuration';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
+import WebsiteContext from '../../context/WebsiteContext';
 
 const Header = () => {
     let options;
     const [users, setUsers] = useState([]);
     const [categories, setCategories] = useState([]);
     const [languages, setLanguages] = useState([]);
+    const [width, setWidth] = useState(window.innerWidth);
 
     options = ItemGenerator(objectToGenerate);
     
     const getCategories = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([ 
-                {id: "1", name: "OEE", children: options[0] }, 
-                {id: "2", name: "Delays", children: options[1] }, 
-                {id: "3", name: "Schedule", children: options[2] }, 
-                {id: "4", name: "Reports", children: options[3] } ])
-        }, 1000);
+        resolve([ 
+            {id: "1", name: "OEE", children: options[0] }, 
+            {id: "2", name: "Delays", children: options[1] }, 
+            {id: "3", name: "Schedule", children: options[2] }, 
+            {id: "4", name: "Reports", children: options[3] } ])
     }); 
 
     const getUsers = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([ 
-                { id: 0, name: "Unsigned" },
-                { id: 1, name: "User 1" },
-                { id: 2, name: "User 2" },
-                { id: 3, name: "User 3" },
-                { id: 4, name: "User 4" },
-                { id: 5, name: "User 5" } ])
-        }, 0);
+        resolve([ 
+            { id: 0, name: "Unsigned" },
+            { id: 1, name: "User 1" },
+            { id: 2, name: "User 2" },
+            { id: 3, name: "User 3" },
+            { id: 4, name: "User 4" },
+            { id: 5, name: "User 5" } ])
     }); 
 
     const getLanguages = new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve([
-                { id: 0, name: "ES" },
-                { id: 1, name: "EN" },
-                { id: 2, name: "PT" }])
-        }, 0);
+        resolve([
+            { id: 0, name: "ES" },
+            { id: 1, name: "EN" },
+            { id: 2, name: "PT" }])
     });
 
     useEffect(() => {
@@ -68,9 +64,10 @@ const Header = () => {
                 setUsers(result);
             }
         )
-        
     }, [] );
 
+    setInterval(() => {setWidth(window.innerWidth)},1000);
+    
     const [visibility, setVisibility] = useState(false);
     
     const changeVisibility = () => {
@@ -95,7 +92,7 @@ const Header = () => {
                     <User listUsers={users}/>
                     <Clock/>
                     <Language listLanguages={languages}/>
-                    <img src={Gear} alt="gear"/>
+                    <Configuration/>
                 </div>
             </>
         )
@@ -103,8 +100,10 @@ const Header = () => {
 
     return (
         <div className="header">
-            { window.innerWidth > 1000? 
-                <HeaderBasic />
+            { width > 1000?
+                <>
+                    <HeaderBasic />
+                </>
                 :
                 <>
                     <div className="headerMobile">

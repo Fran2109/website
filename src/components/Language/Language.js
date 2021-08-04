@@ -1,7 +1,10 @@
 import './Language.css';
 import Idiom from './../../assets/icons/idiom.png';
+import { useTranslation } from "react-i18next";
 
-const Languaje = ({listLanguages}) => {
+const Language = ({listLanguages}) => {
+    const[t, i18n] = useTranslation("global");
+
     return (
         <>
             <div className="language">
@@ -12,7 +15,7 @@ const Languaje = ({listLanguages}) => {
                 <div className="language-list">
                     {listLanguages.map(language =>
                         <div className="language-item" key={language.id}>
-                            <div className="language-name">
+                            <div className="language-name" onClick={() => i18n.changeLanguage(language.name)}>
                                 {language.name}
                             </div>
                         </div>
@@ -23,4 +26,4 @@ const Languaje = ({listLanguages}) => {
     )
 }
 
-export default Languaje;
+export default Language;

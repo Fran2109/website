@@ -72,9 +72,10 @@
 
     .header .headerRight{
         width: 20%;
-        height: 200px;
+        height: auto;
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
     }
 }
 
