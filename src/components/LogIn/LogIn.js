@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import OEEasy from './../../assets/icons/OEEasyLogo.png';
 import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
-import { BrowserRouter as Router, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Redirect, Link } from 'react-router-dom';
 
 async function loginUser(credentials) {
     return fetch('http://localhost:8080/login', {
@@ -39,6 +39,8 @@ const LogIn = ({ setToken }) => {
                 password
                 });
                 setToken(token)
+                {<Link to="/public"/>}
+                /* return(true) */
                 /* return <Redirect to='/IHBox'  /> */
                 /*{<Redirect from="/" to="/asfd" />}*/
                 {{/* <Router path="/projects">
@@ -49,6 +51,7 @@ const LogIn = ({ setToken }) => {
             else
             {
                 alert(t("LogIn.alertWrong"));
+                /* return(false) */
             }
         }
       }
