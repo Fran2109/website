@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 
 const User = ({ listUsers }) => {
     const[t/* , i18n */] = useTranslation("global");
-    const [id, setId] = useState(0);
+    const [id, setId] = useState(1);
     const [visible, setVisible] = useState(false);
     return (
         <li className="user" onMouseLeave={()=>setVisible(false)}>
@@ -14,7 +14,11 @@ const User = ({ listUsers }) => {
             </span>
             <ul className={visible? "userOptions visible" : "userOptions hidden"}>
                 {id!==0?
-                    <li onClick={()=>{setId(0); setVisible(false)}}>
+                    <li onClick={()=>{
+                        setId(0); 
+                        setVisible(false); 
+                        sessionStorage.removeItem('token');
+                        window.location = origin}}>
                         {t("Header.User.Log-out")}
                     </li>
                 :

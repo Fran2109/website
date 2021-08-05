@@ -1,13 +1,14 @@
 .language{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+    align-self: flex-start;
     width: 10%;
 }
 
 .language .language-title{
-    position: absolute;
-    height: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +22,6 @@
 .language:hover > .language-list{
     display: block;
     position: relative;
-    top: 50px;
     border-style: solid;
     border-width: 0.5px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);

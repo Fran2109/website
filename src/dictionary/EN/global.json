@@ -1,4 +1,13 @@
 {
+    "LogIn":{
+        "username":"Username",
+        "password":"Password",
+        "submit":"Login",
+        "message":"Learn more at www.oeeasy.com",
+        "footerMessage":"Copyright © 2017 Ampexa - All rights reserved",
+        "alertEmpty":"Please enter your username and password",
+        "alertWrong":"Invalid username or password"
+    },
     "Header": {
         "Label": {
             "OEE-label": "OEE",

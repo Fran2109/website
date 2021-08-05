@@ -1,9 +1,12 @@
 import React from 'react';
-import ItemGenerator from './../utils/ItemGenerator/ItemGenerator';
-import objectToGenerate from './../utils/ItemGenerator/Object.json';
 
 const WebsiteContext = React.createContext({
-    menus: [ItemGenerator(objectToGenerate)]
+    /* Languages: [
+            { id: 0, name: "ES" },
+            { id: 1, name: "EN" },
+            { id: 2, name: "PT" }
+    ] */
+    Languages: { id: 0, name: "ES" }
 });
 
 export default WebsiteContext;

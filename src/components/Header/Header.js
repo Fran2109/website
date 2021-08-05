@@ -1,5 +1,4 @@
 import {React, useState, useEffect} from 'react';
-/* import ReactDOM from 'react-dom'; */
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
@@ -12,13 +11,11 @@ import Configuration from '../Configuration/Configuration';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
-import WebsiteContext from '../../context/WebsiteContext';
 
 const Header = () => {
     let options;
     const [users, setUsers] = useState([]);
     const [categories, setCategories] = useState([]);
-    const [languages, setLanguages] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
 
     options = ItemGenerator(objectToGenerate);
@@ -41,19 +38,7 @@ const Header = () => {
             { id: 5, name: "User 5" } ])
     }); 
 
-    const getLanguages = new Promise((resolve, reject) => {
-        resolve([
-            { id: 0, name: "ES" },
-            { id: 1, name: "EN" },
-            { id: 2, name: "PT" }])
-    });
-
     useEffect(() => {
-        getLanguages.then(
-            result => {
-                setLanguages(result);
-            }
-        )
         getCategories.then(
             result => {
                 setCategories(result);
@@ -91,7 +76,7 @@ const Header = () => {
                     <Trending/>
                     <User listUsers={users}/>
                     <Clock/>
-                    <Language listLanguages={languages}/>
+                    <Language/>
                     <Configuration/>
                 </div>
             </>

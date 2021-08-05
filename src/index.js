@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App/App.tsx';
+import App from './components/App/App.js';
 import { I18nextProvider } from "react-i18next";
 import i18next from "i18next";
 import global_ES from "./dictionary/ES/global.json"
