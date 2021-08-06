@@ -5,24 +5,17 @@ import PropTypes from 'prop-types';
 import OEEasy from './../../assets/icons/OEEasyLogo.png';
 import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
-import { BrowserRouter as Router, Redirect, Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
 async function loginUser(credentials) {
-    return fetch('http://localhost:8080/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(credentials)
-    })
-      .then(data => data.json())
+    return(credentials.username)
    }
 
 const LogIn = ({ setToken }) => {
     const[t] = useTranslation("global");
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
-
+    let history = useHistory();
     const handleSubmit = async e => {
         
         e.preventDefault();
@@ -39,23 +32,14 @@ const LogIn = ({ setToken }) => {
                 password
                 });
                 setToken(token)
-                {<Link to="/public"/>}
-                /* return(true) */
-                /* return <Redirect to='/IHBox'  /> */
-                /*{<Redirect from="/" to="/asfd" />}*/
-                {{/* <Router path="/projects">
-                    <Redirect to="/projects/another-project" />
-                </Router> */}}
-                /* window.location = '/'; */
+                history.push(`/IHBox`);
             }
             else
             {
                 alert(t("LogIn.alertWrong"));
-                /* return(false) */
             }
         }
       }
-
 
     return (
         <div className="LogIn">

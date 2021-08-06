@@ -1,7 +1,7 @@
 import './App.css';
 import Header from '../Header/Header';
 import LogIn from '../LogIn/LogIn';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, useHistory, Redirect } from 'react-router-dom';
 
 function setToken(userToken) {
   sessionStorage.setItem('token', JSON.stringify(userToken));
@@ -17,15 +17,21 @@ function App() {
 
   const token = getToken();
 
-  /* if(!token) {
-    return <LogIn setToken={setToken} />
-  } */
   return (
     <div className="principal">
       <BrowserRouter>
         <Switch>
-          <Route path="/" exact>
-            {!token? <LogIn setToken={setToken} /> : <Header />}
+          <Route path="/Login" exact>
+            <LogIn setToken={setToken} />
+          </Route>
+          <Route path="/IHBox" exact>
+            <Header />
+          </Route>
+          <Route path="/">
+            {token?
+            <Redirect to="IHBox" />
+            :
+            <Redirect to="Login" />}
           </Route>
         </Switch>
       </BrowserRouter>

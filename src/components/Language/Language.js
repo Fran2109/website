@@ -27,11 +27,10 @@ const Language = ({heightTitle="50px"}) => {
                 <div className="language-title" style={{height: heightTitle}}>
                     <img src={Idiom} alt="idiom"/>
                 </div>
-                
                 <div className="language-list">
                     {languages.map(language =>
                         <div className="language-item" key={language.id}>
-                            <div className="language-name" onClick={() => i18n.changeLanguage(language.name)}>
+                            <div className="language-name" onClick={() => {i18n.changeLanguage(language.name); sessionStorage.setItem('Language', language.name)}}>
                                 {language.name}
                             </div>
                         </div>

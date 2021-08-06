@@ -10,7 +10,11 @@ import global_PT from "./dictionary/PT/global.json"
 
 i18next.init({
   interpolation: { escapeValue: false },
-  lng: "EN",
+  lng:
+  (sessionStorage.getItem("Language") !== null ?
+  sessionStorage.getItem("Language")
+  :
+  "EN"),
   fallbackLng: "EN",
   resources:{
     EN: { global: global_EN },
