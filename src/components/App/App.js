@@ -4,12 +4,12 @@ import LogIn from '../LogIn/LogIn';
 import { BrowserRouter, Route, Switch, useHistory, Redirect } from 'react-router-dom';
 
 function setToken(userToken) {
-  sessionStorage.setItem('token', JSON.stringify(userToken));
+  sessionStorage.setItem('token', userToken);
 }
 
 function getToken() {
   const tokenString = sessionStorage.getItem('token');
-  const userToken = JSON.parse(tokenString);
+  const userToken = tokenString;
   return userToken?.token;
 }
 
@@ -22,19 +22,29 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route path="/Login" exact>
-            <LogIn setToken={setToken} />
+             <LogIn setToken={setToken} />
           </Route>
           <Route path="/IHBox" exact>
             <Header />
           </Route>
           <Route path="/">
-            {(token || sessionStorage.getItem("token")!=undefined)?
-            <Redirect to="IHBox" />
+            {(token)?
+              <Redirect to="IHBox" />
             :
-            <>
-            <Redirect to="Login" />
-            {console.log(token)}
-            </>}
+              <Redirect to="Login" />
+            /* <>
+              {sessionStorage.getItem("token")!=undefined?
+              <Redirect to="IHBox" />
+              :
+              <Redirect to="Login" />
+              }
+            </> */
+            }
+            {/* {sessionStorage.getItem("token")!=undefined?
+              <Redirect to="IHBox" />
+              :
+              <Redirect to="Login" />
+            } */}
           </Route>
         </Switch>
       </BrowserRouter>

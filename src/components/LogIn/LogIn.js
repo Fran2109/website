@@ -25,7 +25,7 @@ const LogIn = ({ setToken }) => {
         }
         else
         {
-            if(username.toString()==="admin" && password.toString()==="admin")
+            if((username.toString()==="admin" && password.toString()==="admin") || (username.toString()==="user" && password.toString()==="user"))
             {
                 const token = await loginUser({
                 username,
@@ -49,7 +49,7 @@ const LogIn = ({ setToken }) => {
                 </div>
                 <Language heightTitle="80px" />
             </div>    
-            <div className="LogInContainer">
+            <div className="LogInContainer First">
                 <div className="LogInIco">
                     <img src={User} alt="User" />
                 </div>
@@ -69,6 +69,10 @@ const LogIn = ({ setToken }) => {
                 <div className="LogInInfo">
                     <span>{t("LogIn.message")}</span>
                 </div>
+            </div>
+            <div className="LogInContainer Second">
+            </div>
+            <div className="LogInContainer Third">
             </div>
             <div className="LogInFooter">
                 <span>{t("LogIn.footerMessage")}</span>
