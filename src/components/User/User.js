@@ -11,6 +11,14 @@ const User = ({ listUsers }) => {
     let history = useHistory();
     return (
         <li className="user" onMouseLeave={()=>setVisible(false)}>
+            <>
+            {
+                sessionStorage.getItem("token") !== null ?
+                null
+                :
+                history.replace("/")
+            }
+            </>
             <span onClick={()=>setVisible(!visible)}>
                 <img src={UserIco} alt="user"/>{listUsers.hasOwnProperty(id)? id===0? t("Header.User.Logged-out") : sessionStorage.getItem("token") : null}
             </span>

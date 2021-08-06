@@ -28,10 +28,13 @@ function App() {
             <Header />
           </Route>
           <Route path="/">
-            {token?
+            {(token || sessionStorage.getItem("token")!=undefined)?
             <Redirect to="IHBox" />
             :
-            <Redirect to="Login" />}
+            <>
+            <Redirect to="Login" />
+            {console.log(token)}
+            </>}
           </Route>
         </Switch>
       </BrowserRouter>
