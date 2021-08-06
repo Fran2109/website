@@ -5,6 +5,7 @@
     align-content: flex-start;
     align-self: flex-start;
     width: 10%;
+    font-size: 18px;
 }
 
 .language .language-title{
@@ -21,6 +22,9 @@
 
 .language:hover > .language-list{
     display: block;
+    width: 40px;
+    background-color: #f5f5f5;
+    align-self: center;
     position: relative;
     border-style: solid;
     border-width: 0.5px;
@@ -28,12 +32,18 @@
 }
 
 .language > .language-list > .language-item{
+    height: 30px;
     padding: 5px;
 }
 
 .language > .language-list > .language-item:hover{
     background-color: #479dc4;
     cursor: pointer;
+    color: #fff;
+}
+
+.language > .language-list > .language-item:hover > .language-name{
+    color: #fff;
 }
 
 .language > .language-list > .language-item > .language-name{

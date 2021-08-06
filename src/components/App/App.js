@@ -1,6 +1,6 @@
 import './App.css';
-import Header from '../Header/Header';
-import LogIn from '../LogIn/LogIn';
+import IHBox from './../IHBox/IHBox';
+import LogIn from './../LogIn/LogIn';
 import { BrowserRouter, Route, Switch, useHistory, Redirect } from 'react-router-dom';
 
 function setToken(userToken) {
@@ -25,7 +25,7 @@ function App() {
              <LogIn setToken={setToken} />
           </Route>
           <Route path="/IHBox" exact>
-            <Header />
+            <IHBox />
           </Route>
           <Route path="/">
             {(token)?

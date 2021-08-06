@@ -1,0 +1,11 @@
+.IHBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.IHBox .Logo img{
+    margin-top: 40px;
+    width: 400px;
+    height: 350px;
+}

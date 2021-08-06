@@ -35,14 +35,14 @@ li.dropdown-parent span img{
 
 li.dropdown-parent > ul.dropdown-menu{
     color: rgb(0, 0, 0);
+    min-width: 220px;
     position: relative;
     list-style-type: none;
     background-color: #ffffff;
     padding: 5px 0px 5px 2px;
     top: 0px;
-    border-style: solid;
-    border-width: 0.5px;
-    border-radius: 0px 0px 20px 20px;
+    border: 1px solid #ccc;
+    border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
