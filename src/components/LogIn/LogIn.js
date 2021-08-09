@@ -44,35 +44,37 @@ const LogIn = ({ setToken }) => {
     return (
         <div className="LogIn">
             <div className="LogInHeader">
-                <div className="OEEasy">
-                    <img src={OEEasy} style={{width: "180px", height: "55px"}} alt="OEEasy" />
-                </div>
-                <Language heightTitle="80px" />
-            </div>    
-            <div className="LogInContainer First">
-                <div className="LogInIco">
-                    <img src={User} alt="User" />
-                </div>
-                <div className="LogInContent">
-                    <form className="Form" onSubmit={handleSubmit} >
-                        <label>
-                            <input className="username" type="text" placeholder={t("LogIn.username")} style={{textAlign: "center"}} onChange={e => setUserName(e.target.value)}/>
-                        </label>
-                        <label>
-                            <input className="password" type="password" placeholder={t("LogIn.password")} style={{textAlign: "center"}} onChange={e => setPassword(e.target.value)}/>
-                        </label>
-                        <button type="submit">
-                            {t("LogIn.submit")}
-                        </button>
-                    </form>
-                </div>
-                <div className="LogInInfo">
-                    <span>{t("LogIn.message")}</span>
-                </div>
+                <div className="LogInHeaderContainer">
+                    <div className="OEEasy">
+                        <img src={OEEasy} style={{width: "180px", height: "55px"}} alt="OEEasy" />
+                    </div>
+                    <Language heightTitle="80px" />
+                </div>    
             </div>
-            <div className="LogInContainer Second">
-            </div>
-            <div className="LogInContainer Third">
+            <div className="LogInMain">
+                <div className="LogInContainer First">
+                    <div className="LogInIco">
+                        <img src={User} alt="User" />
+                    </div>
+                    <div className="LogInContent">
+                        <form className="Form" onSubmit={handleSubmit} >
+                            <label>
+                                <input className="username" type="text" placeholder={t("LogIn.username")} style={{textAlign: "center"}} onChange={e => setUserName(e.target.value)}/>
+                            </label>
+                            <label>
+                                <input className="password" type="password" placeholder={t("LogIn.password")} style={{textAlign: "center"}} onChange={e => setPassword(e.target.value)}/>
+                            </label>
+                            <button type="submit">
+                                {t("LogIn.submit")}
+                            </button>
+                        </form>
+                    </div>
+                    <div className="LogInInfo">
+                        <span>{t("LogIn.message")}</span>
+                    </div>
+                </div>
+                <div className="LogInContainer Second"/>
+                <div className="LogInContainer Third"/>
             </div>
             <div className="LogInFooter">
                 <span>{t("LogIn.footerMessage")}</span>

@@ -23,20 +23,18 @@ const Language = ({heightTitle="50px"}) => {
 
     return (
         <>
-            <div className="language">
-                <div className="language-title" style={{height: heightTitle}}>
+            <li className="language">
+                <span className="language-title" style={{height: heightTitle}}>
                     <img src={Idiom} alt="idiom"/>
-                </div>
-                <div className="language-list">
+                </span>
+                <ul className="language-list">
                     {languages.map(language =>
-                        <div className="language-item" key={language.id}>
-                            <div className="language-name" onClick={() => {i18n.changeLanguage(language.name); sessionStorage.setItem('Language', language.name)}}>
-                                {language.name}
-                            </div>
-                        </div>
+                        <li className="language-item" key={language.id} onClick={() => {i18n.changeLanguage(language.name); sessionStorage.setItem('Language', language.name)}}>
+                            {language.name}
+                        </li>
                     )}
-                </div>
-            </div>
+                </ul>
+            </li>
         </>
     )
 }

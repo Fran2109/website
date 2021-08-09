@@ -1,7 +1,9 @@
 import './App.css';
 import IHBox from './../IHBox/IHBox';
 import LogIn from './../LogIn/LogIn';
-import { BrowserRouter, Route, Switch, useHistory, Redirect } from 'react-router-dom';
+import PageNotFound from './../PageNotFound/PageNotFound';
+import ConfigurationPage from './../ConfigurationPage/ConfigurationPage';
+import {  Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 
 function setToken(userToken) {
   sessionStorage.setItem('token', userToken);
@@ -19,7 +21,7 @@ function App() {
 
   return (
     <div className="principal">
-      <BrowserRouter>
+      <HashRouter>
         <Switch>
           <Route path="/Login" exact>
              <LogIn setToken={setToken} />
@@ -27,27 +29,22 @@ function App() {
           <Route path="/IHBox" exact>
             <IHBox />
           </Route>
-          <Route path="/">
-            {(token)?
+          <Route path="/IHBox/configuration" exact>
+            <ConfigurationPage />
+          </Route>
+          <Route path="/" exact>
+            {
+            sessionStorage.getItem("token")!=undefined?
               <Redirect to="IHBox" />
             :
               <Redirect to="Login" />
-            /* <>
-              {sessionStorage.getItem("token")!=undefined?
-              <Redirect to="IHBox" />
-              :
-              <Redirect to="Login" />
-              }
-            </> */
             }
-            {/* {sessionStorage.getItem("token")!=undefined?
-              <Redirect to="IHBox" />
-              :
-              <Redirect to="Login" />
-            } */}
+          </Route>
+          <Route>
+              <PageNotFound />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

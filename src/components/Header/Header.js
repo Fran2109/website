@@ -17,7 +17,7 @@ const Header = () => {
     const [users, setUsers] = useState([]);
     const [categories, setCategories] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
-
+    
     options = ItemGenerator(objectToGenerate);
     
     const getCategories = new Promise((resolve, reject) => {

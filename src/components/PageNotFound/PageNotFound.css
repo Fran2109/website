@@ -1,0 +1,40 @@
+.PageNotFound{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.PageNotFound img{
+    width: 100vw;
+}
+
+.PageNotFound .Message{
+    font-weight: bold;
+    line-height: normal;
+    font-weight: 900;
+    color: #2b2b2e;
+}
+.PageNotFound .Message h1{
+    font-size: 100px;
+}
+
+.PageNotFound .Message h3{
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.PageNotFound .Message h4{
+    font-size: 25px;
+}
+
+.PageNotFound .Message h4 a{
+    font-size: 25px;
+    color: #46b2e0;
+}
+
+.PageNotFound .Message h4 a:hover{
+    text-decoration: underline;
+    color: #1f8cba;
+}

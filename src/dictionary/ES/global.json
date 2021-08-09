@@ -4,7 +4,7 @@
         "password":"Contraseña",
         "submit":"Iniciar sesión",
         "message":"Más información en www.oeeasy.com",
-        "footerMessage":"Copyright © 2017 Ampexa - Todos los derechos reservados",
+        "footerMessage":"Copyright © 2021 4i Platform Inc. - Todos los derechos reservados",
         "alertEmpty":"Introduzca su nombre de usuario y contraseña",
         "alertWrong":"Usuario o contraseña invalido"
     },
@@ -21,5 +21,10 @@
         },
         "Trending": "Tendencia",
         "Time": "Hora sincronizada con el servidor"
+    },
+    "PageNotFound":{
+        "Message": "Esta página no se encuentra en nuestros servidores.",
+        "MessageOne": "Lo sentimos. ",
+        "MessageTwo": "Volver a la página principal."
     }
 }

@@ -4,7 +4,7 @@
         "password":"Password",
         "submit":"Login",
         "message":"Learn more at www.oeeasy.com",
-        "footerMessage":"Copyright © 2017 Ampexa - All rights reserved",
+        "footerMessage":"Copyright © 2021 4i Platform Inc. - All rights reserved",
         "alertEmpty":"Please enter your username and password",
         "alertWrong":"Invalid username or password"
     },
@@ -21,5 +21,10 @@
         },
         "Trending": "Trending",
         "Time": "Time sinchronized with server"
+    },
+    "PageNotFound":{
+        "Message": "That page was not found on our servers.",
+        "MessageOne": "We are sorry. ",
+        "MessageTwo": "Go back to the main page."
     }
 }

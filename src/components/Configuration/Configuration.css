@@ -7,11 +7,6 @@
     justify-content: center;
 }
 
-.configuration img{
-    transform: rotate(360deg);
-    transition: all 100s;
-}
-
 @media screen and (max-width: 1000px){
     .configuration{
         width: 100%;

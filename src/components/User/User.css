@@ -66,8 +66,6 @@ li.user > ul.userOptions > li:hover{
     li.user{
         width: auto;
         padding: 5px;
-    }
-    li.user span{
-        position: relative;
+        align-self: center;
     }
 }

@@ -16,7 +16,7 @@ const User = ({ listUsers }) => {
                 sessionStorage.getItem("token") !== null ?
                 null
                 :
-                history.replace("/")
+                history.replace("")
             }
             </>
             <span onClick={()=>setVisible(!visible)}>
@@ -28,7 +28,7 @@ const User = ({ listUsers }) => {
                         setId(0); 
                         setVisible(false); 
                         sessionStorage.removeItem("token");
-                        history.replace("/")}}>
+                        history.replace("/Login")}}>
                         {t("Header.User.Log-out")}
                     </li>
                 :
