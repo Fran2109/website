@@ -23,7 +23,7 @@ const Trending = () => {
   );
 
   return (
-    <div className="clock">
+    <div className="trending">
       <EuiPopover
         panelStyle={{ backgroundColor: "black", opacity: 0.8 }}
         button={button}
