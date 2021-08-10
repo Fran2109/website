@@ -4,12 +4,12 @@ import OEE from './../../assets/icons/OEE.svg';
 import Delays from './../../assets/icons/Delays.svg';
 import Reports from './../../assets/icons/Reports.svg';
 import Schedule from './../../assets/icons/Schedule.svg';
-import TreeView from './../TreeView/TreeView';
+import TreeView from '../TreeView/TreeView';
 import { useTranslation } from "react-i18next";
 
 const MenuItem = ({item, option}) => {
   const [visibility, setVisibility] = useState(false);
-  const[t/* , i18n */] = useTranslation("global");
+  const[t] = useTranslation("global");
   return(
     <>
       <li className="dropdown-parent" onMouseLeave={()=>setVisibility(false)}>

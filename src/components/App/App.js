@@ -1,8 +1,8 @@
 import './App.css';
-import IHBox from './../IHBox/IHBox';
-import LogIn from './../LogIn/LogIn';
-import PageNotFound from './../PageNotFound/PageNotFound';
-import ConfigurationPage from './../ConfigurationPage/ConfigurationPage';
+import IHBox from '../IHBox/IHBox.tsx';
+import LogIn from '../LogIn/LogIn';
+import PageNotFound from '../PageNotFound/PageNotFound.tsx';
+import ConfigurationPage from '../ConfigurationPage/ConfigurationPage';
 import {  Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 
 function setToken(userToken) {

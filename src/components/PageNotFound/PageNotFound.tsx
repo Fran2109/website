@@ -2,7 +2,7 @@ import "./PageNotFound.css";
 import wire from './../../assets/images/404.png';
 import {Link} from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import Header from './../Header/Header';
+import Header from '../Header/Header';
 const PageNotFound = () => {
     const[t] = useTranslation("global");
     return(

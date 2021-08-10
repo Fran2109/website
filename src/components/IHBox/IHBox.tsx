@@ -1,5 +1,5 @@
 import './IHBox.css';
-import Header from './../Header/Header';
+import Header from '../Header/Header';
 import Logo from './../../assets/images/logo.png';
 
 const IHBox = () => {
