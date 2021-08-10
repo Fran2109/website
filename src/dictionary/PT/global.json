@@ -22,6 +22,56 @@
         "Trending": "Tendência",
         "Time": "Tempo sincronizado com o servidor"
     },
+    "ConfigurationPage":{
+        "sectionOne":{
+            "title":"Configuração da plataforma",
+            "accountInformation":"Informação da conta",
+            "datasources":"Fontes de dados",
+            "tags":"Tag",
+            "securityprofiles":"Perfis",
+            "users":"Comercial",
+            "networkoverview":"Visão geral da rede",
+            "sendagentcommands":"Comando do Agente",
+            "mobile-devices":"Dispositivos móveis",
+            "audit":"Auditoria",
+            "backupConfiguration":"Restauração de backup",
+            "tagsexportconfiguration":"Exportação de dados brutos",
+            "systemnetworkconfiguration":"Configurações de rede do sistema",
+            "resettofactorydefaults":"Redefinir para os padrões de fábrica"
+        },
+        "sectionTwo":{
+            "title":"Núcleo de Informação",
+            "events":"Eventos",
+            "event-categories":"Categorias de Eventos",
+            "event-codes":"Códigos de Eventos",
+            "schedule.products":"Produtos",
+            "equipmentmodels":"Modelos de Equipamentos",
+            "equipments":"Equipamentos",
+            "equipments-events":"Eventos de Equipamentos",
+            "schedule.equipment-products":"Produtos de Equipamentos"
+        },
+        "sectionThree":{
+            "title":"Configuração OEE",
+            "oeeconfiguration":"Configuração OEE",
+            "delaycategories":"Atrasar categorias",
+            "delaycodes":"Códigos de Atraso",
+            "oee-event-codes":"Códigos de Atraso",
+            "products":"Produtos",
+            "lineproducts":"Produtos de Linha",
+            "shifts":"Turnos",
+            "resettofactorydefaultsoee":"Redefinir para os padrões de fábrica",
+            "usermanualoee":"Manual do usuário"
+        },
+        "sectionFour":{
+            "title":"Ferramentas",
+            "screenbuilder":"Construtor de mímica"
+        },
+        "sectionFive":{
+            "title":"Cerca de",
+            "about":"Cerca de",
+            "howto":"Como"
+        }
+    },
     "PageNotFound":{
         "Message": "Essa página não foi encontrada em nossos servidores.",
         "MessageOne": "Nos desculpe. ",

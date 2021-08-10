@@ -22,6 +22,56 @@
         "Trending": "Trending",
         "Time": "Time sinchronized with server"
     },
+    "ConfigurationPage":{
+        "sectionOne":{
+            "title":"Platform Configuration",
+            "accountInformation":"Account Information",
+            "datasources":"Data Sources",
+            "tags":"Tags",
+            "securityprofiles":"Profiles",
+            "users":"Users",
+            "networkoverview":"Network Overview",
+            "sendagentcommands":"Agent Command",
+            "mobile-devices":"Mobile Devices",
+            "audit":"Audit",
+            "backupConfiguration":"Backup/Restore",
+            "tagsexportconfiguration":"Raw Data Export",
+            "systemnetworkconfiguration":"System Network Configurations",
+            "resettofactorydefaults":"Reset to Factory Defaults"
+        },
+        "sectionTwo":{
+            "title":"Information Core",
+            "events":"Events",
+            "event-categories":"Event Categories",
+            "event-codes":"Event Codes",
+            "schedule.products":"Products",
+            "equipmentmodels":"Equipment Models",
+            "equipments":"Equipments",
+            "equipments-events":"Equipments Events",
+            "schedule.equipment-products":"Equipments Products"
+        },
+        "sectionThree":{
+            "title":"OEE Configuration",
+            "oeeconfiguration":"OEE Configuration",
+            "delaycategories":"Delay Categories",
+            "delaycodes":"Delay Codes",
+            "oee-event-codes":"Events Codes",
+            "products":"Products",
+            "lineproducts":"Line Products",
+            "shifts":"Shifts",
+            "resettofactorydefaultsoee":"Reset to Factory Defaults",
+            "usermanualoee":"User Manual"
+        },
+        "sectionFour":{
+            "title":"Tools",
+            "screenbuilder":"Mimic Builder"
+        },
+        "sectionFive":{
+            "title":"About",
+            "about":"About",
+            "howto":"How To"
+        }
+    },
     "PageNotFound":{
         "Message": "That page was not found on our servers.",
         "MessageOne": "We are sorry. ",

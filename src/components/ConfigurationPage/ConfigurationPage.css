@@ -55,7 +55,7 @@
     text-align: -webkit-match-parent;
 }
 
-.ConfigurationPage .ConfigurationPageContent .ConfigurationLeft .ConfigurationLeftContent ul.Options li a{
+.ConfigurationPage .ConfigurationPageContent .ConfigurationLeft .ConfigurationLeftContent ul.Options a li{
     text-shadow: 0 1px 0 rgb(255 255 255 / 50%);
     font-size: 14px;
 }
@@ -65,7 +65,7 @@
     background-color: #46b2e0;
 }
 
-.ConfigurationPage .ConfigurationPageContent .ConfigurationLeft .ConfigurationLeftContent ul.Options li:hover > a{
+.ConfigurationPage .ConfigurationPageContent .ConfigurationLeft .ConfigurationLeftContent ul.Options a:hover{
     color: #ffffff;
 }
 
