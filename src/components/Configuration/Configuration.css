@@ -1,5 +1,9 @@
-.configuration{
+a{
     width: 10%;
+    margin-right: 20px;
+}
+
+a .configuration{
     height: 50px;
     display: flex;
     flex-direction: column;
@@ -7,8 +11,13 @@
     justify-content: center;
 }
 
+a .configuration:hover{
+    background-color: #3789af;
+}
+
 @media screen and (max-width: 1000px){
-    .configuration{
+    a{
         width: 100%;
+        margin-right: 0px;
     }
 }

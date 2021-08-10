@@ -46,7 +46,7 @@ const LogIn = ({ setToken }) => {
             <div className="LogInHeader">
                 <div className="LogInHeaderContainer">
                     <div className="OEEasy">
-                        <img src={FourIPlatform} style={{width: "240px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="OEEasy" />
+                        <img src={FourIPlatform} style={{width: "240px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
                     </div>
                     <Language heightTitle="80px" />
                 </div>    

@@ -1,5 +1,4 @@
 import React from 'react';
-import '@elastic/eui/dist/eui_theme_amsterdam_light.css';
 import './TreeView.css';
 import {EuiTreeView} from '@elastic/eui';
 

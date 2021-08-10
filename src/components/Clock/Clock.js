@@ -32,19 +32,19 @@ const Clock = () => {
   }, [tick])
   
   const button = (
-    <EuiButton style={{backgroundColor: "#479dc4"}} onMouseEnter={onButtonClick} onMouseLeave={closePopover}>
+    <EuiButton style={{backgroundColor: "transparent"}} >
       <p style={{color: "white", fontWeight: "bold"}}>{time}</p>
     </EuiButton>
   );
 
   return (
-    <div className="clock">
+    <div className="clock" onMouseEnter={onButtonClick} onMouseLeave={closePopover}>
       <EuiPopover
-        panelStyle={{ backgroundColor: "black", opacity: 0.8 }}
+        panelStyle={{ opacity: 0.8 }}
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
-        <EuiText style={{ width: 120, textAlign: "center", color: "white", fontSize:12 }}>
+        <EuiText style={{ width: 120, textAlign: "center", color: "white", fontSize:12, margin:"2px 10px" }}>
           {t("Header.Time")}
         </EuiText>
       </EuiPopover>

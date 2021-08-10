@@ -16,7 +16,7 @@ const Trending = () => {
 
   const button = (
     <EuiButton style={{backgroundColor: "transparent"}} >
-        <p style={{color: "white", fontWeight: "bold", }}>
+        <p style={{color: "white", fontWeight: "bold"}}>
             <img src={Graphic} alt="graphic"/>
         </p>
     </EuiButton>
@@ -25,11 +25,11 @@ const Trending = () => {
   return (
     <div className="trending" onMouseEnter={onButtonClick} onMouseLeave={closePopover}>
       <EuiPopover
-        panelStyle={{ backgroundColor: "black", opacity: 0.8 }}
+        panelStyle={{ opacity: 0.8 }}
         button={button}
         isOpen={isPopoverOpen}
         closePopover={closePopover}>
-        <EuiText style={{ width: 80, textAlign: "center", color: "white", fontSize:12 }}>
+        <EuiText style={{ textAlign: "center", color: "white", fontSize:12 }}>
             {t("Header.Trending")}
         </EuiText>
       </EuiPopover>

@@ -18,11 +18,11 @@ const Configuration = () => {
     /* setInterval(() => {random = Math.random()*10; setRotate(random)}, 5000); */
     let history = useHistory();
     return(
-        <div className="configuration">
-            <Link to={"/IHBox/configuration"}>
+        <Link to={"/IHBox/configuration"}>
+            <div className="configuration">
                 {<img src={Gear} alt="gear" style={{transform: "rotate("+rotate*360+"deg)", transition: "all 50s"}}/>}
-            </Link>
-        </div>
+            </div>
+        </Link>
     )
 }
 

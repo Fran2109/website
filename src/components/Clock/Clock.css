@@ -8,6 +8,10 @@
     align-self: stretch;
 }
 
+.clock:hover{
+    background-color: #3789af;
+}
+
 .euiButton:hover:not([class*='isDisabled']), .euiButton:focus {
     text-decoration: none;
 }
