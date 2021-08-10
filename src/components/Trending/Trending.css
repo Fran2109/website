@@ -6,6 +6,11 @@
     justify-content: center;
 }
 
+.trending:hover{
+    background-color: #3789af;
+    cursor: pointer;
+}
+
 .euiButton .euiButton__content {
     padding: 0px;
 }

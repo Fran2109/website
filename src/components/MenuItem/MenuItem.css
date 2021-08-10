@@ -55,18 +55,18 @@ li.dropdown-parent > ul.dropdown-menu{
 }
 
 @media screen and (max-width: 1000px){
-    li.user{
+    /* li.user{
         width: auto;
-    }
+    } */
 
     li.dropdown-parent > ul.dropdown-menu-visible{
         top: 0px;
     }
 
-    li.user:hover > ul.userOptions{
+    /* li.user:hover > ul.userOptions{
         display: none;
     }
     li.user span{
         position: relative;
-    }
+    } */
 }

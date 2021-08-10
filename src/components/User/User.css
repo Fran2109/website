@@ -10,7 +10,7 @@ li.user{
 li.user span{
     height: 50px;
     width: auto;
-    padding-right: 15px;
+    padding: 15px;
     font-weight: bold;
     display:flex;
     flex-direction:row;

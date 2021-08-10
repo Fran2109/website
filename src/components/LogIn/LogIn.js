@@ -2,7 +2,7 @@ import './LogIn.css';
 import User from './../../assets/icons/user.png';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import OEEasy from './../../assets/icons/OEEasyLogo.png';
+import FourIPlatform from './../../assets/images/4IPlatform.png';
 import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
@@ -46,7 +46,7 @@ const LogIn = ({ setToken }) => {
             <div className="LogInHeader">
                 <div className="LogInHeaderContainer">
                     <div className="OEEasy">
-                        <img src={OEEasy} style={{width: "180px", height: "55px"}} alt="OEEasy" />
+                        <img src={FourIPlatform} style={{width: "240px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="OEEasy" />
                     </div>
                     <Language heightTitle="80px" />
                 </div>    

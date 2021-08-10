@@ -20,29 +20,16 @@ const User = ({ listUsers }) => {
             }
             </>
             <span onClick={()=>setVisible(!visible)}>
-                <img src={UserIco} alt="user"/>{listUsers.hasOwnProperty(id)? id===0? t("Header.User.Logged-out") : sessionStorage.getItem("token") : null}
+                <img src={UserIco} alt="user"/>{listUsers.hasOwnProperty(id)? sessionStorage.getItem("token") : null}
             </span>
             <ul className={visible? "userOptions visible" : "userOptions hidden"}>
-                {id!==0?
-                    <li onClick={()=>{
-                        setId(0); 
-                        setVisible(false); 
-                        sessionStorage.removeItem("token");
-                        history.replace("/Login")}}>
-                        {t("Header.User.Log-out")}
-                    </li>
-                :
-                    listUsers.map((userOption) => {
-                        return( 
-                            userOption.id!==0?
-                            <li onClick={()=>{setId(userOption.id); setVisible(false)}} key={userOption.id}>
-                                {userOption.name}
-                            </li>
-                            :
-                            null
-                        )
-                    })
-                }
+                <li onClick={()=>{
+                    setId(0); 
+                    setVisible(false); 
+                    sessionStorage.removeItem("token");
+                    history.replace("/Login")}}>
+                    {t("Header.User.Log-out")}
+                </li>
             </ul>
         </li>
     );

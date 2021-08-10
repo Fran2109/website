@@ -15,7 +15,7 @@ const Trending = () => {
   const closePopover = () => setIsPopoverOpen(false);
 
   const button = (
-    <EuiButton style={{backgroundColor: "#479dc4"}} onMouseEnter={onButtonClick} onMouseLeave={closePopover}>
+    <EuiButton style={{backgroundColor: "transparent"}} >
         <p style={{color: "white", fontWeight: "bold", }}>
             <img src={Graphic} alt="graphic"/>
         </p>
@@ -23,7 +23,7 @@ const Trending = () => {
   );
 
   return (
-    <div className="trending">
+    <div className="trending" onMouseEnter={onButtonClick} onMouseLeave={closePopover}>
       <EuiPopover
         panelStyle={{ backgroundColor: "black", opacity: 0.8 }}
         button={button}

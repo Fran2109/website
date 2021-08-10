@@ -75,9 +75,9 @@ const Header = () => {
                 <div className="headerRight">
                     <Trending/>
                     <User listUsers={users}/>
-                    {/* <Clock/>
+                    <Clock/>
                     <Language/>
-                    <Configuration/> */}
+                    <Configuration/>
                 </div>
             </>
         )
