@@ -8,7 +8,7 @@ const PageNotFound = () => {
     return(
         <div className="PageNotFound">
             <Header/>
-            <img src={wire}/>
+            <img src={wire} alt="404"/>
             <div className="Message">
                 <h1>404</h1>
                 <h3>{t("PageNotFound.Message")}</h3>

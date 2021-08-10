@@ -12,6 +12,10 @@
     background-color: #3789af;
 }
 
+.euiPopover__panel:focus{
+    outline: none;
+}
+
 .euiButton:hover:not([class*='isDisabled']), .euiButton:focus {
     text-decoration: none;
 }

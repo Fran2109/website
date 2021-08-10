@@ -34,7 +34,7 @@ function App() {
           </Route>
           <Route path="/" exact>
             {
-            sessionStorage.getItem("token")!=undefined?
+            sessionStorage.getItem("token")!==undefined?
               <Redirect to="IHBox" />
             :
               <Redirect to="Login" />

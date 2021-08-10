@@ -54,7 +54,7 @@ const LogIn = ({ setToken }) => {
             <div className="LogInMain">
                 <div className="LogInContainer First">
                     <div className="LogInIco">
-                        <img src={User} alt="User" />
+                        <img src={User} alt="User"/>
                     </div>
                     <div className="LogInContent">
                         <form className="Form" onSubmit={handleSubmit} >

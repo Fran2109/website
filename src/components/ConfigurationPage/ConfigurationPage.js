@@ -66,17 +66,22 @@ const ConfigurationPage = () => {
                 <div className="ConfigurationLeft">
                     {configurations.map(configuration => {
                         return(
-                            <div key={configuration.id} className="ConfigurationLeftContent" style={configuration.previous=="ConfigurationPage.sectionFive."? {marginBottom:"60px"} : null}>
+                            <div key={configuration.id} className="ConfigurationLeftContent" style={configuration.previous==="ConfigurationPage.sectionFive."? {marginBottom:"60px"} : null}>
                                 <h4>{t(configuration.previous+configuration.name)}</h4>
                                 <ul className="Options">
                                     {configuration.children.map(option => {
                                         return(
                                             <>
-                                                <Link to={`/configuration/${option.name}`}>
-                                                    <li key={option.id}>
+                                                <Link to={`/configuration/${option.name}`} key={option.id}>
+                                                    <li >
                                                         {t(configuration.previous+option.name)}
                                                     </li>    
                                                 </Link>
+{/*                                                 <li key={option.id}>
+                                                    <Link to={`/configuration/${option.name}`}>
+                                                        {t(configuration.previous+option.name)}
+                                                    </Link>
+                                                </li> */}
                                             </>
                                         )
                                     })}

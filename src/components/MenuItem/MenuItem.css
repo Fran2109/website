@@ -12,10 +12,9 @@ li.dropdown-parent button{
 li.dropdown-parent > span{
     height: 50px;
     font-weight: bold;
-    padding: 5px 5px;
     text-decoration: none;
     display: block;
-
+    padding: 0px 25px;
     display:flex;
     justify-content:flex-start;
     align-items:center;
@@ -62,11 +61,4 @@ li.dropdown-parent > ul.dropdown-menu{
     li.dropdown-parent > ul.dropdown-menu-visible{
         top: 0px;
     }
-
-    /* li.user:hover > ul.userOptions{
-        display: none;
-    }
-    li.user span{
-        position: relative;
-    } */
 }

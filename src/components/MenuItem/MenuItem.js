@@ -13,7 +13,7 @@ const MenuItem = ({item, option}) => {
   return(
     <>
       <li className="dropdown-parent" onMouseLeave={()=>setVisibility(false)}>
-        <span style={{padding:"0px 25px"}}onClick={()=>setVisibility(!visibility)}>
+        <span onClick={()=>setVisibility(!visibility)}>
           
           <img src={item==="OEE" ? OEE : item==="Delays"? Delays : item==="Reports"? Reports : Schedule } alt=""/>
           {t("Header.Label."+item.toString()+"-label")}

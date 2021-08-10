@@ -5,8 +5,6 @@
     width: 100%;
     background-color: #479dc4;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-
-    /* FLEX */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -16,8 +14,6 @@
 .header .headerLeft{
     width:40%;
     list-style: none;
-
-    /* FLEX */
     display: flex;
     flex-wrap: wrap;
 }
@@ -62,7 +58,7 @@
     
     .header .headerLeft{
         flex-direction: column;
-        width:80%;
+        width: 70%;
     }
 
     .header .headerLeft .items{
@@ -70,11 +66,10 @@
     }
 
     .header .headerRight{
-        width: 15%;
+        width: 20%;
         height: auto;
         flex-direction: column;
         align-items: center;
-        /* justify-content: center; */
     }
 }
 
