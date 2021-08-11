@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import UserIco from './../../assets/icons/user.png';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
+import { IoPersonSharp } from "react-icons/io5";
 
 const User = ({ listUsers }) => {
     const[t] = useTranslation("global");
@@ -16,11 +17,12 @@ const User = ({ listUsers }) => {
                 sessionStorage.getItem("token") !== null ?
                 null
                 :
-                history.replace("")
+                history.replace("/Login")
             }
             </>
             <span onClick={()=>setVisible(!visible)}>
-                <img src={UserIco} alt="user"/>{listUsers.hasOwnProperty(id)? sessionStorage.getItem("token") : null}
+                <IoPersonSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
+                <p>{listUsers.hasOwnProperty(id)? sessionStorage.getItem("token") : null}</p>
             </span>
             <ul className={visible? "userOptions visible" : "userOptions hidden"}>
                 <li onClick={()=>{

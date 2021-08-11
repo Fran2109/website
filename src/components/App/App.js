@@ -35,9 +35,15 @@ function App() {
           <Route path="/" exact>
             {
             sessionStorage.getItem("token")!==undefined?
+            <>
               <Redirect to="IHBox" />
+              {console.log("true")}
+            </>
             :
+            <>
               <Redirect to="Login" />
+              {console.log("false")}
+            </>
             }
           </Route>
           <Route>

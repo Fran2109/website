@@ -6,6 +6,7 @@ import FourIPlatform from './../../assets/images/4IPlatform.png';
 import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
+import { IoPersonSharp } from "react-icons/io5";
 
 async function loginUser(credentials) {
     return(credentials.username)
@@ -44,7 +45,7 @@ const LogIn = ({ setToken }) => {
     return (
         <div className="LogIn">
             <div className="LogInHeader">
-                <div className="LogInHeaderContainer">
+                <div className="LogInHeaderContainer" style={{color: "black"}}>
                     <div className="OEEasy">
                         <img src={FourIPlatform} style={{width: "240px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
                     </div>
@@ -54,7 +55,7 @@ const LogIn = ({ setToken }) => {
             <div className="LogInMain">
                 <div className="LogInContainer First">
                     <div className="LogInIco">
-                        <img src={User} alt="User"/>
+                        <IoPersonSharp style={{width:"60px", height:"60px", color:"white"}} />
                     </div>
                     <div className="LogInContent">
                         <form className="Form" onSubmit={handleSubmit} >

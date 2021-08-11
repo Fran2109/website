@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '@elastic/eui/dist/eui_theme_amsterdam_dark.css';
+/* import '@ionic/core/css/core.css';
+import '@ionic/core/css/ionic.bundle.css'; */
 import './index.css';
 import App from './components/App/App.js';
 import { I18nextProvider } from "react-i18next";
@@ -8,6 +10,7 @@ import i18next from "i18next";
 import global_ES from "./dictionary/ES/global.json"
 import global_EN from "./dictionary/EN/global.json"
 import global_PT from "./dictionary/PT/global.json"
+
 i18next.init({
   interpolation: { escapeValue: false },
   lng:

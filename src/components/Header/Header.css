@@ -4,26 +4,26 @@
     height: 50px;
     width: 100%;
     background-color: #479dc4;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .header .headerLeft{
-    width:40%;
+    width:auto;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
 }
 
 .header .headerLeft .items{
-    width:25%;
+    width:auto;
 }
 
 .header .headerRight{
-    width: 40%;
+    width: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;

@@ -1,11 +1,8 @@
 import React, { /* useEffect, */useState } from 'react';
 import './MenuItem.css';
-import OEE from './../../assets/icons/OEE.svg';
-import Delays from './../../assets/icons/Delays.svg';
-import Reports from './../../assets/icons/Reports.svg';
-import Schedule from './../../assets/icons/Schedule.svg';
 import TreeView from '../TreeView/TreeView';
 import { useTranslation } from "react-i18next";
+import { IoBarChartSharp, IoOptions } from "react-icons/io5";
 
 const MenuItem = ({item, option}) => {
   const [visibility, setVisibility] = useState(false);
@@ -15,8 +12,11 @@ const MenuItem = ({item, option}) => {
       <li className="dropdown-parent" onMouseLeave={()=>setVisibility(false)}>
         <span onClick={()=>setVisibility(!visibility)}>
           
-          <img src={item==="OEE" ? OEE : item==="Delays"? Delays : item==="Reports"? Reports : Schedule } alt=""/>
-          {t("Header.Label."+item.toString()+"-label")}
+          {item==="Schedule" ? 
+            <IoOptions style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
+          : 
+            <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />}
+          <p>{t("Header.Label."+item.toString()+"-label")}</p>
 
         </span>
         <ul className={visibility? "dropdown-menu visible" : "dropdown-menu hidden"}>

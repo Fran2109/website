@@ -2,6 +2,7 @@ import './Language.css';
 import Idiom from './../../assets/icons/idiom.png';
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from 'react';
+import { IoLanguageSharp } from "react-icons/io5";
 
 const Language = ({heightTitle="50px"}) => {
     const [languages, setLanguages] = useState([]); 
@@ -25,7 +26,7 @@ const Language = ({heightTitle="50px"}) => {
         <>
             <li className="language">
                 <span className="language-title" style={{height: heightTitle}}>
-                    <img src={Idiom} alt="idiom"/>
+                    <IoLanguageSharp style={{width:"20px", height:"20px" }}/>
                 </span>
                 <ul className="language-list">
                     {languages.map(language =>

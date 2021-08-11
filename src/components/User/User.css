@@ -1,5 +1,5 @@
 li.user{
-    width: 15%;
+    width: auto;
     color: #fff;
     display: flex;
     flex-direction: column; 
@@ -17,11 +17,6 @@ li.user span{
     align-items:center;
 }
 
-li.user span img{
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 li.user:hover{
     cursor: pointer;
 }
@@ -31,7 +26,8 @@ li.user:hover >  span{
 }
 
 li.user > ul.userOptions{
-    position: relative;
+    position: absolute;
+    top: 50px;
     min-width: 160px;
     list-style-type: none;
     background-color: #479dc4;
@@ -73,5 +69,7 @@ li.user > ul.userOptions > li:hover{
     li.user > ul.userOptions{
         min-width: 0px;
         width: 100px;
+        position: relative;
+        top: 0px;
     }
 }

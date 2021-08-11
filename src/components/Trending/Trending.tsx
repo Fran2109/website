@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './Trending.css';
 import { EuiPopover, EuiButton, EuiText } from '@elastic/eui';
-import Graphic from './../../assets/icons/graphic.png';
+/* import Graphic from './../../assets/icons/graphic.svg'; */
 import { useTranslation } from "react-i18next";
+import { IoStatsChart } from "react-icons/io5";
 
 const Trending = () => {
 
@@ -17,7 +18,7 @@ const Trending = () => {
   const button = (
     <EuiButton style={{backgroundColor: "transparent"}} >
         <p style={{color: "white", fontWeight: "bold"}}>
-            <img src={Graphic} alt="graphic"/>
+          <IoStatsChart style={{width:"20px", height:"20px", color:"white"}} />
         </p>
     </EuiButton>
   );
