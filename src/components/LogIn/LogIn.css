@@ -57,7 +57,7 @@
     border-style: solid;
     border-width: 0.5px;
     border-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
 
     display: flex;
     flex-direction: column;
@@ -65,22 +65,6 @@
     align-items: center;
 }
 
-.LogIn .LogInMain .First{
-    position: relative;
-    z-index: 3;
-}
-
-.LogIn .LogInMain .Second{
-    position: absolute;
-    transform: rotate(3deg);
-    z-index: 2;
-}
-
-.LogIn .LogInMain .Third{
-    position: absolute;
-    transform: rotate(-2deg);
-    z-index: 1;
-}
 
 .LogIn .LogInMain .LogInContainer .LogInIco{
     margin-top: 20px;
@@ -91,8 +75,8 @@
     border-radius: 50%;
     border-style: solid;
     border-width: 0.5px;
-    border-color: #fff;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    border-color: #fff;/* 
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5); */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,11 +114,11 @@
 }
 
 .LogIn .LogInMain .LogInContainer .LogInContent .Form input.username{
-    border-radius: 10px 10px 0px 0px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .LogIn .LogInMain .LogInContainer .LogInContent .Form input.password{
-    border-radius: 0px 0px 10px 10px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .LogIn .LogInMain .LogInContainer .LogInContent .Form button{

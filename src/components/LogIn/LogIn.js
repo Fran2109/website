@@ -74,8 +74,6 @@ const LogIn = ({ setToken }) => {
                         <span>{t("LogIn.message")}</span>
                     </div>
                 </div>
-                <div className="LogInContainer Second"/>
-                <div className="LogInContainer Third"/>
             </div>
             <div className="LogInFooter">
                 <span>{t("LogIn.footerMessage")}</span>

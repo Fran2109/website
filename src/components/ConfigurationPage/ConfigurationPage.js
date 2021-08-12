@@ -3,8 +3,12 @@ import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
+import { IoSettingsSharp } from "react-icons/io5";
+
 const ConfigurationPage = () => {
     const [configurations, setConfigurations] = useState([]);
+    const [width, setWidth] = useState(window.innerWidth);
+    const [visibility, setVisibility] = useState(false);
     const[t] = useTranslation("global");
     const getConfigurations = new Promise((resolve, reject) => {
         resolve([ 
@@ -59,39 +63,70 @@ const ConfigurationPage = () => {
             setConfigurations(configurations);
         });
     }, [])
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.innerWidth !== width) {
+                setWidth(window.innerWidth);
+            }
+        }, 100);
+        return () => clearInterval(interval);
+      }, []);
+
+    const OptionsConfiguration = () => {
+        return(
+            <div className="ConfigurationLeft">
+                {configurations.map(configuration => {
+                    return(
+                        <div key={configuration.id} className="ConfigurationLeftContent" style={configuration.previous==="ConfigurationPage.sectionFive."? {marginBottom:"60px"} : null}>
+                            <h4>{t(configuration.previous+configuration.name)}</h4>
+                            <ul className="Options">
+                                {configuration.children.map(option => {
+                                    return(
+                                        <>
+                                            <Link to={`/configuration/${option.name}`} key={option.id}>
+                                                <li >
+                                                    {t(configuration.previous+option.name)}
+                                                </li>    
+                                            </Link>
+                                        </>
+                                    )
+                                })}
+                            </ul>
+                        </div>
+                    );
+                })}
+            </div>
+        )
+    }
     return(
         <div className="ConfigurationPage">
             <Header/>
             <div className="ConfigurationPageContent">
-                <div className="ConfigurationLeft">
-                    {configurations.map(configuration => {
-                        return(
-                            <div key={configuration.id} className="ConfigurationLeftContent" style={configuration.previous==="ConfigurationPage.sectionFive."? {marginBottom:"60px"} : null}>
-                                <h4>{t(configuration.previous+configuration.name)}</h4>
-                                <ul className="Options">
-                                    {configuration.children.map(option => {
-                                        return(
-                                            <>
-                                                <Link to={`/configuration/${option.name}`} key={option.id}>
-                                                    <li >
-                                                        {t(configuration.previous+option.name)}
-                                                    </li>    
-                                                </Link>
-{/*                                                 <li key={option.id}>
-                                                    <Link to={`/configuration/${option.name}`}>
-                                                        {t(configuration.previous+option.name)}
-                                                    </Link>
-                                                </li> */}
-                                            </>
-                                        )
-                                    })}
-                                </ul>
-                            </div>
-                        );
-                    })}
-                </div>
+                { width > 1000?
+                <>
+                    <OptionsConfiguration />
+                </>
+                :
+                <>
+                    <IoSettingsSharp onClick={()=>setVisibility(!visibility)} style={{
+                                position: "absolute",
+                                top: "0px",
+                                left: "95vw",
+                                margin:"10px", 
+                                color: "black"}}/>
+                    {visibility?
+                        <>
+                            
+                            <OptionsConfiguration />
+                        </>
+                        :
+                            null
+                    }
+                </>
+                }
                 <div className="ConfigurationRight">
-
+                    
                 </div>
             </div>
         </div>

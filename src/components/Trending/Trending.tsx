@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 import './Trending.css';
 import { EuiPopover, EuiButton, EuiText } from '@elastic/eui';
-/* import Graphic from './../../assets/icons/graphic.svg'; */
 import { useTranslation } from "react-i18next";
 import { IoStatsChart } from "react-icons/io5";
 
 const Trending = () => {
 
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
-  const[t/* , i18n */] = useTranslation("global");
+  const[t] = useTranslation("global");
 
   const onButtonClick = () =>
     setIsPopoverOpen((isPopoverOpen) => !isPopoverOpen);
