@@ -3,6 +3,7 @@ import IHBox from '../IHBox/IHBox.tsx';
 import LogIn from '../LogIn/LogIn';
 import PageNotFound from '../PageNotFound/PageNotFound.tsx';
 import ConfigurationPage from '../ConfigurationPage/ConfigurationPage';
+import Overview from './../Overview/Overview.tsx';
 import {  Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 
 function setToken(userToken) {
@@ -28,6 +29,9 @@ function App() {
           </Route>
           <Route path="/IHBox" exact>
             <IHBox />
+          </Route>
+          <Route path="/IHBox/oeeOverview" exact>
+            <Overview />
           </Route>
           <Route path="/IHBox/configuration" exact>
             <ConfigurationPage />

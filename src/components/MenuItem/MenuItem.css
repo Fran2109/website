@@ -33,12 +33,11 @@ li.dropdown-parent span img{
 
 li.dropdown-parent > ul.dropdown-menu{
     color: rgb(0, 0, 0);
-    min-width: 220px;
+    min-width: 180px;
     position: absolute;
     top: 50px;
     list-style-type: none;
     background-color: #ffffff;
-    padding: 5px 0px 5px 2px;
     border: 1px solid #ccc;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
@@ -51,6 +50,19 @@ li.dropdown-parent > ul.dropdown-menu{
 .hidden{
     display: none;
 }
+
+li.dropdown-parent > ul.dropdown-menu > a > li.Options{
+    text-align: center;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-shadow: none;
+}
+
+li.dropdown-parent > ul.dropdown-menu > a:hover > li.Options{
+    background-color: #3789af;
+    color: rgb(255, 255, 255);
+}
+
 
 @media screen and (max-width: 1000px){
     li.dropdown-parent > ul.dropdown-menu{
