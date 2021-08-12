@@ -22,10 +22,21 @@ const Header = () => {
     
     const getCategories = new Promise((resolve, reject) => {
         resolve([ 
-            {id: "1", name: "OEE", children: options[0] }, 
-            {id: "2", name: "Delays", children: options[1] }, 
-            {id: "3", name: "Schedule", children: options[2] }, 
-            {id: "4", name: "Reports", children: options[3] } ])
+            {id: "1", name: "OEE", children: [
+                {id: "5", name: "Overview", url:"/IHBox/oeeOverview" } ] },
+            {id: "2", name: "Delays", children: [
+                {id: "6", name: "Declare" },
+                {id: "7", name: "Manager" }
+            ] },
+            {id: "3", name: "Schedule", url:"IHBox/schedule" }, 
+            {id: "4", name: "Reports", children: [
+                {id: "8", name: "OEE" },
+                {id: "9", name: "Losses" },
+                {id: "10", name: "Events" },
+                {id: "11", name: "Deleys" },
+                {id: "12", name: "Batch" },
+                {id: "13", name: "Last 24 Hours" }                
+            ] } ])
     }); 
 
     const getUsers = new Promise((resolve, reject) => {

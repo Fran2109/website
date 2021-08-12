@@ -54,6 +54,7 @@ li.dropdown-parent > ul.dropdown-menu{
 li.dropdown-parent > ul.dropdown-menu > a > li.Options{
     text-align: center;
     font-size: 18px;
+    padding: 5px 0px ;
     color: rgb(0, 0, 0);
     text-shadow: none;
 }

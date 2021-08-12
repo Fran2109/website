@@ -22,7 +22,7 @@ const MenuItem = ({item, option}) => {
               <>
                 <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{t("Header.Label."+item.toString()+"-label")}</p>
-                {/* <IoTriangle style={{width:"8px", height:"8px", color:"rgba(62, 110, 184, 0.37)", transform: "rotate(180deg)", marginLeft:"5px"}}/> */}
+                <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"5px" }}/>
               </>
           }
         
@@ -36,7 +36,10 @@ const MenuItem = ({item, option}) => {
               </li> 
             </Link>
             : 
-            <TreeView list={option.children}/>}
+            option.children!==undefined ?
+            <TreeView list={option.children}/>
+            :
+            null}
         </ul>
       </li>
     </>

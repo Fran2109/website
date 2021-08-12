@@ -4,7 +4,11 @@
         "password":"Contraseña",
         "submit":"Iniciar sesión",
         "message":"Más información en www.oeeasy.com",
-        "footerMessage":"Copyright © 2021 4i Platform Inc. - Todos los derechos reservados",
+        "footerMessage":{
+            "one":"Copyright © 2021 ",
+            "two": "4i Platform Inc. ",
+            "three": "Todos los derechos reservados"
+        },
         "alertEmpty":"Introduzca su nombre de usuario y contraseña",
         "alertWrong":"Usuario o contraseña invalido"
     },

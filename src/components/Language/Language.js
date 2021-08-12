@@ -1,13 +1,12 @@
 import './Language.css';
-import Idiom from './../../assets/icons/idiom.png';
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from 'react';
-import { IoLanguageSharp } from "react-icons/io5";
+import { IoLanguageSharp, IoTriangle } from "react-icons/io5";
 
 const Language = ({heightTitle="50px"}) => {
     const [languages, setLanguages] = useState([]); 
-    const[t, i18n] = useTranslation("global");
-
+    const [t, i18n] = useTranslation("global");
+    const [visibility, setVisibility] = useState(false);
     const getLanguages = new Promise((resolve, reject) => {
         resolve([
             { id: 0, name: "ES" },
@@ -24,13 +23,17 @@ const Language = ({heightTitle="50px"}) => {
 
     return (
         <>
-            <li className="language">
-                <span className="language-title" style={{height: heightTitle}}>
+            <li className="language" onMouseLeave={()=>setVisibility(false)}>
+                <span className="language-title" style={{height: heightTitle}} onClick={()=>{setVisibility(!visibility)}}>
                     <IoLanguageSharp style={{width:"20px", height:"20px" }}/>
+                    <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"5px" }}/>
                 </span>
-                <ul className="language-list">
+                <ul className={visibility? "language-list visible" : "language-list hidden"}>
                     {languages.map(language =>
-                        <li className="language-item" key={language.id} onClick={() => {i18n.changeLanguage(language.name); sessionStorage.setItem('Language', language.name)}}>
+                        <li className="language-item" key={language.id} onClick={() => {
+                                                                    i18n.changeLanguage(language.name); 
+                                                                    sessionStorage.setItem('Language', language.name);
+                                                                    setVisibility(false)}}>
                             {language.name}
                         </li>
                     )}

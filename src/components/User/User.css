@@ -21,9 +21,10 @@ li.user:hover{
     cursor: pointer;
 }
 
-li.user:hover >  span{
+li.user:hover > span{
     background-color: #3789af;
 }
+
 
 li.user > ul.userOptions{
     position: absolute;
