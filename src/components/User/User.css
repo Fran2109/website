@@ -56,7 +56,7 @@ li.user > ul.userOptions > li{
 }
 
 li.user > ul.userOptions > li:hover{
-    background-color:#3789af;
+    background-image: linear-gradient(to bottom, #46b2e0, #30a9dc);
     border-radius: 2px;
     color: #ffffff;
 }

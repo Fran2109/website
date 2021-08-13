@@ -8,7 +8,6 @@
     border:none;
     background-color: #479dc4;
     text-decoration: none;
-    padding: 0px;
     border-radius: 0px;
     
     display: flex;
@@ -17,15 +16,12 @@
 }
 
 .TreeList button span{
-    padding:5px;
+    /* padding:5px; */
+    /* margin: 10px; */
     font-size: 18px;
 }
 .TreeList button:hover {
     text-decoration: none;
-    background-color: #3789af;
+    background-image: linear-gradient(to bottom, #46b2e0, #30a9dc);
     color: #fff;
-}
-
-.TreeList ul.euiTreeView {
-    padding: 5px 0px 5px 10px;
 }

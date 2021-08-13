@@ -9,9 +9,10 @@ li.dropdown-parent button{
     background-color: #ffffff;
 }
 
-li.dropdown-parent > span{
+li.dropdown-parent > span, a.Link{
     height: 50px;
     font-weight: bold;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 0px 25px;
@@ -20,16 +21,11 @@ li.dropdown-parent > span{
     align-items:center;
 }
 
-li.dropdown-parent > span:hover{
+li.dropdown-parent > span:hover, a.Link:hover{
     background-color: #3789af;
     cursor: pointer;
 }
 
-li.dropdown-parent span img{
-    width:20px;
-    height:20px;
-    margin-right: 10px;
-}
 
 li.dropdown-parent > ul.dropdown-menu{
     color: rgb(0, 0, 0);
@@ -60,7 +56,8 @@ li.dropdown-parent > ul.dropdown-menu > a > li.Options{
 }
 
 li.dropdown-parent > ul.dropdown-menu > a:hover > li.Options{
-    background-color: #3789af;
+    /* background-color: #3789af; */
+    background-image: linear-gradient(to bottom, #46b2e0, #30a9dc);
     color: rgb(255, 255, 255);
 }
 

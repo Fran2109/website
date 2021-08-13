@@ -112,14 +112,12 @@ const ConfigurationPage = () => {
                     <IoSettingsSharp onClick={()=>setVisibility(!visibility)} style={{
                                 position: "absolute",
                                 top: "0px",
-                                left: "95vw",
-                                margin:"10px", 
+                                left: "100%",
+                                marginLeft:"-30px", 
+                                marginTop:"10px",
                                 color: "black"}}/>
                     {visibility?
-                        <>
-                            
                             <OptionsConfiguration />
-                        </>
                         :
                             null
                     }

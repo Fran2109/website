@@ -14,7 +14,6 @@ import User from './../User/User';
 
 const Header = () => {
     let options;
-    const [users, setUsers] = useState([]);
     const [categories, setCategories] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
     
@@ -23,41 +22,26 @@ const Header = () => {
     const getCategories = new Promise((resolve, reject) => {
         resolve([ 
             {id: "1", name: "OEE", children: [
-                {id: "5", name: "Overview", url:"/IHBox/oeeOverview" } ] },
+                {id: "5", label: "Overview", url:"/IHBox/oeeOverview" } ] },
             {id: "2", name: "Delays", children: [
-                {id: "6", name: "Declare" },
-                {id: "7", name: "Manager" }
+                {id: "6", label: "Declare" },
+                {id: "7", label: "Manager" }
             ] },
-            {id: "3", name: "Schedule", url:"IHBox/schedule" }, 
+            {id: "3", name: "Schedule", url:"/IHBox/schedule" }, 
             {id: "4", name: "Reports", children: [
-                {id: "8", name: "OEE" },
-                {id: "9", name: "Losses" },
-                {id: "10", name: "Events" },
-                {id: "11", name: "Deleys" },
-                {id: "12", name: "Batch" },
-                {id: "13", name: "Last 24 Hours" }                
+                {id: "8", label: "OEE" },
+                {id: "9", label: "Losses" },
+                {id: "10", label: "Events" },
+                {id: "11", label: "Deleys" },
+                {id: "12", label: "Batch" },
+                {id: "13", label: "Last 24 Hours" }                
             ] } ])
-    }); 
-
-    const getUsers = new Promise((resolve, reject) => {
-        resolve([ 
-            { id: 0, name: "Unsigned" },
-            { id: 1, name: "User 1" },
-            { id: 2, name: "User 2" },
-            { id: 3, name: "User 3" },
-            { id: 4, name: "User 4" },
-            { id: 5, name: "User 5" } ])
     }); 
 
     useEffect(() => {
         getCategories.then(
             result => {
                 setCategories(result);
-            }
-        )
-        getUsers.then(
-            result => {
-                setUsers(result);
             }
         )
     }, [] );
@@ -77,7 +61,7 @@ const Header = () => {
                     {categories.map((category) => {
                         return( 
                             <div className="items" key={category.id}>
-                                <MenuItem item={category.name} option={category.children}/>
+                                <MenuItem item={category}/>
                             </div>
                         )
                     })}
@@ -85,7 +69,7 @@ const Header = () => {
 
                 <div className="headerRight">
                     <Trending/>
-                    <User listUsers={users}/>
+                    <User/>
                     <Clock/>
                     <Language/>
                     <Configuration/>
