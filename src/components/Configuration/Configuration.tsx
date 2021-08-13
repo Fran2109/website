@@ -13,13 +13,13 @@ const Configuration = () => {
     const[t] = useTranslation("global");
     useEffect(() => {
         const interval = setInterval(() => {
-            getRandomInt(0,1)===0?
+            getRandomInt(0,6)===0?
                 <>
                 {setRotate(true)}
                 </>
                 :
                 setRotate(false);
-        }, 1000);
+        }, 60000);
         return () => clearInterval(interval);
       }, []);
 

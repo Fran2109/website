@@ -2,8 +2,8 @@ import {React, useState, useEffect} from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
-/* import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
-import objectToGenerate from './../../utils/ItemGenerator/Object.json'; */
+import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
+import objectToGenerate from './../../utils/ItemGenerator/Object.json';
 import Clock from './../Clock/Clock';
 import Trending from './../Trending/Trending.tsx';
 import Language from './../Language/Language';
@@ -13,11 +13,11 @@ import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
 
 const Header = () => {
-    /* let options; */
+    let options;
     const [categories, setCategories] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
     
-    /* options = ItemGenerator(objectToGenerate); */
+    options = ItemGenerator(objectToGenerate);
     
     const getCategories = new Promise((resolve, reject) => {
         resolve([ 
@@ -34,7 +34,7 @@ const Header = () => {
                 {id: "10", label: "Events" },
                 {id: "11", label: "Deleys" },
                 {id: "12", label: "Batch" },
-                {id: "13", label: "Last 24 Hours" }                
+                {id: "13", label: "Last 24 Hours", children: options[1].children}                
             ] } ])
     }); 
 
@@ -43,10 +43,17 @@ const Header = () => {
             result => {
                 setCategories(result);
             }
-        )
+        )        
     }, [] );
 
-    setInterval(() => {setWidth(window.innerWidth)},1000);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (window.innerWidth !== width) {
+                setWidth(window.innerWidth);
+            }
+        }, 100);
+        return () => clearInterval(interval);
+    }, [] );
     
     const [visibility, setVisibility] = useState(false);
     
@@ -58,6 +65,8 @@ const Header = () => {
         return (
             <>
                 <ul className="headerLeft">
+                    {console.log(categories)}
+                    {console.log(options[1].children)}
                     {categories.map((category) => {
                         return( 
                             <div className="items" key={category.id}>
