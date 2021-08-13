@@ -21,11 +21,22 @@ li.dropdown-parent > span, a.Link{
     align-items:center;
 }
 
+li.dropdown-parent > span > .IoTriangle{
+    transform: rotate(180deg);
+    color:#07b;
+    width:8px; 
+    height:8px; 
+    margin-left: 8px;
+}
+
 li.dropdown-parent > span:hover, a.Link:hover{
     background-color: #3789af;
     cursor: pointer;
 }
 
+li.dropdown-parent > span:hover > .IoTriangle{
+    color:#00466f;
+}
 
 li.dropdown-parent > ul.dropdown-menu{
     color: rgb(0, 0, 0);

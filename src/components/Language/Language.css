@@ -21,6 +21,18 @@ li.language .language-title:hover{
     background-color: #3789af;
 }
 
+li.language .language-title .IoTriangle{
+    transform:rotate(180deg);
+    color: #07b;
+    width: 8px;
+    height: 8px;
+    margin-left:8px;
+}
+
+li.language .language-title:hover .IoTriangle{
+    color:#00466f;
+}
+
 li.language .hidden{
     display: none;
 }

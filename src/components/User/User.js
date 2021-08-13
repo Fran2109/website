@@ -25,7 +25,7 @@ const User = () => {
             <span onClick={()=>setVisible(!visible)}>
                 <IoPersonSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{sessionStorage.getItem("token").toUpperCase()}</p>
-                <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"8px" }}/>
+                <IoTriangle className="IoTriangle"/>
             </span>
             <ul className={visible? "userOptions visible" : "userOptions hidden"}>
                 <li onClick={()=>{

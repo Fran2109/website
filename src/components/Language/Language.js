@@ -29,7 +29,7 @@ const Language = ({heightTitle="50px"}) => {
             <li className="language"  ref={domNode}/* onMouseLeave={()=>setVisibility(false)} */>
                 <span className="language-title" style={{height: heightTitle}} onClick={()=>{setVisibility(!visibility)}}>
                     <IoLanguageSharp style={{width:"20px", height:"20px" }}/>
-                    <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"8px" }}/>
+                    <IoTriangle className="IoTriangle"/>
                 </span>
                 <ul className={visibility? "language-list visible" : "language-list hidden"}>
                     {languages.map(language =>

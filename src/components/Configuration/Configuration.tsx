@@ -13,13 +13,13 @@ const Configuration = () => {
     const[t] = useTranslation("global");
     useEffect(() => {
         const interval = setInterval(() => {
-            getRandomInt(0,6)===0?
+            getRandomInt(0,1)===0?
                 <>
                 {setRotate(true)}
                 </>
                 :
                 setRotate(false);
-        }, 5000);
+        }, 1000);
         return () => clearInterval(interval);
       }, []);
 
@@ -30,11 +30,11 @@ const Configuration = () => {
                     <EuiPopover
                         panelStyle={{ opacity: 0.8 }}
                         isOpen={rotate}
+                        anchorPosition="downLeft"
                         button={rotate?
-                            /*<IoSettingsSharp style={{ transform: "rotate(720deg)", transitionDuration: "10s", transitionTimingFunction: "linear", color:"yellow", width:"20px", height:"20px"}}/> */
-                            <IoSettingsSharp className="IoSettingsSharp" style={{color:"yellow", width:"20px", height:"20px"}}/>
+                           <IoSettingsSharp className="IoSettingsSharp" style={{color:"yellow", width:"20px", height:"20px"}}/>
                             :
-                            <IoSettingsSharp style={{/*  transform: "rotate(0deg)", transitionDuration: "0.1s", */ color:"white", width:"20px", height:"20px"}}/>
+                            <IoSettingsSharp style={{ color:"white", width:"20px", height:"20px"}}/>
                             }
                         >
                         <EuiText style={{ width: 120, textAlign: "center", color: "white", fontSize:12, margin:"5px"}}>

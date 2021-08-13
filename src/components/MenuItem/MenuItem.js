@@ -29,7 +29,7 @@ const MenuItem = ({item}) => {
               <span onClick={()=>setVisibility(!visibility)}>
                 <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{t("Header.Label."+item.name.toString()+"-label")}</p>
-                <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"8px" }}/>
+                <IoTriangle className="IoTriangle"/>
               </span>
             </>
           }   
