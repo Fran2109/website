@@ -1,4 +1,4 @@
-import react, { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 let useClickOutside = (handler) => {
     let domNode = useRef();

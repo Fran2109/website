@@ -2,8 +2,8 @@ import {React, useState, useEffect} from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
-import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
-import objectToGenerate from './../../utils/ItemGenerator/Object.json';
+/* import ItemGenerator from './../../utils/ItemGenerator/ItemGenerator';
+import objectToGenerate from './../../utils/ItemGenerator/Object.json'; */
 import Clock from './../Clock/Clock';
 import Trending from './../Trending/Trending.tsx';
 import Language from './../Language/Language';
@@ -13,11 +13,11 @@ import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
 
 const Header = () => {
-    let options;
+    /* let options; */
     const [categories, setCategories] = useState([]);
     const [width, setWidth] = useState(window.innerWidth);
     
-    options = ItemGenerator(objectToGenerate);
+    /* options = ItemGenerator(objectToGenerate); */
     
     const getCategories = new Promise((resolve, reject) => {
         resolve([ 

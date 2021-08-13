@@ -32,7 +32,7 @@
 }
 
 .LogIn .LogInHeader .LogInHeaderContainer{
-    width: 1170px;
+    width: 1000px;
     height: 80px;    
     display: flex;
     flex-direction: row;

@@ -1,6 +1,5 @@
 import './LogIn.css';
-import User from './../../assets/icons/user.png';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
@@ -61,7 +60,7 @@ const LogIn = ({ setToken }) => {
                         { width > 1000?
                         <img src={FourIPlatform} style={{width: "240px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
                         :
-                        <img src={FourIPlatformSecond} style={{width: "120px", height: "27px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
+                        <img src={FourIPlatformSecond} style={{width: "133px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
                         }
                     </div>
                     <Language heightTitle="80px" />
@@ -95,9 +94,6 @@ const LogIn = ({ setToken }) => {
                     <p>{t("LogIn.footerMessage.one")}</p>
                     <p>{t("LogIn.footerMessage.two")}</p>
                     <p>{t("LogIn.footerMessage.three")}</p>
-                    {/* {t("LogIn.footerMessage.one")}
-                    {t("LogIn.footerMessage.two")}
-                    {t("LogIn.footerMessage.three")} */}
                 </span>
             </div> 
         </div>

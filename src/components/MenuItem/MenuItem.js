@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState } from 'react';
 import './MenuItem.css';
 import TreeView from '../TreeView/TreeView';
 import { useTranslation } from "react-i18next";
@@ -29,7 +29,7 @@ const MenuItem = ({item}) => {
               <span onClick={()=>setVisibility(!visibility)}>
                 <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{t("Header.Label."+item.name.toString()+"-label")}</p>
-                <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"5px" }}/>
+                <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"8px" }}/>
               </span>
             </>
           }   

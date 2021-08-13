@@ -18,6 +18,22 @@
     background-color: #3789af;
 }
 
+.configurationBtn a .configuration .IoSettingsSharp{
+    animation-name: rotation;
+	animation-duration: 3s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+@keyframes rotation {
+    0% {
+      transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+  }
+
 @media screen and (max-width: 1000px){
     .configurationBtn{
         width: 100%;
