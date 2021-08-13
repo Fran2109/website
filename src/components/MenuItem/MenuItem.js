@@ -4,27 +4,7 @@ import TreeView from '../TreeView/TreeView';
 import { useTranslation } from "react-i18next";
 import { IoBarChartSharp, IoOptions, IoTriangle } from "react-icons/io5";
 import { Link } from "react-router-dom";
-
-let useClickOutside = (handler) => {
-  let domNode = useRef();
-
-  useEffect(() => {
-    let maybeHandler = (event) => {
-      if(!domNode.current.contains(event.target)){
-        handler();
-      }
-    };
-    document.addEventListener('mousedown', maybeHandler);
-
-    return () => {
-      document.removeEventListener('mousedown', maybeHandler);
-    }
-  }, []);
-  return domNode;
-};
-
-
-
+import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
 const MenuItem = ({item}) => {
   const [visibility, setVisibility] = useState(false);
@@ -35,7 +15,7 @@ const MenuItem = ({item}) => {
   });
   return(
     <>
-      <li className="dropdown-parent" ref={domNode}/*  onMouseLeave={()=>setVisibility(false)} */>
+      <li className="dropdown-parent" ref={domNode} >
         
           {item.url!==undefined ? 
             <>

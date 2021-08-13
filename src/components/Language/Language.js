@@ -2,6 +2,7 @@ import './Language.css';
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from 'react';
 import { IoLanguageSharp, IoTriangle } from "react-icons/io5";
+import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
 const Language = ({heightTitle="50px"}) => {
     const [languages, setLanguages] = useState([]); 
@@ -20,10 +21,12 @@ const Language = ({heightTitle="50px"}) => {
             }
         )
     }, []);
-
+    let domNode = useClickOutside(() => {
+        setVisibility(false);
+      });
     return (
         <>
-            <li className="language" onMouseLeave={()=>setVisibility(false)}>
+            <li className="language"  ref={domNode}/* onMouseLeave={()=>setVisibility(false)} */>
                 <span className="language-title" style={{height: heightTitle}} onClick={()=>{setVisibility(!visibility)}}>
                     <IoLanguageSharp style={{width:"20px", height:"20px" }}/>
                     <IoTriangle style={{transform: "rotate(180deg)", color:"#07b", width:"8px", height:"8px", marginLeft:"5px" }}/>

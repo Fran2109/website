@@ -3,14 +3,18 @@ import React, { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { IoPersonSharp, IoTriangle } from "react-icons/io5";
+import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
 const User = () => {
     const[t] = useTranslation("global");
     const [id, setId] = useState(1);
     const [visible, setVisible] = useState(false);
     let history = useHistory();
+    let domNode = useClickOutside(() => {
+        setVisible(false);
+      });
     return (
-        <li className="user" onMouseLeave={()=>setVisible(false)}>
+        <li className="user" ref={domNode}/* onMouseLeave={()=>setVisible(false)} */>
             <>
             {
                 sessionStorage.getItem("token") !== null ?
