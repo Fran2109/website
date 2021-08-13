@@ -1,16 +1,41 @@
-import React, { /* useEffect, */useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import './MenuItem.css';
 import TreeView from '../TreeView/TreeView';
 import { useTranslation } from "react-i18next";
 import { IoBarChartSharp, IoOptions, IoTriangle } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
+let useClickOutside = (handler) => {
+  let domNode = useRef();
+
+  useEffect(() => {
+    let maybeHandler = (event) => {
+      if(!domNode.current.contains(event.target)){
+        handler();
+      }
+    };
+    document.addEventListener('mousedown', maybeHandler);
+
+    return () => {
+      document.removeEventListener('mousedown', maybeHandler);
+    }
+  }, []);
+  return domNode;
+};
+
+
+
+
 const MenuItem = ({item}) => {
   const [visibility, setVisibility] = useState(false);
   const[t] = useTranslation("global");
+
+  let domNode = useClickOutside(() => {
+    setVisibility(false);
+  });
   return(
     <>
-      <li className="dropdown-parent" onMouseLeave={()=>setVisibility(false)}>
+      <li className="dropdown-parent" ref={domNode}/*  onMouseLeave={()=>setVisibility(false)} */>
         
           {item.url!==undefined ? 
             <>
