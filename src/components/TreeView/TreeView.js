@@ -8,9 +8,7 @@ const TreeView = ({list}) => {
     <>
       <div className="TreeList">
         {<EuiTreeView items={list} 
-        expandByDefault={false}
-        display="compressed"
-        aria-label="Sample Folder Tree"/>}
+        expandByDefault={false}/>}
       </div>
     </>
   );

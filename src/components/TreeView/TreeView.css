@@ -25,3 +25,8 @@
     background-image: linear-gradient(to bottom, #46b2e0, #30a9dc);
     color: #fff;
 }
+
+.euiTreeView__iconWrapper {
+    margin-top: 0px;
+    margin-right: 8px;
+}
