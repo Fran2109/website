@@ -62,9 +62,6 @@ const ConfigurationPage = () => {
         getConfigurations.then(configurations => {
             setConfigurations(configurations);
         });
-    }, [])
-
-    useEffect(() => {
         const interval = setInterval(() => {
             if (window.innerWidth !== width) {
                 setWidth(window.innerWidth);
