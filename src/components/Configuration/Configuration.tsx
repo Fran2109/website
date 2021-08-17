@@ -15,7 +15,7 @@ const Configuration = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            getRandomInt(0,1)===0?
+            getRandomInt(0,6)===0?
                 setRotate(true)
                 :
                 setRotate(false)
@@ -30,6 +30,7 @@ const Configuration = () => {
                     <EuiPopover
                         panelStyle={{ opacity: 0.8 }}
                         isOpen={isPopoverOpen}
+                        closePopover={() => setIsPopoverOpen(false)}
                         anchorPosition="downLeft"
                         button={
                             rotate?
