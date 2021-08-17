@@ -43,16 +43,13 @@ const Header = () => {
             result => {
                 setCategories(result);
             }
-        )        
-    }, [] );
-
-    useEffect(() => {
+        )       
         const interval = setInterval(() => {
             if (window.innerWidth !== width) {
                 setWidth(window.innerWidth);
             }
         }, 100);
-        return () => clearInterval(interval);
+        return () => clearInterval(interval); 
     }, [] );
     
     const [visibility, setVisibility] = useState(false);
@@ -65,8 +62,6 @@ const Header = () => {
         return (
             <>
                 <ul className="headerLeft">
-                    {console.log(categories)}
-                    {console.log(options[1].children)}
                     {categories.map((category) => {
                         return( 
                             <div className="items" key={category.id}>
