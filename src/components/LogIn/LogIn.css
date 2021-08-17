@@ -18,7 +18,7 @@
     background-color: #fff;
     width: 100%;
     top: 0;
-    z-index: 100;
+    z-index: 2;
     opacity: 0.9;
     padding: 0px 60px;
     position: sticky;
@@ -42,6 +42,7 @@
 
 .LogIn .LogInMain{
     width: 100%;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -114,12 +115,14 @@
 
 .LogIn .LogInMain .LogInContainer .LogInContent .Form input.username{
     border-radius: 5px 5px 0px 0px;
-    border-width: 0.5px 0.5px 0.25px 0.5px;
+    border: solid #ccc;
+    border-width: 1px 1px 0px 1px;
 }
 
 .LogIn .LogInMain .LogInContainer .LogInContent .Form input.password{
     border-radius: 0px 0px 5px 5px;
-    border-width: 0px 0.5px 0.5px 0.5px;
+    border: solid #ccc;
+    border-width: 1px 1px 1px 1px;
 }
 
 .LogIn .LogInMain .LogInContainer .LogInContent .Form button{
@@ -159,7 +162,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 100;
+    z-index: 2;
 }
 
 .LogIn .LogInFooter span{

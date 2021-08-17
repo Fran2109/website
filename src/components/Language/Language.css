@@ -22,10 +22,9 @@ li.language .language-title:hover{
 }
 
 li.language .language-title .IoTriangle{
-    transform:rotate(180deg);
     color: #07b;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     margin-left:8px;
 }
 
@@ -49,6 +48,7 @@ li.language > .language-list{
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+    z-index: 10000;
 }
 
 li.language > ul.language-list > li.language-item{

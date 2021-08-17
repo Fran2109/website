@@ -1,7 +1,8 @@
 import './Language.css';
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from 'react';
-import { IoLanguageSharp, IoTriangle } from "react-icons/io5";
+import { IoLanguageSharp } from "react-icons/io5";
+import { VscTriangleDown } from "react-icons/vsc";
 import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
 const Language = ({heightTitle="50px"}) => {
@@ -26,10 +27,10 @@ const Language = ({heightTitle="50px"}) => {
       });
     return (
         <>
-            <li className="language"  ref={domNode}/* onMouseLeave={()=>setVisibility(false)} */>
+            <li className="language"  ref={domNode} >
                 <span className="language-title" style={{height: heightTitle}} onClick={()=>{setVisibility(!visibility)}}>
                     <IoLanguageSharp style={{width:"20px", height:"20px" }}/>
-                    <IoTriangle className="IoTriangle"/>
+                    <VscTriangleDown className="IoTriangle"/>
                 </span>
                 <ul className={visibility? "language-list visible" : "language-list hidden"}>
                     {languages.map(language =>

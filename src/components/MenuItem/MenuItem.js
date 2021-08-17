@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import './MenuItem.css';
 import TreeView from '../TreeView/TreeView';
 import { useTranslation } from "react-i18next";
-import { IoBarChartSharp, IoOptions, IoTriangle } from "react-icons/io5";
+import { IoBarChartSharp, IoOptions } from "react-icons/io5";
+import { VscTriangleDown } from "react-icons/vsc";
+
 import { Link } from "react-router-dom";
 import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
@@ -16,7 +18,6 @@ const MenuItem = ({item}) => {
   return(
     <>
       <li className="dropdown-parent" ref={domNode} >
-        
           {item.url!==undefined ? 
             <>
               <Link to={item.url} className="Link">
@@ -29,7 +30,7 @@ const MenuItem = ({item}) => {
               <span onClick={()=>setVisibility(!visibility)}>
                 <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{t("Header.Label."+item.name.toString()+"-label")}</p>
-                <IoTriangle className="IoTriangle"/>
+                <VscTriangleDown className="IoTriangle"/>
               </span>
             </>
           }   

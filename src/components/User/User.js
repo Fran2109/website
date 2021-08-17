@@ -2,7 +2,8 @@ import './User.css';
 import  { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
-import { IoPersonSharp, IoTriangle } from "react-icons/io5";
+import { IoPersonSharp } from "react-icons/io5";
+import { VscTriangleDown } from "react-icons/vsc";
 import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
 const User = () => {
@@ -25,7 +26,7 @@ const User = () => {
             <span onClick={()=>setVisible(!visible)}>
                 <IoPersonSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{sessionStorage.getItem("token").toUpperCase()}</p>
-                <IoTriangle className="IoTriangle"/>
+                <VscTriangleDown className="IoTriangle"/>
             </span>
             <ul className={visible? "userOptions visible" : "userOptions hidden"}>
                 <li onClick={()=>{

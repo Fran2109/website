@@ -4,18 +4,12 @@ import './Clock.css';
 import { useTranslation } from "react-i18next";
 
 const Clock = () => {
+  const [hours, setHours] = useState("00");
+  const [minutes, setMinutes] = useState("00");
+  const [time, setTime] = useState(/* new Date().toLocaleTimeString() */);
 
-  const [time, setTime] = useState(new Date().getHours()+":"+new Date().getMinutes());
-  /* const [time, setTime] = useState(
-      new Date().getHours()<10?
-      "0"+new Date().getHours():new Date().getHours()
-      +":"+
-      new Date().getMinutes()<10?
-      "0"+new Date().getMinutes():new Date().getMinutes()
-  ); */
   const [tick, setTick] = useState(new Date().getSeconds())
-  const [hours, setHours] = useState(new Date().getHours());
-  const [minutes, setMinutes] = useState(new Date().getMinutes());
+  
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const[t] = useTranslation("global");
   
@@ -33,7 +27,6 @@ const Clock = () => {
       setHours("0"+new Date().getHours()):setHours(new Date().getHours())
     new Date().getMinutes()<10?
       setMinutes("0"+new Date().getMinutes()):setMinutes(new Date().getMinutes())
-
     setTime(hours+":"+minutes)
   }, [tick])
   

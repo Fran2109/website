@@ -9,32 +9,37 @@ const Configuration = () => {
     function getRandomInt(min:number, max:number) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
-    const[rotate, setRotate] = useState(false);
+    const[rotate, setRotate] = useState(true);
+    const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const[t] = useTranslation("global");
+
     useEffect(() => {
         const interval = setInterval(() => {
-            getRandomInt(0,6)===0?
-                <>
-                {setRotate(true)}
-                </>
+            getRandomInt(0,1)===0?
+                setRotate(true)
                 :
-                setRotate(false);
-        }, 60000);
+                setRotate(false)
+        }, 10000);
         return () => clearInterval(interval);
       }, []);
 
     return(
-        <div className="configurationBtn" >
+        <div className="configurationBtn"  >
             <Link to={"/IHBox/configuration"}>
-                <div className="configuration">
+                <div className="configuration" onMouseEnter={() => rotate? setIsPopoverOpen(true) : null} onMouseLeave={()=>setIsPopoverOpen(false)}>
                     <EuiPopover
                         panelStyle={{ opacity: 0.8 }}
-                        isOpen={rotate}
+                        isOpen={isPopoverOpen}
                         anchorPosition="downLeft"
-                        button={rotate?
-                           <IoSettingsSharp className="IoSettingsSharp" style={{color:"yellow", width:"20px", height:"20px"}}/>
-                            :
-                            <IoSettingsSharp style={{ color:"white", width:"20px", height:"20px"}}/>
+                        button={
+                            rotate?
+                                <div className="BTN" style={{width:"50px", height:"50px"}}>
+                                    <IoSettingsSharp className="IoSettingsSharp" style={{color:"yellow", width:"20px", height:"20px"}}/>
+                                </div>   
+                                :
+                                <div className="BTN" style={{width:"50px", height:"50px"}}>
+                                    <IoSettingsSharp style={{ color:"white", width:"20px", height:"20px"}}/>
+                                </div>  
                             }
                         >
                         <EuiText style={{ width: 120, textAlign: "center", color: "white", fontSize:12, margin:"5px"}}>

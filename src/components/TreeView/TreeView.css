@@ -17,7 +17,7 @@
 
 .TreeList button span{
     /* padding:5px; */
-    /* margin: 10px; */
+    margin-right: 10px;
     font-size: 18px;
 }
 .TreeList button:hover {

@@ -22,10 +22,10 @@ li.dropdown-parent > span, a.Link{
 }
 
 li.dropdown-parent > span > .IoTriangle{
-    transform: rotate(180deg);
+    /* transform: rotate(180deg); */
     color:#07b;
-    width:8px; 
-    height:8px; 
+    width:10px; 
+    height:10px; 
     margin-left: 8px;
 }
 
