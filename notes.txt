@@ -1,0 +1,53 @@
+login.js            165     tryLogin(username, password)
+
+SecurityLogin.js    1185    function _Logoff(name)
+
+SecurityLogin.js    33      function _GetData(parametes, method, callback, errorCallback)
+
+SecurityLogin.js    196     function _CreateCookie(name, value, expireDays)
+
+SecurityLogin.js    129     function _Login(name, password)
+
+SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js    196     function _CreateCookie(name, value, expireDays)
+
+login.js            632     function _createLoginDataCookie()
+
+SecurityLogin.js    346     function _GetUserName(callback, errorCallback)
+
+login.js            723     function _createCookie(name, value, days)
+
+login.js            716     function getParameterByName(name)
+
+SecurityLogin.js    405     window.SecurityLogin = new SecurityLogin();
+
+SecurityLogin.js    19      function _SecurityLogin(options)
+
+SecurityLogin.js    28      function _Initialize(options)
+
+SecurityLogin.js    348     function _GetUserName(callback, errorCallback)
+
+SecurityLogin.js    86      function _GetServerCookie(callback, errorCallback)
+
+SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js    279     function _IsLogged(callback, errorCallback)
+
+SecurityLogin.js    204     function _GetLocalCookie(name)
+
+SecurityLogin.js    60      function _IsLoggedWCF(callback, errorCallback)
+
+SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js    348     function _GetUserName(callback, errorCallback)
+
+SecurityLogin.js    242     function _GetRoles(connectionName)
+
+SecurityLogin.js    279     function _IsLogged(callback, errorCallback)
+
+SecurityLogin.js    204     function _GetLocalCookie(name)
+
+SecurityLogin.js    60      function _IsLoggedWCF(callback, errorCallback)
+
+SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)

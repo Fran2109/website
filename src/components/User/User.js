@@ -2,7 +2,7 @@ import './User.css';
 import  { useState } from 'react';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
-import { IoPersonSharp } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 import { VscTriangleDown } from "react-icons/vsc";
 import useClickOutside from './../../utils/useClickOutside/useClickOutside';
 
@@ -14,7 +14,7 @@ const User = () => {
         setVisible(false);
       });
     return (
-        <li className="user" ref={domNode}/* onMouseLeave={()=>setVisible(false)} */>
+        <li className="user" ref={domNode}>
             <>
             {
                 sessionStorage.getItem("token") !== null ?
@@ -24,7 +24,7 @@ const User = () => {
             }
             </>
             <span onClick={()=>setVisible(!visible)}>
-                <IoPersonSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
+                <FaUser style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
                 <p>{sessionStorage.getItem("token").toUpperCase()}</p>
                 <VscTriangleDown className="IoTriangle"/>
             </span>

@@ -8,7 +8,7 @@ const TreeView = ({list}) => {
     <>
       <div className="TreeList">
         {<EuiTreeView items={list} 
-        expandByDefault={false}/>}
+        expandByDefault={true}/>}
       </div>
     </>
   );

@@ -6,7 +6,7 @@ import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
 import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
-import { IoPersonSharp } from "react-icons/io5";
+import { FaUser } from "react-icons/fa";
 
 async function loginUser(credentials) {
     return(credentials.username)
@@ -69,7 +69,7 @@ const LogIn = ({ setToken }) => {
             <div className="LogInMain">
                 <div className="LogInContainer First">
                     <div className="LogInIco">
-                        <IoPersonSharp style={{width:"60px", height:"60px", color:"white"}} />
+                        <FaUser style={{width:"60px", height:"60px", color:"white"}} />
                     </div>
                     <div className="LogInContent">
                         <form className="Form" onSubmit={handleSubmit} >
