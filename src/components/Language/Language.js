@@ -23,9 +23,11 @@ const Language = ({heightTitle="50px"}) => {
             }
         )
     }, []);
+    
     let domNode = useClickOutside(() => {
         setVisibility(false);
-      });
+    });
+
     let history = useHistory();
     return (
         <>
@@ -43,7 +45,7 @@ const Language = ({heightTitle="50px"}) => {
                                                                     i18n.changeLanguage(language.name); 
                                                                     sessionStorage.setItem('Language', language.name);
                                                                     setVisibility(false)}}>
-                            {language.name}
+                            {t("")+language.name}
                         </li>
                     )}
                 </ul>
