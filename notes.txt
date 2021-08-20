@@ -1,53 +1,91 @@
-login.js            165     tryLogin(username, password)
+login.js                        165     function tryLogin(username, password)
 
-SecurityLogin.js    1185    function _Logoff(name)
+SecurityLogin.js                185     function _Logoff(name)
 
-SecurityLogin.js    33      function _GetData(parametes, method, callback, errorCallback)
+SecurityLogin.js                33      function _GetData(parametes, method, callback, errorCallback)
 
-SecurityLogin.js    196     function _CreateCookie(name, value, expireDays)
+SecurityLogin.js                56      Core.Json.Request(url, options);
 
-SecurityLogin.js    129     function _Login(name, password)
+IndustrialDashboard-debug.js    921     function _RequestJSON(url, options)
 
-SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
+IndustrialDashboard-debug.js    2016    function _JSONEncode(obj)
 
-SecurityLogin.js    196     function _CreateCookie(name, value, expireDays)
+IndustrialDashboard-debug.js    1996    function _getType(obj)
 
-login.js            632     function _createLoginDataCookie()
+IndustrialDashboard-debug.js    2016    function _JSONEncode(obj)
 
-SecurityLogin.js    346     function _GetUserName(callback, errorCallback)
+IndustrialDashboard-debug.js    1996    function _getType(obj)
 
-login.js            723     function _createCookie(name, value, days)
+IndustrialDashboard-debug.js    1822    function _AsyncRequestJSON(standardOptions)
 
-login.js            716     function getParameterByName(name)
+IndustrialDashboard-debug.js    1830    function _initialize()
 
-SecurityLogin.js    405     window.SecurityLogin = new SecurityLogin();
+IndustrialDashboard-debug.js    1732    function _PrivateParameters(opt, type)                          opt = undefined, type = undefined
 
-SecurityLogin.js    19      function _SecurityLogin(options)
+IndustrialDashboard-debug.js    1658    function _DefaultEvents(object)                                 object = null
 
-SecurityLogin.js    28      function _Initialize(options)
+IndustrialDashboard-debug.js    239     function _ValidateEmptyObject(object)                           object = "http"
 
-SecurityLogin.js    348     function _GetUserName(callback, errorCallback)
+IndustrialDashboard-debug.js    131     function _ObjectClone(obj)                                      obj = undefined
 
-SecurityLogin.js    86      function _GetServerCookie(callback, errorCallback)
+IndustrialDashboard-debug.js    249     function _EvalExist(obj, path, separator)                       obj = _PrivateParameters {URL: "http://192.168.4.66/IHBox/IndustrialDashboard/DALService.svc/", Version: {…}}, path = "DatabaseParameters", separator = undefined
 
-SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
+IndustrialDashboard-debug.js    5624    function _ToString(value, format)                               value = "URL", format = undefined
 
-SecurityLogin.js    279     function _IsLogged(callback, errorCallback)
+IndustrialDashboard-debug.js    5624    function _ToString(value, format)                               value = "Version", format = undefined
 
-SecurityLogin.js    204     function _GetLocalCookie(name)
+IndustrialDashboard-debug.js    1658    function _DefaultEvents(object)                                 object = _PrivateParameters {URL: "http://192.168.4.66/IHBox/IndustrialDashboard/DALService.svc/", Version: {…}}
 
-SecurityLogin.js    60      function _IsLoggedWCF(callback, errorCallback)
 
-SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
 
-SecurityLogin.js    348     function _GetUserName(callback, errorCallback)
 
-SecurityLogin.js    242     function _GetRoles(connectionName)
 
-SecurityLogin.js    279     function _IsLogged(callback, errorCallback)
 
-SecurityLogin.js    204     function _GetLocalCookie(name)
 
-SecurityLogin.js    60      function _IsLoggedWCF(callback, errorCallback)
+SecurityLogin.js                196     function _CreateCookie(name, value, expireDays)
 
-SecurityLogin.js    33      function _GetData(parameters, method, callback, errorCallback)
+SecurityLogin.js                129     function _Login(name, password)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js                196     function _CreateCookie(name, value, expireDays)
+
+login.js                        632     function _createLoginDataCookie()
+
+SecurityLogin.js                346     function _GetUserName(callback, errorCallback)
+
+login.js                        723     function _createCookie(name, value, days)
+
+login.js                        716     function getParameterByName(name)
+
+SecurityLogin.js                405     window.SecurityLogin = new SecurityLogin();
+
+SecurityLogin.js                19      function _SecurityLogin(options)
+
+SecurityLogin.js                28      function _Initialize(options)
+
+SecurityLogin.js                348     function _GetUserName(callback, errorCallback)
+
+SecurityLogin.js                86      function _GetServerCookie(callback, errorCallback)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js                279     function _IsLogged(callback, errorCallback)
+
+SecurityLogin.js                204     function _GetLocalCookie(name)
+
+SecurityLogin.js                60      function _IsLoggedWCF(callback, errorCallback)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js                348     function _GetUserName(callback, errorCallback)
+
+SecurityLogin.js                242     function _GetRoles(connectionName)
+
+SecurityLogin.js                279     function _IsLogged(callback, errorCallback)
+
+SecurityLogin.js                204     function _GetLocalCookie(name)
+
+SecurityLogin.js                60      function _IsLoggedWCF(callback, errorCallback)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)

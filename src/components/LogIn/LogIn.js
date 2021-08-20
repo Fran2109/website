@@ -28,7 +28,6 @@ const LogIn = ({ setToken }) => {
       }, []);
 
     const handleSubmit = async e => {
-        
         e.preventDefault();
         if (username===undefined || password===undefined)
         {
@@ -63,6 +62,22 @@ const LogIn = ({ setToken }) => {
                         <img src={FourIPlatformSecond} style={{width: "133px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
                         }
                     </div>
+                    <button style={{color:"black"}} onClick={() => {
+                        window.SecurityLogin.Logoff();
+                        document.cookie = "autoLogin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                        var login = window.SecurityLogin.Login("admin", "admin");
+                        if(login)
+                        {
+                            console.log("Login OK");
+                        }
+                        else
+                        {
+                            console.log("Error LogIn");
+                        }
+                    }}>
+                        login
+                    </button>
+
                     <Language heightTitle="80px" />
                 </div>    
             </div>
