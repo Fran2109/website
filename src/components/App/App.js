@@ -48,7 +48,7 @@ function App() {
             </>
             }
           </Route>
-          <Route>
+          <Route >
               <PageNotFound />
           </Route>
         </Switch>

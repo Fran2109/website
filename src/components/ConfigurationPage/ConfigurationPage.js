@@ -70,6 +70,10 @@ const ConfigurationPage = () => {
         return () => clearInterval(interval);
       }, []);
 
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min)) + min;
+    }
+
     const OptionsConfiguration = () => {
         return(
             <div className="ConfigurationLeft">
@@ -81,11 +85,14 @@ const ConfigurationPage = () => {
                                 {configuration.children.map(option => {
                                     return(
                                         <>
+                                            {getRandomInt(0,3)===0?
                                             <Link to={`/configuration/${option.name}`} key={option.id}>
                                                 <li >
                                                     {t(configuration.previous+option.name)}
                                                 </li>    
                                             </Link>
+                                            :
+                                            null}
                                         </>
                                     )
                                 })}
