@@ -9,7 +9,7 @@ const Configuration = () => {
     function getRandomInt(min:number, max:number) {
         return Math.floor(Math.random() * (max - min)) + min;
     }
-    const[rotate, setRotate] = useState(true);
+    const[rotate, setRotate] = useState(false);
     const [isPopoverOpen, setIsPopoverOpen] = useState(false);
     const[t] = useTranslation("global");
 

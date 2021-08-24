@@ -27,6 +27,20 @@ const LogIn = ({ setToken }) => {
         return () => clearInterval(interval);
       }, []);
 
+    function tryLogin(username, password) {
+        window.SecurityLogin.Logoff();
+        document.cookie = "autoLogin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        var login = window.SecurityLogin.Login(username, password);
+        if (login) {
+            console.log("Login OK");
+            setToken(username)
+            history.push(`/IHBox`);
+        } else {
+            console.log("Login NO OK");
+            alert(t("LogIn.alertWrong"));
+        }
+    }
+
     const handleSubmit = async e => {
         e.preventDefault();
         if (username===undefined || password===undefined)
@@ -35,19 +49,7 @@ const LogIn = ({ setToken }) => {
         }
         else
         {
-            if((username.toString()==="admin" && password.toString()==="admin") || (username.toString()==="user" && password.toString()==="user"))
-            {
-                const token = await loginUser({
-                username,
-                password
-                });
-                setToken(token)
-                history.push(`/IHBox`);
-            }
-            else
-            {
-                alert(t("LogIn.alertWrong"));
-            }
+            tryLogin(username, password);
         }
       }
 
@@ -62,21 +64,6 @@ const LogIn = ({ setToken }) => {
                         <img src={FourIPlatformSecond} style={{width: "133px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
                         }
                     </div>
-                    <button style={{color:"black"}} onClick={() => {
-                        window.SecurityLogin.Logoff();
-                        document.cookie = "autoLogin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-                        var login = window.SecurityLogin.Login("admin", "admin");
-                        if(login)
-                        {
-                            console.log("Login OK");
-                        }
-                        else
-                        {
-                            console.log("Login NO OK");
-                        }
-                    }}>
-                        login
-                    </button>
 
                     <Language heightTitle="80px" />
                 </div>    

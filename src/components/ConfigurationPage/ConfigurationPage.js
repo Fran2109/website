@@ -77,16 +77,16 @@ const ConfigurationPage = () => {
     const OptionsConfiguration = () => {
         return(
             <div className="ConfigurationLeft">
-                {configurations.map(configuration => {
+                {configurations.map((configuration) => {
                     return(
                         <div key={configuration.id} className="ConfigurationLeftContent" style={configuration.previous==="ConfigurationPage.sectionFive."? {marginBottom:"60px"} : null}>
                             <h4>{t(configuration.previous+configuration.name)}</h4>
                             <ul className="Options">
-                                {configuration.children.map(option => {
+                                {configuration.children.map((option) => {
                                     return(
                                         <>
                                             {getRandomInt(0,3)===0?
-                                            <Link to={`/configuration/${option.name}`} key={option.id}>
+                                            <Link to={`/configuration/${option.name}`} key={option.id} >
                                                 <li >
                                                     {t(configuration.previous+option.name)}
                                                 </li>    

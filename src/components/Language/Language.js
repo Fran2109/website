@@ -22,6 +22,7 @@ const Language = ({heightTitle="50px"}) => {
                 setLanguages(result);
             }
         )
+        return () => setLanguages(languages);
     }, []);
     
     let domNode = useClickOutside(() => {
