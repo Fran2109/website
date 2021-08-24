@@ -25,7 +25,7 @@ const User = () => {
             </>
             <span onClick={()=>setVisible(!visible)}>
                 <FaUser style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-                <p>{sessionStorage.getItem("token").toUpperCase()}</p>
+                <p>{ sessionStorage.getItem("token")!==null?  sessionStorage.getItem("token").toUpperCase() : null}</p>
                 <VscTriangleDown className="IoTriangle"/>
             </span>
             <ul className={visible? "userOptions visible" : "userOptions hidden"}>
