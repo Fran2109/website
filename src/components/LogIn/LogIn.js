@@ -1,5 +1,5 @@
 import './LogIn.css';
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
@@ -7,7 +7,6 @@ import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
-import LoginContext from './../../context/LoginContext';
 
 async function loginUser(credentials) {
     return(credentials.username)
@@ -53,11 +52,9 @@ const LogIn = ({ setToken }) => {
             tryLogin(username, password);
         }
       }
-    const isLogged = useContext(LoginContext);
 
     return (
         <div className="LogIn">
-            {console.log(isLogged)}
             <div className="LogInHeader">
                 <div className="LogInHeaderContainer" style={{color: "black"}}>
                     <div className="OEEasy">

@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useContext } from 'react';
+import {React, useState, useEffect} from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
@@ -11,7 +11,6 @@ import Configuration from '../Configuration/Configuration.tsx';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
-import LoginContext from './../../context/LoginContext';
 
 const Header = () => {
     let options;
@@ -59,8 +58,6 @@ const Header = () => {
         setVisibility(!visibility);
     }
 
-    const isLogged = useContext(LoginContext);
-
     const HeaderBasic = () => {
         return (
             <>
@@ -87,7 +84,6 @@ const Header = () => {
 
     return (
         <div className="header">
-            {console.log(isLogged)}
             { width > 1000?
                 <>
                     <HeaderBasic />
