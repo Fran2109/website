@@ -1,6 +1,6 @@
 import './App.css';
-import IHBox from '../IHBox/IHBox.tsx';
-import LogIn from '../LogIn/LogIn';
+import IHBox from '../IHBox/IHBox.js';
+import Login from './../Login/Login';
 import PageNotFound from '../PageNotFound/PageNotFound.tsx';
 import ConfigurationPage from '../ConfigurationPage/ConfigurationPage';
 import Overview from './../Overview/Overview.tsx';
@@ -25,7 +25,7 @@ function App() {
       <HashRouter>
         <Switch>
           <Route path="/Login" exact>
-             <LogIn setToken={setToken} />
+             <Login setToken={setToken} />
           </Route>
           <Route path="/IHBox" exact>
             <IHBox />

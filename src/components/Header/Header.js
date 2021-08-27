@@ -32,7 +32,7 @@ const Header = () => {
                 {id: "8", label: "OEE" },
                 {id: "9", label: "Losses" },
                 {id: "10", label: "Events" },
-                {id: "11", label: "Deleys" },
+                {id: "11", label: "Delays" },
                 {id: "12", label: "Batch" },
                 {id: "13", label: "Last 24 Hours", children: options[1].children}                
             ] } ])
@@ -90,6 +90,7 @@ const Header = () => {
                 </>
                 :
                 <>
+
                     <div className="headerMobile">
                         <button className="menu" onClick={changeVisibility}>
                             {!visibility?

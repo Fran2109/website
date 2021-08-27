@@ -1,9 +1,9 @@
-import './LogIn.css';
+import './Login.css';
 import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
-import Language from './../Language/Language';
+import Language from '../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
@@ -12,7 +12,7 @@ async function loginUser(credentials) {
     return(credentials.username)
    }
 
-const LogIn = ({ setToken }) => {
+const Login = ({ setToken }) => {
     const[t] = useTranslation("global");
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
@@ -33,11 +33,12 @@ const LogIn = ({ setToken }) => {
         var login = window.SecurityLogin.Login(username, password);
         if (login) {
             console.log("Login OK");
-            setToken(username)
+            setToken(username);
+            localStorage.setItem("ihBoxSystem_localstorage", true);
             history.push(`/IHBox`);
         } else {
             console.log("Login NO OK");
-            alert(t("LogIn.alertWrong"));
+            alert(t("Login.alertWrong"));
         }
     }
 
@@ -45,7 +46,7 @@ const LogIn = ({ setToken }) => {
         e.preventDefault();
         if (username===undefined || password===undefined)
         {
-            alert(t("LogIn.alertEmpty"));
+            alert(t("Login.alertEmpty"));
         }
         else
         {
@@ -54,9 +55,9 @@ const LogIn = ({ setToken }) => {
       }
 
     return (
-        <div className="LogIn">
-            <div className="LogInHeader">
-                <div className="LogInHeaderContainer" style={{color: "black"}}>
+        <div className="Login">
+            <div className="LoginHeader">
+                <div className="LoginHeaderContainer" style={{color: "black"}}>
                     <div className="OEEasy">
                         { width > 1000?
                         <img src={FourIPlatform} style={{width: "240px", height: "55px", filter: "brightness(0) saturate(0)"}} alt="4IPlatform" />
@@ -68,42 +69,42 @@ const LogIn = ({ setToken }) => {
                     <Language heightTitle="80px" />
                 </div>    
             </div>
-            <div className="LogInMain">
-                <div className="LogInContainer First">
-                    <div className="LogInIco">
+            <div className="LoginMain">
+                <div className="LoginContainer First">
+                    <div className="LoginIco">
                         <FaUser style={{width:"60px", height:"60px", color:"white"}} />
                     </div>
-                    <div className="LogInContent">
+                    <div className="LoginContent">
                         <form className="Form" onSubmit={handleSubmit} >
                             <label>
-                                <input className="username" type="text" placeholder={t("LogIn.username")} style={{textAlign: "center"}} onChange={e => setUserName(e.target.value)}/>
+                                <input className="username" type="text" placeholder={t("Login.username")} style={{textAlign: "center"}} onChange={e => setUserName(e.target.value)}/>
                             </label>
                             <label>
-                                <input className="password" type="password" placeholder={t("LogIn.password")} style={{textAlign: "center"}} onChange={e => setPassword(e.target.value)}/>
+                                <input className="password" type="password" placeholder={t("Login.password")} style={{textAlign: "center"}} onChange={e => setPassword(e.target.value)}/>
                             </label>
                             <button type="submit">
-                                {t("LogIn.submit")}
+                                {t("Login.submit")}
                             </button>
                         </form>
                     </div>
-                    <div className="LogInInfo">
-                        <span>{t("LogIn.message")}</span>
+                    <div className="LoginInfo">
+                        <span>{t("Login.message")}</span>
                     </div>
                 </div>
             </div>
-            <div className="LogInFooter">
+            <div className="LoginFooter">
                 <span>
-                    <p>{t("LogIn.footerMessage.one")}</p>
-                    <p>{t("LogIn.footerMessage.two")}</p>
-                    <p>{t("LogIn.footerMessage.three")}</p>
+                    <p>{t("Login.footerMessage.one")}</p>
+                    <p>{t("Login.footerMessage.two")}</p>
+                    <p>{t("Login.footerMessage.three")}</p>
                 </span>
             </div> 
         </div>
     )
 }
 
-LogIn.propTypes = {
+Login.propTypes = {
     setToken: PropTypes.func.isRequired
 }
 
-export default LogIn;
+export default Login;

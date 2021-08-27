@@ -6,6 +6,66 @@ SecurityLogin.js                33      function _GetData(parametes, method, cal
 
 SecurityLogin.js                56      Core.Json.Request(url, options);
 
+IndustrialDashboard-debug.js
+
+SecurityLogin.js                196     function _CreateCookie(name, value, expireDays)      Crea cookie de loginData  con el nombre de usuario llamado con la funcion _creteLoginDataCookie()
+
+SecurityLogin.js                129     function _Login(name, password)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js                196     function _CreateCookie(name, value, expireDays)
+
+login.js                        632     function _createLoginDataCookie()
+
+SecurityLogin.js                346     function _GetUserName(callback, errorCallback)
+
+login.js                        723     function _createCookie(name, value, days)
+
+login.js                        716     function getParameterByName(name)
+
+SecurityLogin.js                405     window.SecurityLogin = new SecurityLogin();
+
+SecurityLogin.js                17      function _SecurityLogin(options)
+
+SecurityLogin.js                28      function _Initialize(options)
+
+SecurityLogin.js                348     function _GetUserName(callback, errorCallback)
+
+SecurityLogin.js                86      function _GetServerCookie(callback, errorCallback)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js                279     function _IsLogged(callback, errorCallback)
+
+SecurityLogin.js                204     function _GetLocalCookie(name)
+
+SecurityLogin.js                60      function _IsLoggedWCF(callback, errorCallback)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+SecurityLogin.js                348     function _GetUserName(callback, errorCallback)
+
+SecurityLogin.js                242     function _GetRoles(connectionName)
+
+Entre estas dos funciones se crea la cookie de ihBoxSystem_localstorage
+
+SecurityLogin.js                279     function _IsLogged(callback, errorCallback)
+
+SecurityLogin.js                204     function _GetLocalCookie(name)
+
+SecurityLogin.js                60      function _IsLoggedWCF(callback, errorCallback)
+
+SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
+
+
+
+
+
+
+
+
+
 IndustrialDashboard-debug.js    921     function _RequestJSON(url, options)
 
 IndustrialDashboard-debug.js    2016    function _JSONEncode(obj)
@@ -36,56 +96,3 @@ IndustrialDashboard-debug.js    5624    function _ToString(value, format)       
 
 IndustrialDashboard-debug.js    1658    function _DefaultEvents(object)                                 object = _PrivateParameters {URL: "http://192.168.4.66/IHBox/IndustrialDashboard/DALService.svc/", Version: {…}}
 
-
-
-
-
-
-
-SecurityLogin.js                196     function _CreateCookie(name, value, expireDays)
-
-SecurityLogin.js                129     function _Login(name, password)
-
-SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
-
-SecurityLogin.js                196     function _CreateCookie(name, value, expireDays)
-
-login.js                        632     function _createLoginDataCookie()
-
-SecurityLogin.js                346     function _GetUserName(callback, errorCallback)
-
-login.js                        723     function _createCookie(name, value, days)
-
-login.js                        716     function getParameterByName(name)
-
-SecurityLogin.js                405     window.SecurityLogin = new SecurityLogin();
-
-SecurityLogin.js                19      function _SecurityLogin(options)
-
-SecurityLogin.js                28      function _Initialize(options)
-
-SecurityLogin.js                348     function _GetUserName(callback, errorCallback)
-
-SecurityLogin.js                86      function _GetServerCookie(callback, errorCallback)
-
-SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
-
-SecurityLogin.js                279     function _IsLogged(callback, errorCallback)
-
-SecurityLogin.js                204     function _GetLocalCookie(name)
-
-SecurityLogin.js                60      function _IsLoggedWCF(callback, errorCallback)
-
-SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
-
-SecurityLogin.js                348     function _GetUserName(callback, errorCallback)
-
-SecurityLogin.js                242     function _GetRoles(connectionName)
-
-SecurityLogin.js                279     function _IsLogged(callback, errorCallback)
-
-SecurityLogin.js                204     function _GetLocalCookie(name)
-
-SecurityLogin.js                60      function _IsLoggedWCF(callback, errorCallback)
-
-SecurityLogin.js                33      function _GetData(parameters, method, callback, errorCallback)
