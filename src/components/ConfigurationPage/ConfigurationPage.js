@@ -85,7 +85,7 @@ const ConfigurationPage = () => {
                                 {configuration.children.map((option) => {
                                     return(
                                         <>
-                                            {getRandomInt(0,3)===0?
+                                            {getRandomInt(0,3)!==0?
                                             <Link to={`/configuration/${option.name}`} key={option.id} >
                                                 <li >
                                                     {t(configuration.previous+option.name)}

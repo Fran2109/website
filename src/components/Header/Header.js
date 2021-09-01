@@ -58,6 +58,95 @@ const Header = () => {
         setVisibility(!visibility);
     }
 
+    function getLenghtOfObject(obj) {
+        return Object.keys(obj).length;
+    }
+
+    function orderObject(data){
+        let md = {Items: []};
+        let items;
+        let itemParameters;
+        let itemProperties;
+        items = (getLenghtOfObject(data) > 0) ? data.Table : items;
+        itemParameters = (getLenghtOfObject(data) > 1) ? data.Table1 : itemParameters;
+        itemProperties = (getLenghtOfObject(data) > 2) ? data.Table2 : itemProperties;
+        
+    
+        let parameters=[]; 
+        let properties=[]; 
+    
+    
+        itemParameters.forEach(ip => {
+            let id = parseInt(ip.MenuLinkID, 32);
+            let option=
+            {
+                Name: ip.Name, 
+                Value: ip.Value
+            };
+            parameters[id]=option; 
+        });
+    
+        itemProperties.forEach(ip => {
+            let id = parseInt(ip.MenuId, 32);
+            let option=
+            {
+                Name: ip.Name, 
+                Value: ip.Value
+            };
+            properties[id]=option; 
+        });
+    
+        let itemsById = [];
+    
+        for (let i = 0; i < items.length; i++)
+        {
+            let row = items[i];
+            let mi = 
+            {
+                Id: parseInt(row.Id, 32),
+                Parent: row.Parent ? parseInt(row.Parent, 32) : null,
+                Name: row.Name ? row.Name : null,
+                RouteId: row.RouteID ? parseInt(row.RouteID, 32) : null,
+                Enabled: row.Enabled,
+                Visible: row.Visible,
+                Group: row.Group ? row.Group : null,
+                Route: row.Route,
+                Children: [],
+            };      
+    
+            mi.Parameters = parameters[mi.Id]
+            mi.Properties = properties[mi.Id]
+    
+            mi.URL = null;//ResolveURL(mi.Route, mi.Parameters);
+    
+            itemsById[mi.Id] = mi;
+        }
+        itemsById.forEach(kvp => {
+            let mi = kvp;
+            if (mi.Parent !== null)
+            {
+                if (itemsById[mi.Parent].Id !== undefined)
+                {
+                    itemsById[mi.Parent].Children.push(mi)
+                }
+            }
+            else {
+                md.Items.push(mi); 
+            }
+        });
+        return md;
+    }
+
+    useEffect(() => {
+        window.Core.Json.CallProcedure("FrontEnd.GetMenuData", null, {
+            onSuccess: function (data) {
+                let categories2=orderObject(data);
+                console.log(categories2);
+            },
+            Async: false
+        }, "APP");
+    }, []);
+
     const HeaderBasic = () => {
         return (
             <>

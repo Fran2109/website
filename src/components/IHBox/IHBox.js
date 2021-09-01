@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import Logo from './../../assets/images/logo.png';
 
 const IHBox = () => {
-    var QP = new window.Core.Database.QueryParameters();
+    /* var QP = new window.Core.Database.QueryParameters();
     QP.Add('Timezone', 'VARCHAR', 'ART');
     QP.Add('@ihId', 'INT', 1046);
 
@@ -20,8 +20,8 @@ const IHBox = () => {
         onSuccess: function (response) { console.log(response); },
         Async: false,
         CachePerUser: true, 
-    }, "APP");
-
+    }, "APP"); */
+    
     return (
         <div className="IHBox">
             <Header />

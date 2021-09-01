@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
 import { VscTriangleDown } from "react-icons/vsc";
-import useClickOutside from './../../utils/useClickOutside/useClickOutside';
+import useClickOutside from '../../utils/useClickOutside/useClickOutside';
 
 const User = () => {
     const[t] = useTranslation("global");

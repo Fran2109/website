@@ -96,3 +96,1901 @@ IndustrialDashboard-debug.js    5624    function _ToString(value, format)       
 
 IndustrialDashboard-debug.js    1658    function _DefaultEvents(object)                                 object = _PrivateParameters {URL: "http://192.168.4.66/IHBox/IndustrialDashboard/DALService.svc/", Version: {…}}
 
+
+
+delay-codes-manager.js   no se que hace
+
+event-codes-manager.js   no se que hace
+
+locks-manager.js   
+0: {Id: 1, Name: "TAGSCONFIGCHANGE", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+1: {Id: 2, Name: "AGENTDISCONNECTED", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+2: {Id: 3, Name: "DBSTARTMON", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+3: {Id: 4, Name: "DBSTOPMON", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+4: {Id: 5, Name: "DBFIXCONFLICTS", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+5: {Id: 6, Name: "SETPLCADDRESS", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+6: {Id: 7, Name: "SETOPCADDRESS", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+7: {Id: 17, Name: "BATCHOPEN", ObjectTypeId: 2, ObjectTypeName: "EQUIP"}
+8: {Id: 27, Name: "DISABLE", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+9: {Id: 28, Name: "ENABLE", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+10: {Id: 29, Name: "DMTSCRIPTRUN-UPDATEINSTALLER", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+11: {Id: 30, Name: "DMTSCRIPTSET-CHECKUPDATE", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+12: {Id: 31, Name: "DMTSCRIPTRUN-CHECKUPDATE", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+13: {Id: 32, Name: "DMTSCRIPTSET-SYSTEMRESOURCES", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+14: {Id: 33, Name: "DMTSCRIPTRUN-SYSTEMRESOURCES", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+15: {Id: 34, Name: "DMTSCRIPTSET-IHDATAMANAGERCLIENTSCRIPT", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+16: {Id: 35, Name: "DMTSCRIPTRUN-IHDATAMANAGERCLIENTSCRIPT", ObjectTypeId: 1, ObjectTypeName: "AGENT"}
+
+ihdatasources-dropdown.js        su procedure genera la lista desplegable de IHs
+
+topMessagesControl.js      no se que hace
+
+router.js creo que es el que verifica el estado de logue
+
+appController.js   hace  5 procedues
+
+585
+0: {Version: "380"}
+
+0: {IsAccountConfigured: 0}
+
+user.js  129  
+[
+    {
+        "UserID": 6,
+        "AccountID": 1,
+        "Email": "",
+        "Validated": true,
+        "Number": "100020",
+        "RecoveryPassword": false,
+        "AccountType": 3,
+        "FirstTimeLogin": true,
+        "DebugMode": false,
+        "TimeZoneOffset": -8,
+        "TimeZoneName": "(GMT-08:00) Pacific Time (US & Canada)",
+        "TimeZoneIsDST": true,
+        "TimeZoneAbbreviation": "PDTUSCND  ",
+        "MaxAgents": -1,
+        "MaxTags": 200,
+        "IHServerHost": "IHBOX-3260B2"
+    }
+]
+
+menu.js
+{
+    "Table": [
+        {
+            "Id": 12,
+            "Parent": null,
+            "Name": "Configuration",
+            "RouteID": null,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "ih_configuration",
+            "IHBoxModule": null,
+            "Code": "configuration",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 2582,
+            "Parent": null,
+            "Name": "OEE",
+            "RouteID": null,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "OEE",
+            "Code": "oee",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 9712,
+            "Parent": null,
+            "Name": "Information Core",
+            "RouteID": null,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "ih_configuration",
+            "IHBoxModule": null,
+            "Code": "CORE.information-core",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 9710,
+            "Parent": null,
+            "Name": "OEE",
+            "RouteID": 2753,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_oee_read",
+            "Group": "OEE.operation-container-modes",
+            "IHBoxModule": "OEE",
+            "Code": "OEE.oee",
+            "KeepData": true,
+            "Route": "!/operation-container/oee(/)"
+        },
+        {
+            "Id": 9759,
+            "Parent": 9758,
+            "Name": "Nuevo Item",
+            "RouteID": 2795,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen22_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/22"
+        },
+        {
+            "Id": 9717,
+            "Parent": 9712,
+            "Name": "Events",
+            "RouteID": 9,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "event_events_read",
+            "Group": "ih_configuration",
+            "IHBoxModule": "EVENT",
+            "Code": "events",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2594,
+            "Parent": 2593,
+            "Name": "Lines and Machines",
+            "RouteID": 9,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_oee-configuration_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "oee-configuration",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2589,
+            "Parent": 2585,
+            "Name": "OEE",
+            "RouteID": 1706,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_oee-report_read",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "oee-report",
+            "KeepData": true,
+            "Route": "!/oeeReport"
+        },
+        {
+            "Id": 9709,
+            "Parent": 2585,
+            "Name": "Losses",
+            "RouteID": 2751,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "OEE.losses_read",
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "OEE",
+            "Code": "OEE.losses",
+            "KeepData": true,
+            "Route": "!/losses(/)"
+        },
+        {
+            "Id": 2588,
+            "Parent": 2583,
+            "Name": "Declare",
+            "RouteID": 1711,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_delays-simple_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "delays-simple",
+            "KeepData": true,
+            "Route": "!/delayssimple"
+        },
+        {
+            "Id": 9764,
+            "Parent": 9763,
+            "Name": "New Item",
+            "RouteID": 2799,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen26_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/26"
+        },
+        {
+            "Id": 2586,
+            "Parent": 2582,
+            "Name": "Overview",
+            "RouteID": 1704,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_oee-overview_read",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "oee-overview",
+            "KeepData": true,
+            "Route": "!/oeeOverview(/:ihid)(/:id)(/:shiftId)(/:time)(/)"
+        },
+        {
+            "Id": 9768,
+            "Parent": 9766,
+            "Name": "New Item",
+            "RouteID": 2802,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen29_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/29"
+        },
+        {
+            "Id": 26,
+            "Parent": 25,
+            "Name": "About",
+            "RouteID": 9,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "about_about_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "about",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 13,
+            "Parent": 12,
+            "Name": "Account Configuration",
+            "RouteID": 9,
+            "SortOrder": 1,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihconfiguration_accountinformation_readWrite",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "account-configuration",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9720,
+            "Parent": 25,
+            "Name": "HowTo",
+            "RouteID": 9,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "about_howto_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "howto",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 15,
+            "Parent": 12,
+            "Name": "Data Sources",
+            "RouteID": 9,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_data_sources_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "data-sources",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9769,
+            "Parent": 9766,
+            "Name": "New Item",
+            "RouteID": 2803,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen30_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/30"
+        },
+        {
+            "Id": 1529,
+            "Parent": 2581,
+            "Name": "Mimic Builder",
+            "RouteID": 9,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_screenBuilder_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": "tools-mimic-builder",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9766,
+            "Parent": 2582,
+            "Name": "New Item",
+            "RouteID": null,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": null
+        },
+        {
+            "Id": 9765,
+            "Parent": 9763,
+            "Name": "New Item",
+            "RouteID": 2800,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen27_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/27"
+        },
+        {
+            "Id": 9719,
+            "Parent": 2585,
+            "Name": "Events",
+            "RouteID": 2762,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_events-summary-report_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "events-summary-report",
+            "KeepData": true,
+            "Route": "!/eventssummaryreport"
+        },
+        {
+            "Id": 2587,
+            "Parent": 2583,
+            "Name": "Manager",
+            "RouteID": 1709,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_delays-1_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "delays-1",
+            "KeepData": true,
+            "Route": "!/delays1"
+        },
+        {
+            "Id": 9716,
+            "Parent": 9712,
+            "Name": "Event Categories",
+            "RouteID": 9,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "event_categories_read",
+            "Group": "ih_configuration",
+            "IHBoxModule": "EVENT",
+            "Code": "event-categories",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2590,
+            "Parent": 2585,
+            "Name": "Delays",
+            "RouteID": 1710,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_delays-3_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "delays-3",
+            "KeepData": true,
+            "Route": "!/delays3"
+        },
+        {
+            "Id": 2595,
+            "Parent": 2593,
+            "Name": "Delay Categories",
+            "RouteID": 9,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_delay-categories_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "delay-categories",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9760,
+            "Parent": 9758,
+            "Name": "Nuevo Item",
+            "RouteID": 2796,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen23_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/23"
+        },
+        {
+            "Id": 9711,
+            "Parent": null,
+            "Name": "Production",
+            "RouteID": 2754,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "OEE.production_read",
+            "Group": "OEE.operation-container-modes",
+            "IHBoxModule": "OEE",
+            "Code": "OEE.production",
+            "KeepData": true,
+            "Route": "!/operation-container/production(/)"
+        },
+        {
+            "Id": 2583,
+            "Parent": null,
+            "Name": "Delays",
+            "RouteID": null,
+            "SortOrder": 2,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "OEE",
+            "Code": "delays",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 9721,
+            "Parent": null,
+            "Name": "Schedule",
+            "RouteID": 2771,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "SCHEDULE.schedule_read",
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": null,
+            "Code": "SCHEDULE.schedule",
+            "KeepData": true,
+            "Route": "!/schedule"
+        },
+        {
+            "Id": 9761,
+            "Parent": 9758,
+            "Name": "Nuevo Item",
+            "RouteID": 2797,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen24_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/24"
+        },
+        {
+            "Id": 9713,
+            "Parent": 9712,
+            "Name": "Event Codes",
+            "RouteID": 9,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "event_codes_read",
+            "Group": "ih_configuration",
+            "IHBoxModule": "EVENT",
+            "Code": "event-codes",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2596,
+            "Parent": 2593,
+            "Name": "Delay Codes",
+            "RouteID": 9,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_delay-codes_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "delay-codes",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2591,
+            "Parent": 2585,
+            "Name": "Batch",
+            "RouteID": 1705,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_oee-batch_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "oee-batch",
+            "KeepData": true,
+            "Route": "!/oeeBatch(/:id)"
+        },
+        {
+            "Id": 9763,
+            "Parent": 2583,
+            "Name": "New Item",
+            "RouteID": null,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": null
+        },
+        {
+            "Id": 9767,
+            "Parent": 2582,
+            "Name": "New Item",
+            "RouteID": 2801,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen28_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/28"
+        },
+        {
+            "Id": 17,
+            "Parent": 12,
+            "Name": "Tags",
+            "RouteID": 9,
+            "SortOrder": 3,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_tagsConfiguration_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "tags",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 24,
+            "Parent": 12,
+            "Name": "Profiles",
+            "RouteID": 9,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_security_profiles_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "profiles",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9718,
+            "Parent": 2593,
+            "Name": "Event Codes",
+            "RouteID": 9,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "OEE.oee-event-codes_read",
+            "Group": "ih_configuration",
+            "IHBoxModule": "OEE",
+            "Code": "oee-event-codes",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2592,
+            "Parent": 2585,
+            "Name": "Last 24 Hours",
+            "RouteID": 1708,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_last-24-hours-report_read",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "last-24-hours-report",
+            "KeepData": true,
+            "Route": "!/last24hoursreport"
+        },
+        {
+            "Id": 9715,
+            "Parent": 9712,
+            "Name": "Products",
+            "RouteID": 9,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "SCHEDULE.products_read",
+            "Group": "ih_configuration",
+            "IHBoxModule": null,
+            "Code": "SCHEDULE.products",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2597,
+            "Parent": 2593,
+            "Name": "Products",
+            "RouteID": 9,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_products_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "products",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9762,
+            "Parent": 9758,
+            "Name": "Nuevo Item",
+            "RouteID": 2798,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen25_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/25"
+        },
+        {
+            "Id": 2585,
+            "Parent": null,
+            "Name": "Reports",
+            "RouteID": null,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "OEE",
+            "Code": "reports",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 2593,
+            "Parent": null,
+            "Name": "OEE Configuration",
+            "RouteID": null,
+            "SortOrder": 4,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "ih_configuration",
+            "IHBoxModule": "OEE",
+            "Code": "oee-configuration-section",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 2581,
+            "Parent": null,
+            "Name": "TOOLS",
+            "RouteID": null,
+            "SortOrder": 5,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "ih_configuration",
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": "Tools",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 9707,
+            "Parent": 9712,
+            "Name": "Equipment Models",
+            "RouteID": 9,
+            "SortOrder": 5,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "equipments_equipment_types_read",
+            "Group": null,
+            "IHBoxModule": "EQUIP",
+            "Code": "equipment-types",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2598,
+            "Parent": 2593,
+            "Name": "Line Products",
+            "RouteID": 9,
+            "SortOrder": 5,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_line-products_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "line-products",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 14,
+            "Parent": 12,
+            "Name": "Users",
+            "RouteID": 9,
+            "SortOrder": 5,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_users_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "users",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 29,
+            "Parent": 12,
+            "Name": "Network Overview",
+            "RouteID": 9,
+            "SortOrder": 6,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_network_overview_read",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "network-overview-configuration-dashboard",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2599,
+            "Parent": 2593,
+            "Name": "Shifts",
+            "RouteID": 9,
+            "SortOrder": 6,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_shifts_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "shifts",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9706,
+            "Parent": 9712,
+            "Name": "Equipments",
+            "RouteID": 9,
+            "SortOrder": 6,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "equipments_equipments_read",
+            "Group": null,
+            "IHBoxModule": "EQUIP",
+            "Code": "equipments",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9708,
+            "Parent": 9712,
+            "Name": "Equipment Events",
+            "RouteID": 9,
+            "SortOrder": 7,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "event_equipment-events_read",
+            "Group": null,
+            "IHBoxModule": "EVENT",
+            "Code": "equipment-events",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2600,
+            "Parent": 2593,
+            "Name": "Reset to Factory Defaults",
+            "RouteID": 9,
+            "SortOrder": 7,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_reset-to-factory-defaults-oee_readWrite",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "reset-to-factory-defaults-oee",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 6646,
+            "Parent": 12,
+            "Name": "Agent Command",
+            "RouteID": 9,
+            "SortOrder": 7,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_sendagentcommands_readWrite",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "send-agent-commands",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9724,
+            "Parent": 12,
+            "Name": "Mobile-devices",
+            "RouteID": 9,
+            "SortOrder": 8,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "IHConfiguration_mobile-devices_readWrite",
+            "Group": "ih_configuration",
+            "IHBoxModule": null,
+            "Code": "mobile-devices",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 27,
+            "Parent": 12,
+            "Name": "Audit",
+            "RouteID": 9,
+            "SortOrder": 8,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_audit_readWrite",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "audit",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 2601,
+            "Parent": 2593,
+            "Name": "User Manual",
+            "RouteID": 9,
+            "SortOrder": 8,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_OEE_user-manual-oee_read",
+            "Group": null,
+            "IHBoxModule": "OEE",
+            "Code": "user-manual-oee",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9714,
+            "Parent": 9712,
+            "Name": "Equipment Products",
+            "RouteID": 9,
+            "SortOrder": 8,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "SCHEDULE.equipment-products_read",
+            "Group": "ih_configuration",
+            "IHBoxModule": "SCHEDULE",
+            "Code": "SCHEDULE.equipment-products",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 28,
+            "Parent": 12,
+            "Name": "Backup / Restore",
+            "RouteID": 9,
+            "SortOrder": 9,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_backup-configuration_readWrite",
+            "Group": null,
+            "IHBoxModule": "BACKUP",
+            "Code": "backup-configuration",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 18,
+            "Parent": 12,
+            "Name": "Tags Export",
+            "RouteID": 9,
+            "SortOrder": 10,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_tags_export_readWrite",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "tags-export",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 20,
+            "Parent": 12,
+            "Name": "System Network Configuration",
+            "RouteID": 9,
+            "SortOrder": 11,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_systemnetworkconfiguration_readWrite",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "system-network-configuration",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 21,
+            "Parent": 12,
+            "Name": "Reset to Factory Defaults",
+            "RouteID": 9,
+            "SortOrder": 12,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_reset_to_factory_defaults_readWrite",
+            "Group": null,
+            "IHBoxModule": null,
+            "Code": "reset-to-factory-defaults",
+            "KeepData": true,
+            "Route": "!/ih/configuration(/:section)(/:sectionParam1)(/:sectionParam2)"
+        },
+        {
+            "Id": 9757,
+            "Parent": 9725,
+            "Name": "Nuevo Item",
+            "RouteID": 2794,
+            "SortOrder": 22,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "modules_SCREEN_BUILDER_Screen21_readWrite",
+            "Group": null,
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": "!/screens/21"
+        },
+        {
+            "Id": 9758,
+            "Parent": 9725,
+            "Name": "Nuevo It",
+            "RouteID": null,
+            "SortOrder": 23,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": null
+        },
+        {
+            "Id": 25,
+            "Parent": null,
+            "Name": "About",
+            "RouteID": null,
+            "SortOrder": 999999,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "ih_configuration",
+            "IHBoxModule": null,
+            "Code": "about-menu",
+            "KeepData": true,
+            "Route": null
+        },
+        {
+            "Id": 9725,
+            "Parent": null,
+            "Name": "Mimics",
+            "RouteID": null,
+            "SortOrder": 1000000,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": null,
+            "Group": "navbar_left_with_modules",
+            "IHBoxModule": "SCREEN_BUILDER",
+            "Code": null,
+            "KeepData": false,
+            "Route": null
+        },
+        {
+            "Id": 30,
+            "Parent": null,
+            "Name": "Trending",
+            "RouteID": 5,
+            "SortOrder": null,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_trending_read",
+            "Group": "navbar_right_with_modules",
+            "IHBoxModule": null,
+            "Code": "trending-collapsed",
+            "KeepData": true,
+            "Route": "!/trending(/custom/:params)"
+        },
+        {
+            "Id": 10,
+            "Parent": null,
+            "Name": "Trending",
+            "RouteID": 5,
+            "SortOrder": null,
+            "Enabled": true,
+            "Visible": true,
+            "RequiredRole": "ihConfiguration_trending_read",
+            "Group": "navbar_left_no_modules",
+            "IHBoxModule": null,
+            "Code": "trending",
+            "KeepData": true,
+            "Route": "!/trending(/custom/:params)"
+        }
+    ],
+    "Table1": [
+        {
+            "MenuLinkID": 13,
+            "Name": "section",
+            "Value": "accountinformation"
+        },
+        {
+            "MenuLinkID": 14,
+            "Name": "section",
+            "Value": "users"
+        },
+        {
+            "MenuLinkID": 15,
+            "Name": "section",
+            "Value": "datasources"
+        },
+        {
+            "MenuLinkID": 17,
+            "Name": "section",
+            "Value": "tags"
+        },
+        {
+            "MenuLinkID": 18,
+            "Name": "section",
+            "Value": "tagsexportconfiguration"
+        },
+        {
+            "MenuLinkID": 20,
+            "Name": "section",
+            "Value": "systemnetworkconfiguration"
+        },
+        {
+            "MenuLinkID": 21,
+            "Name": "section",
+            "Value": "resettofactorydefaults"
+        },
+        {
+            "MenuLinkID": 24,
+            "Name": "section",
+            "Value": "securityprofiles"
+        },
+        {
+            "MenuLinkID": 26,
+            "Name": "section",
+            "Value": "about"
+        },
+        {
+            "MenuLinkID": 27,
+            "Name": "section",
+            "Value": "audit"
+        },
+        {
+            "MenuLinkID": 28,
+            "Name": "section",
+            "Value": "backupConfiguration"
+        },
+        {
+            "MenuLinkID": 29,
+            "Name": "section",
+            "Value": "networkoverview"
+        },
+        {
+            "MenuLinkID": 1529,
+            "Name": "section",
+            "Value": "screenbuilder"
+        },
+        {
+            "MenuLinkID": 2594,
+            "Name": "section",
+            "Value": "oeeconfiguration"
+        },
+        {
+            "MenuLinkID": 2595,
+            "Name": "section",
+            "Value": "delaycategories"
+        },
+        {
+            "MenuLinkID": 2596,
+            "Name": "section",
+            "Value": "delaycodes"
+        },
+        {
+            "MenuLinkID": 2597,
+            "Name": "section",
+            "Value": "products"
+        },
+        {
+            "MenuLinkID": 2598,
+            "Name": "section",
+            "Value": "lineproducts"
+        },
+        {
+            "MenuLinkID": 2599,
+            "Name": "section",
+            "Value": "shifts"
+        },
+        {
+            "MenuLinkID": 2600,
+            "Name": "section",
+            "Value": "resettofactorydefaultsoee"
+        },
+        {
+            "MenuLinkID": 2601,
+            "Name": "section",
+            "Value": "usermanualoee"
+        },
+        {
+            "MenuLinkID": 6646,
+            "Name": "section",
+            "Value": "sendagentcommands"
+        },
+        {
+            "MenuLinkID": 9706,
+            "Name": "section",
+            "Value": "equipments"
+        },
+        {
+            "MenuLinkID": 9707,
+            "Name": "section",
+            "Value": "equipmentmodels"
+        },
+        {
+            "MenuLinkID": 9708,
+            "Name": "section",
+            "Value": "equipment-events"
+        },
+        {
+            "MenuLinkID": 9709,
+            "Name": "section",
+            "Value": "oee.losses"
+        },
+        {
+            "MenuLinkID": 9713,
+            "Name": "section",
+            "Value": "event-codes"
+        },
+        {
+            "MenuLinkID": 9714,
+            "Name": "section",
+            "Value": "schedule.equipment-products"
+        },
+        {
+            "MenuLinkID": 9715,
+            "Name": "section",
+            "Value": "schedule.products"
+        },
+        {
+            "MenuLinkID": 9716,
+            "Name": "section",
+            "Value": "event-categories"
+        },
+        {
+            "MenuLinkID": 9717,
+            "Name": "section",
+            "Value": "events"
+        },
+        {
+            "MenuLinkID": 9718,
+            "Name": "section",
+            "Value": "oee-event-codes"
+        },
+        {
+            "MenuLinkID": 9720,
+            "Name": "section",
+            "Value": "howto"
+        },
+        {
+            "MenuLinkID": 9724,
+            "Name": "section",
+            "Value": "mobile-devices"
+        }
+    ],
+    "Table2": [
+        {
+            "MenuId": 10,
+            "Name": "classes",
+            "Value": "trending-dropdown-container"
+        },
+        {
+            "MenuId": 10,
+            "Name": "icon",
+            "Value": "fa fa-line-chart"
+        },
+        {
+            "MenuId": 10,
+            "Name": "localize-key",
+            "Value": "menu_item_trending"
+        },
+        {
+            "MenuId": 11,
+            "Name": "icon",
+            "Value": "fa fa-sitemap"
+        },
+        {
+            "MenuId": 11,
+            "Name": "localize-key",
+            "Value": "menu_item_network_overview"
+        },
+        {
+            "MenuId": 12,
+            "Name": "localize-key",
+            "Value": "configuration_label"
+        },
+        {
+            "MenuId": 25,
+            "Name": "localize-key",
+            "Value": "about_label"
+        },
+        {
+            "MenuId": 2581,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 2581,
+            "Name": "localize-key",
+            "Value": "screenbuilder_nav_label"
+        },
+        {
+            "MenuId": 2582,
+            "Name": "icon",
+            "Value": "fw fw-icon-bar-chart"
+        },
+        {
+            "MenuId": 2582,
+            "Name": "localize-key",
+            "Value": "menu_item_OEE"
+        },
+        {
+            "MenuId": 2583,
+            "Name": "icon",
+            "Value": "fw fw-icon-bar-chart"
+        },
+        {
+            "MenuId": 2583,
+            "Name": "localize-key",
+            "Value": "menu_item_delays"
+        },
+        {
+            "MenuId": 2585,
+            "Name": "icon",
+            "Value": "fw fw-icon-bar-chart"
+        },
+        {
+            "MenuId": 2585,
+            "Name": "localize-key",
+            "Value": "menu_item_reports"
+        },
+        {
+            "MenuId": 2593,
+            "Name": "localize-key",
+            "Value": "menu_item_configuration_oee_label"
+        },
+        {
+            "MenuId": 9712,
+            "Name": "localize-key",
+            "Value": "menu_item_core.information-core_label"
+        },
+        {
+            "MenuId": 9721,
+            "Name": "icon",
+            "Value": "fa fa-tasks"
+        },
+        {
+            "MenuId": 9721,
+            "Name": "localize-key",
+            "Value": "menu_item_schedule.schedule_label"
+        },
+        {
+            "MenuId": 30,
+            "Name": "icon",
+            "Value": "fa fa-line-chart"
+        },
+        {
+            "MenuId": 30,
+            "Name": "icon-only",
+            "Value": "true"
+        },
+        {
+            "MenuId": 30,
+            "Name": "localize-key",
+            "Value": "menu_item_trending"
+        },
+        {
+            "MenuId": 9710,
+            "Name": "data-screenid",
+            "Value": "oee.oee"
+        },
+        {
+            "MenuId": 9710,
+            "Name": "localize-key",
+            "Value": "menu_item_oee.oee_label"
+        },
+        {
+            "MenuId": 9710,
+            "Name": "operation-code",
+            "Value": "oee"
+        },
+        {
+            "MenuId": 9711,
+            "Name": "data-screenid",
+            "Value": "oee.production"
+        },
+        {
+            "MenuId": 9711,
+            "Name": "localize-key",
+            "Value": "menu_item_oee.production_label"
+        },
+        {
+            "MenuId": 9711,
+            "Name": "operation-code",
+            "Value": "production"
+        },
+        {
+            "MenuId": 9706,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 9706,
+            "Name": "data-screenid",
+            "Value": "equipments"
+        },
+        {
+            "MenuId": 9706,
+            "Name": "localize-key",
+            "Value": "equipments"
+        },
+        {
+            "MenuId": 9707,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 9707,
+            "Name": "data-screenid",
+            "Value": "equipment-types"
+        },
+        {
+            "MenuId": 9707,
+            "Name": "localize-key",
+            "Value": "equipment-models"
+        },
+        {
+            "MenuId": 9708,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 9708,
+            "Name": "data-screenid",
+            "Value": "equipment-events"
+        },
+        {
+            "MenuId": 9708,
+            "Name": "localize-key",
+            "Value": "menu_item_equipment-events_label"
+        },
+        {
+            "MenuId": 9713,
+            "Name": "data-screenid",
+            "Value": "event-codes"
+        },
+        {
+            "MenuId": 9713,
+            "Name": "localize-key",
+            "Value": "menu_item_event-codes_label"
+        },
+        {
+            "MenuId": 9714,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 9714,
+            "Name": "data-screenid",
+            "Value": "schedule.equipment-products"
+        },
+        {
+            "MenuId": 9714,
+            "Name": "localize-key",
+            "Value": "menu_item_schedule.equipment-products_label"
+        },
+        {
+            "MenuId": 9715,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 9715,
+            "Name": "data-screenid",
+            "Value": "schedule.products"
+        },
+        {
+            "MenuId": 9715,
+            "Name": "localize-key",
+            "Value": "menu_item_schedule.products_label"
+        },
+        {
+            "MenuId": 9716,
+            "Name": "data-screenid",
+            "Value": "event-categories"
+        },
+        {
+            "MenuId": 9716,
+            "Name": "localize-key",
+            "Value": "menu_item_event-categories_label"
+        },
+        {
+            "MenuId": 9717,
+            "Name": "data-screenid",
+            "Value": "events"
+        },
+        {
+            "MenuId": 9717,
+            "Name": "localize-key",
+            "Value": "menu_item_events_label"
+        },
+        {
+            "MenuId": 2594,
+            "Name": "data-screenid",
+            "Value": "oee-configuration"
+        },
+        {
+            "MenuId": 2594,
+            "Name": "localize-key",
+            "Value": "oee_configuration_label"
+        },
+        {
+            "MenuId": 2595,
+            "Name": "data-screenid",
+            "Value": "delay-categories"
+        },
+        {
+            "MenuId": 2595,
+            "Name": "localize-key",
+            "Value": "delay_categories_label"
+        },
+        {
+            "MenuId": 2596,
+            "Name": "data-screenid",
+            "Value": "delay-codes"
+        },
+        {
+            "MenuId": 2596,
+            "Name": "localize-key",
+            "Value": "delay_codes_label"
+        },
+        {
+            "MenuId": 2597,
+            "Name": "data-screenid",
+            "Value": "products"
+        },
+        {
+            "MenuId": 2597,
+            "Name": "localize-key",
+            "Value": "products_label"
+        },
+        {
+            "MenuId": 2598,
+            "Name": "data-screenid",
+            "Value": "line-products"
+        },
+        {
+            "MenuId": 2598,
+            "Name": "localize-key",
+            "Value": "line_products_label"
+        },
+        {
+            "MenuId": 2599,
+            "Name": "data-screenid",
+            "Value": "shifts"
+        },
+        {
+            "MenuId": 2599,
+            "Name": "localize-key",
+            "Value": "shifts_label"
+        },
+        {
+            "MenuId": 2600,
+            "Name": "data-screenid",
+            "Value": "reset-to-factory-defaults-oee"
+        },
+        {
+            "MenuId": 2600,
+            "Name": "localize-key",
+            "Value": "resetToFactoryDefaults_oee_nav_label"
+        },
+        {
+            "MenuId": 2601,
+            "Name": "data-screenid",
+            "Value": "user-manual-oee"
+        },
+        {
+            "MenuId": 2601,
+            "Name": "localize-key",
+            "Value": "user_manual_nav_label"
+        },
+        {
+            "MenuId": 9718,
+            "Name": "data-screenid",
+            "Value": "oee-event-codes"
+        },
+        {
+            "MenuId": 9718,
+            "Name": "localize-key",
+            "Value": "menu_item_oee-event-codes_label"
+        },
+        {
+            "MenuId": 2589,
+            "Name": "localize-key",
+            "Value": "menu_item_oee_report"
+        },
+        {
+            "MenuId": 2590,
+            "Name": "localize-key",
+            "Value": "menu_item_delays_report"
+        },
+        {
+            "MenuId": 2591,
+            "Name": "localize-key",
+            "Value": "menu_item_batch_report"
+        },
+        {
+            "MenuId": 2592,
+            "Name": "localize-key",
+            "Value": "menu_item_oee_last24hoursreport_label"
+        },
+        {
+            "MenuId": 9709,
+            "Name": "data-screenid",
+            "Value": "oee.losses"
+        },
+        {
+            "MenuId": 9709,
+            "Name": "localize-key",
+            "Value": "menu_item_OEE.losses_label"
+        },
+        {
+            "MenuId": 2587,
+            "Name": "localize-key",
+            "Value": "menu_item_delays_manager"
+        },
+        {
+            "MenuId": 2588,
+            "Name": "localize-key",
+            "Value": "menu_item_delays_declare"
+        },
+        {
+            "MenuId": 2586,
+            "Name": "localize-key",
+            "Value": "menu_item_OEE_overview"
+        },
+        {
+            "MenuId": 1529,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 1529,
+            "Name": "data-screenid",
+            "Value": "screen-builder"
+        },
+        {
+            "MenuId": 1529,
+            "Name": "localize-key",
+            "Value": "screens_screenbuilder_nav_label"
+        },
+        {
+            "MenuId": 26,
+            "Name": "data-screenid",
+            "Value": "about"
+        },
+        {
+            "MenuId": 26,
+            "Name": "localize-key",
+            "Value": "about_label"
+        },
+        {
+            "MenuId": 9720,
+            "Name": "data-screenid",
+            "Value": "howto"
+        },
+        {
+            "MenuId": 9720,
+            "Name": "localize-key",
+            "Value": "howto_label"
+        },
+        {
+            "MenuId": 13,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 13,
+            "Name": "data-screenid",
+            "Value": "account-information"
+        },
+        {
+            "MenuId": 13,
+            "Name": "localize-key",
+            "Value": "accountinformation_nav_label"
+        },
+        {
+            "MenuId": 14,
+            "Name": "data-screenid",
+            "Value": "users"
+        },
+        {
+            "MenuId": 14,
+            "Name": "localize-key",
+            "Value": "users_nav_label"
+        },
+        {
+            "MenuId": 15,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 15,
+            "Name": "data-screenid",
+            "Value": "data-sources-configuration"
+        },
+        {
+            "MenuId": 15,
+            "Name": "localize-key",
+            "Value": "datasources_nav_label"
+        },
+        {
+            "MenuId": 17,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 17,
+            "Name": "data-screenid",
+            "Value": "tags-configuration"
+        },
+        {
+            "MenuId": 17,
+            "Name": "localize-key",
+            "Value": "tags_nav_label"
+        },
+        {
+            "MenuId": 18,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 18,
+            "Name": "data-screenid",
+            "Value": "tags-export-configuration"
+        },
+        {
+            "MenuId": 18,
+            "Name": "localize-key",
+            "Value": "tagsExportConfiguration_nav_label"
+        },
+        {
+            "MenuId": 20,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 20,
+            "Name": "data-screenid",
+            "Value": "system-network-configuration"
+        },
+        {
+            "MenuId": 20,
+            "Name": "localize-key",
+            "Value": "systemNetworkConfiguration_nav_label"
+        },
+        {
+            "MenuId": 21,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 21,
+            "Name": "data-screenid",
+            "Value": "reset-to-factory-defaults"
+        },
+        {
+            "MenuId": 21,
+            "Name": "localize-key",
+            "Value": "resetToFactoryDefaults_nav_label"
+        },
+        {
+            "MenuId": 24,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 24,
+            "Name": "data-screenid",
+            "Value": "profiles"
+        },
+        {
+            "MenuId": 24,
+            "Name": "localize-key",
+            "Value": "profiles_nav_label"
+        },
+        {
+            "MenuId": 27,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 27,
+            "Name": "data-screenid",
+            "Value": "audit"
+        },
+        {
+            "MenuId": 27,
+            "Name": "localize-key",
+            "Value": "audit_nav_label"
+        },
+        {
+            "MenuId": 28,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 28,
+            "Name": "data-screenid",
+            "Value": "backup-configuration"
+        },
+        {
+            "MenuId": 28,
+            "Name": "localize-key",
+            "Value": "backup_nav_label"
+        },
+        {
+            "MenuId": 29,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 29,
+            "Name": "data-screenid",
+            "Value": "network-overview"
+        },
+        {
+            "MenuId": 29,
+            "Name": "localize-key",
+            "Value": "networkoverview_nav_label"
+        },
+        {
+            "MenuId": 9724,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 9724,
+            "Name": "data-screenid",
+            "Value": "mobile-devices"
+        },
+        {
+            "MenuId": 9724,
+            "Name": "localize-key",
+            "Value": "mobile-devices"
+        },
+        {
+            "MenuId": 6646,
+            "Name": "data-available-on-cloud",
+            "Value": "false"
+        },
+        {
+            "MenuId": 6646,
+            "Name": "data-screenid",
+            "Value": "send-agent-commands"
+        },
+        {
+            "MenuId": 6646,
+            "Name": "localize-key",
+            "Value": "send_agent_commands_nav_label"
+        }
+    ]
+}
+
+navbar-clock-js
+{
+    "Table": [
+        {
+            "TimeStamp": "2021-08-27 02:55:22"
+        }
+    ]
+}
+
+app-config.js
+{
+    "Table": [
+        {
+            "Route": "!/landing"
+        }
+    ]
+}
+

@@ -9,6 +9,8 @@
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
+    position: sticky;
+    top: 0;
 }
 
 .header .headerLeft{

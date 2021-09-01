@@ -4,6 +4,15 @@ import './Clock.css';
 import { useTranslation } from "react-i18next";
 
 const Clock = () => {
+
+  var QP = new window.Core.Database.QueryParameters(); 
+  window.Core.Json.CallProcedure("FRONTEND.SyncTimeWithServer", QP, {
+    onSuccess: function (data) {
+            new Date().setDate(data.Table[0].TimeStamp);
+        }
+        , Async: false
+    }, "APP"); 
+
   const [time, setTime] = useState((new Date().getHours()<10?"0"+new Date().getHours():new Date().getHours())+":"+(new Date().getMinutes()<10?"0"+new Date().getMinutes():new Date().getMinutes()));
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const[t] = useTranslation("global");
@@ -19,6 +28,7 @@ const Clock = () => {
     return () => clearInterval(interval);
   }, []);
   
+
   const button = (
     <EuiButton style={{backgroundColor: "transparent"}} >
       <p style={{color: "white", fontWeight: "bold"}}>{time}</p>
