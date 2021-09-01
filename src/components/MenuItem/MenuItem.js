@@ -18,33 +18,29 @@ const MenuItem = ({item}) => {
   return(
     <>
       <li className="dropdown-parent" ref={domNode} >
-          {item.url!==undefined ? 
+          {item.URL!==null ? 
             <>
-              <Link to={item.url} className="Link">
+              <Link to={item.URL} className="Link">
                 <IoOptions style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-                <p>{t("Header.Label."+item.name.toString()+"-label")}</p>
+                {/* <p>{t("Header.Label."+item.name.toString()+"-label")}</p> */}
+                <p>{item.Name}</p>
               </Link>
             </>
             :
             <>
               <span onClick={()=>setVisibility(!visibility)}>
                 <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-                <p>{t("Header.Label."+item.name.toString()+"-label")}</p>
+                {/* <p>{t("Header.Label."+item.name.toString()+"-label")}</p> */}
+                <p>{item.Name}</p>
                 <VscTriangleDown className="IoTriangle"/>
               </span>
             </>
           }   
         
         <ul className={visibility? "dropdown-menu visible" : "dropdown-menu hidden"}>
-          {item.name==="OEE" ?
-            <Link to="/IHBox/oeeOverview">
-              <li className="Options">
-                Overview
-              </li> 
-            </Link>
-            : 
-            item.children!==undefined?
-            <TreeView list={item.children}/>
+          {
+            item.Children.length > 0?
+            <TreeView list={item.Children}/>
             :
             null
           }

@@ -11,7 +11,7 @@ li.dropdown-parent button{
 
 li.dropdown-parent > span, a.Link{
     height: 50px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #fff;
     text-decoration: none;
     display: block;
@@ -22,7 +22,6 @@ li.dropdown-parent > span, a.Link{
 }
 
 li.dropdown-parent > span > .IoTriangle{
-    /* transform: rotate(180deg); */
     color:#07b;
     width:10px; 
     height:10px; 
