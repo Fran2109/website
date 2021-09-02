@@ -11,6 +11,7 @@
 .ConfigurationPage .ConfigurationPageContent .ConfigurationLeft{
     width: 25vw;    
     position: fixed;
+    left: 0;
     z-index: -1005;
     overflow: auto;
     height: 100vh;

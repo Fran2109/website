@@ -2,8 +2,6 @@ import './App.css';
 import IHBox from '../IHBox/IHBox.js';
 import Login from './../Login/Login';
 import PageNotFound from '../PageNotFound/PageNotFound.tsx';
-import ConfigurationPage from '../ConfigurationPage/ConfigurationPage';
-import Overview from './../Overview/Overview.tsx';
 import {  Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 
 function setToken(userToken) {
@@ -24,17 +22,11 @@ function App() {
     <div className="principal">
       <HashRouter>
         <Switch>
-          <Route path="/Login" exact>
+          <Route path="/Login">
              <Login setToken={setToken} />
           </Route>
-          <Route path="/IHBox" exact>
+          <Route path="/IHBox">
             <IHBox />
-          </Route>
-          <Route path="/IHBox/oeeOverview" exact>
-            <Overview />
-          </Route>
-          <Route path="/IHBox/configuration" exact>
-            <ConfigurationPage />
           </Route>
           <Route path="/" exact>
             {
@@ -47,7 +39,7 @@ function App() {
               <Redirect to="Login" />
             </>
             }
-          </Route>
+          </Route>          
           <Route >
               <PageNotFound />
           </Route>

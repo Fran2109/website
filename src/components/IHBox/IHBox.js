@@ -1,6 +1,10 @@
 import './IHBox.css';
 import Header from '../Header/Header';
 import Logo from './../../assets/images/logo.png';
+import ConfigurationPage from '../ConfigurationPage/ConfigurationPage';
+import Overview from './../Overview/Overview.tsx';
+import {  Route, Switch } from 'react-router-dom';
+import PageNotFound from '../PageNotFound/PageNotFound.tsx';
 
 const IHBox = () => {
     /* var QP = new window.Core.Database.QueryParameters();
@@ -25,9 +29,25 @@ const IHBox = () => {
     return (
         <div className="IHBox">
             <Header />
-                <div className="Logo">
-                    <img src={Logo} alt="Logo" />
-                </div>
+            <Switch>
+                <Route path="/IHBox/oeeOverview" exact>
+                    <Overview />
+                </Route>
+                <Route path="/IHBox/configuration">
+                    <ConfigurationPage />
+                </Route>
+                <Route path="/IHBox" exact>
+                    <div className="Logo">
+                        <img src={Logo} alt="Logo" />
+                    </div>
+                </Route>
+                <Route >
+                    <PageNotFound />
+                </Route>
+                
+            </Switch>
+            
+                
         </div>
     );
 }

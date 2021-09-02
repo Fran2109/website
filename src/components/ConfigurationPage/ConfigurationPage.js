@@ -1,9 +1,10 @@
 import './ConfigurationPage.css';
-import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { IoSettingsSharp } from "react-icons/io5";
+import {  Route, Switch } from 'react-router-dom';
+/* import PageNotFound from './../PageNotFound/PageNotFound.tsx'; */
 
 const ConfigurationPage = () => {
     const [configurations, setConfigurations] = useState([]);
@@ -86,7 +87,7 @@ const ConfigurationPage = () => {
                                     return(
                                         <>
                                             {getRandomInt(0,3)!==0?
-                                            <Link to={`/configuration/${option.name}`} key={option.id} >
+                                            <Link to={`/IHBox/configuration/${option.name}`} key={option.id} >
                                                 <li >
                                                     {t(configuration.previous+option.name)}
                                                 </li>    
@@ -105,7 +106,6 @@ const ConfigurationPage = () => {
     }
     return(
         <div className="ConfigurationPage">
-            <Header/>
             <div className="ConfigurationPageContent">
                 { width > 1000?
                 <>
@@ -128,7 +128,11 @@ const ConfigurationPage = () => {
                 </>
                 }
                 <div className="ConfigurationRight">
-                    
+                {/* <Switch>
+                    <Route >
+                        <PageNotFound />
+                    </Route>
+                </Switch> */}
                 </div>
             </div>
         </div>
