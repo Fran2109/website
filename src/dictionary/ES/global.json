@@ -14,10 +14,30 @@
     },
     "Header": {
         "Label": {
-            "OEE-label": "OEE",
-            "Delays-label": "Paradas",
-            "Schedule-label": "Producción",
-            "Reports-label": "Reportes"
+            "OEE": {
+                "Head": "OEE",
+                "Overview": "General"
+            },
+            "Delays": {
+                "Head": "Paradas",
+                "Declare": "Declaración",
+                "Manager": "Administración"
+            },
+            "Schedule": {
+                "Head": "Producción"
+            },
+            "Reports": {
+                "Head": "Reportes",
+                "OEE": "OEE",
+                "Losses": "Pérdidas",
+                "Events": "Events",
+                "Delays": "Paradas",
+                "Batch": "Lote",
+                "Last 24 Hours": "Últimas 24 Horas"
+            },
+            "Mimics": {
+                "Head": "Mimicos"
+            }
         },
         "User" : {
             "Logged-out": "Sin identificarse",

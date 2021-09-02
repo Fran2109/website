@@ -22,17 +22,28 @@ const MenuItem = ({item}) => {
             <>
               <Link to={item.URL} className="Link">
                 <IoOptions style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-                {/* <p>{t("Header.Label."+item.name.toString()+"-label")}</p> */}
-                <p>{item.Name}</p>
+                <p>{t("Header.Label."+item.Name.toString()+".Head")}</p>
               </Link>
             </>
             :
             <>
               <span onClick={()=>setVisibility(!visibility)}>
-                <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-                {/* <p>{t("Header.Label."+item.name.toString()+"-label")}</p> */}
-                <p>{item.Name}</p>
-                <VscTriangleDown className="IoTriangle"/>
+                {item.Name==="Mimics"?
+                <>
+                  {item.Children.length>0?
+                  <>
+                    <p>{t("Header.Label."+item.Name.toString()+".Head")}</p>
+                    <VscTriangleDown className="IoTriangle"/>
+                  </>
+                  :
+                  null}
+                </>
+                :
+                <>
+                  <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
+                  <p>{t("Header.Label."+item.Name.toString()+".Head")}</p>
+                  <VscTriangleDown className="IoTriangle"/>
+                </>}
               </span>
             </>
           }   
@@ -40,7 +51,7 @@ const MenuItem = ({item}) => {
         <ul className={visibility? "dropdown-menu visible" : "dropdown-menu hidden"}>
           {
             item.Children.length > 0?
-            <TreeView list={item.Children}/>
+            <TreeView list={item.Children} head={item.Name}/>
             :
             null
           }

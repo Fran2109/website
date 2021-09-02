@@ -1,13 +1,25 @@
 import React from 'react';
 import './TreeView.css';
 import {EuiTreeView} from '@elastic/eui';
-import {VscChevronRight} from "react-icons/vsc";
+import { VscTriangleDown } from "react-icons/vsc";
+import { useTranslation } from "react-i18next";
 
-const TreeView = ({list}) => {
+const TreeView = ({ list, head }) => {
+  const[t] = useTranslation("global");
+  head="Header.Label."+head+".";
+  const ifHasTranslation = (header, text) => {
+    let flag = true;
+    for (let i = 0; i < header.length; i++) {
+      if(header[i]!==text[i])
+      {
+        flag = false;
+      }
+    }
+    return flag?  false : true
+  }
   const ItemGenerator = (props) => {	
     var i=0;
     let itemsGenerated = [];
-  
     const hasSubtype = (subType) => {
       return subType.length>0? true : false;
     };
@@ -23,10 +35,10 @@ const TreeView = ({list}) => {
       {
         i++;
         let subTypeGenerated = {
-          label: subType.Name,
+          label: ifHasTranslation(head, t(head+subType.Name))? t(head+subType.Name) : subType.Name,
           id: i.toString(),
           children: hasSubtype(subType.Children) ? subTypeGenerator(subType.Children) : null,
-          icon: hasSubtype(subType.Children)? <VscChevronRight style={{color:"black"}} /> : null,
+          icon: hasSubtype(subType.Children)? <VscTriangleDown className="IoTriangle" style={{marginTop: "8px", height: "10px", width: "10px"}}/> : null,
         }
         if(subTypeGenerated.children == null) {
           delete subTypeGenerated.children;

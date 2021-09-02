@@ -14,10 +14,30 @@
     },
     "Header": {
         "Label": {
-            "OEE-label": "OEE",
-            "Delays-label": "Delays",
-            "Schedule-label": "Schedule",
-            "Reports-label": "Reports"
+            "OEE": {
+                "Head": "OEE",
+                "Overview": "Overview"
+            },
+            "Delays": {
+                "Head": "Delays",
+                "Declare": "Declare",
+                "Manager": "Manager"
+            },
+            "Schedule": {
+                "Head": "Schedule"
+            },
+            "Reports": {
+                "Head": "Reports",
+                "OEE": "OEE",
+                "Losses": "Losses",
+                "Events": "Events",
+                "Delays": "Delays",
+                "Batch": "Batch",
+                "Last 24 Hours": "Last 24 Hours"
+            },
+            "Mimics": {
+                "Head": "Mimics"
+            }
         },
         "User" : {
             "Logged-out": "Unsigned",

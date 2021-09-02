@@ -31,5 +31,13 @@
 }
 
 .euiTreeView .euiTreeView {
-    padding-left: 12px;
+    padding-left: 0px;
+}
+
+.euiTreeView__nodeLabel{
+    margin-left: 12px;
+}
+
+.euiTreeView__node--expanded .euiText .euiTreeView .euiTreeView__node .euiTreeView__nodeInner{
+    padding-left: 24px;
 }
