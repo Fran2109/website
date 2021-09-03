@@ -45,28 +45,26 @@ const ConfigurationPage = () => {
                 <>
                     {configurationsOptions.map((configuration) => {
                         return(
-                            <div key={configuration.Id} className="ConfigurationLeftContent" style={configuration.Name==="About"? {marginBottom:"60px"} : null}>
+                            <ul key={configuration.Id} className="ConfigurationLeftContent" style={configuration.Name==="About"? {marginBottom:"60px"} : null}>
                                 {ifHasTranslation("ConfigurationPage."+configuration.Name, t("ConfigurationPage."+configuration.Name+".Head"))?
                                 <h4>{t("ConfigurationPage."+configuration.Name+".Head")}</h4>
                                 :
-                                <h4>{configuration.Name}</h4>}                  
+                                <h4>{configuration.Name}</h4>} 
                                 <ul className="Options">
                                     {orderObject(configuration.Children).map((option) => {
                                         return(
-                                            <>
-                                                <Link to={`/IHBox/configuration/${option.Name}`} >
-                                                    <li key={option.Id} >
-                                                        {ifHasTranslation("ConfigurationPage."+configuration.Name+"."+option.Name, t("ConfigurationPage."+configuration.Name+"."+option.Name))?
-                                                        t("ConfigurationPage."+configuration.Name+"."+option.Name)
-                                                        :
-                                                        option.Name}
-                                                    </li>    
-                                                </Link>
-                                            </>
+                                            <Link to={`/IHBox/configuration/${option.Name}`} key={option.Id}>
+                                                <li >
+                                                    {ifHasTranslation("ConfigurationPage."+configuration.Name+"."+option.Name, t("ConfigurationPage."+configuration.Name+"."+option.Name))?
+                                                    t("ConfigurationPage."+configuration.Name+"."+option.Name)
+                                                    :
+                                                    option.Name}
+                                                </li>    
+                                            </Link>
                                         )
                                     })}
                                 </ul>
-                            </div>
+                            </ul>
                         );
                     })}
                 </>
