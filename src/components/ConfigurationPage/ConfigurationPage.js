@@ -45,7 +45,7 @@ const ConfigurationPage = () => {
                 <>
                     {configurationsOptions.map((configuration) => {
                         return(
-                            <div /* key={configuration.Id} */ className="ConfigurationLeftContent" style={configuration.Name==="About"? {marginBottom:"60px"} : null}>
+                            <div key={configuration.Id} className="ConfigurationLeftContent" style={configuration.Name==="About"? {marginBottom:"60px"} : null}>
                                 {ifHasTranslation("ConfigurationPage."+configuration.Name, t("ConfigurationPage."+configuration.Name+".Head"))?
                                 <h4>{t("ConfigurationPage."+configuration.Name+".Head")}</h4>
                                 :
