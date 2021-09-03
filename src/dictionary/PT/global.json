@@ -48,53 +48,53 @@
     },
     "ConfigurationBtn":"Conexão ruim",
     "ConfigurationPage":{
-        "sectionOne":{
-            "title":"Configuração da plataforma",
-            "accountInformation":"Informação da conta",
-            "datasources":"Fontes de dados",
-            "tags":"Tag",
-            "securityprofiles":"Perfis",
-            "users":"Comercial",
-            "networkoverview":"Visão geral da rede",
-            "sendagentcommands":"Comando do Agente",
-            "mobile-devices":"Dispositivos móveis",
-            "audit":"Auditoria",
-            "backupConfiguration":"Restauração de backup",
-            "tagsexportconfiguration":"Exportação de dados brutos",
-            "systemnetworkconfiguration":"Configurações de rede do sistema",
-            "resettofactorydefaults":"Redefinir para os padrões de fábrica"
+        "Configuration":{
+            "Head":"Configuração da plataforma",
+            "Account Configuration":"Informação da conta",
+            "Data Sources":"Fontes de dados",
+            "Tags":"Tag",
+            "Profiles":"Perfis",
+            "Users":"Comercial",
+            "Network Overview":"Visão geral da rede",
+            "Agent Command":"Comando do Agente",
+            "Mobile-devices":"Dispositivos móveis",
+            "Audit":"Auditoria",
+            "Backup / Restore":"Restauração de backup",
+            "Tags Export":"Exportação de dados brutos",
+            "System Network Configuration":"Configurações de rede do sistema",
+            "Reset to Factory Defaults":"Redefinir para os padrões de fábrica"
         },
-        "sectionTwo":{
-            "title":"Núcleo de Informação",
-            "events":"Eventos",
-            "event-categories":"Categorias de Eventos",
-            "event-codes":"Códigos de Eventos",
-            "schedule.products":"Produtos",
-            "equipmentmodels":"Modelos de Equipamentos",
-            "equipments":"Equipamentos",
-            "equipments-events":"Eventos de Equipamentos",
-            "schedule.equipment-products":"Produtos de Equipamentos"
+        "Information Core":{
+            "Head": "Núcleo de Informação",
+            "Events": "Eventos",
+            "Event Categories": "Categorias de Eventos",
+            "Event Codes": "Códigos de Eventos",
+            "Products":"Produtos",
+            "Equipment Models":"Modelos de Equipamentos",
+            "Equipments":"Equipamentos",
+            "Equipment Events":"Eventos de Equipamentos",
+            "Equipment Products":"Produtos de Equipamentos"
         },
-        "sectionThree":{
-            "title":"Configuração OEE",
-            "oeeconfiguration":"Configuração OEE",
-            "delaycategories":"Atrasar categorias",
-            "delaycodes":"Códigos de Atraso",
-            "oee-event-codes":"Códigos de Atraso",
-            "products":"Produtos",
-            "lineproducts":"Produtos de Linha",
-            "shifts":"Turnos",
-            "resettofactorydefaultsoee":"Redefinir para os padrões de fábrica",
-            "usermanualoee":"Manual do usuário"
+        "OEE Configuration":{
+            "Head":"Configuração OEE",
+            "Lines and Machines":"Configuração OEE",
+            "Delay Categories":"Atrasar categorias",
+            "Delay Codes":"Códigos de Atraso",
+            "Event Codes":"Códigos de Eventos",
+            "Products":"Produtos",
+            "Line Products":"Produtos de Linha",
+            "Shifts":"Turnos",
+            "Reset to Factory Defaults":"Redefinir para os padrões de fábrica",
+            "User Manual":"Manual do usuário"
         },
-        "sectionFour":{
-            "title":"Ferramentas",
-            "screenbuilder":"Construtor de mímica"
+        "TOOLS":{
+            "Head":"Ferramentas",
+            "Mimic Builder":"Construtor de mímica"
         },
-        "sectionFive":{
-            "title":"Cerca de",
-            "about":"Cerca de",
-            "howto":"Como"
+        "About":{
+            "Head":"Cerca de",
+            "About":"Cerca de",
+            "HowTo":"Como"
         }
     },
     "PageNotFound":{

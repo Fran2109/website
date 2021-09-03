@@ -48,53 +48,53 @@
     },
     "ConfigurationBtn":"Bad Connection",
     "ConfigurationPage":{
-        "sectionOne":{
-            "title":"Platform Configuration",
-            "accountInformation":"Account Information",
-            "datasources":"Data Sources",
-            "tags":"Tags",
-            "securityprofiles":"Profiles",
-            "users":"Users",
-            "networkoverview":"Network Overview",
-            "sendagentcommands":"Agent Command",
-            "mobile-devices":"Mobile Devices",
-            "audit":"Audit",
-            "backupConfiguration":"Backup/Restore",
-            "tagsexportconfiguration":"Raw Data Export",
-            "systemnetworkconfiguration":"System Network Configurations",
-            "resettofactorydefaults":"Reset to Factory Defaults"
+        "Configuration":{
+            "Head":"Platform Configuration",
+            "Account Configuration":"Account Information",
+            "Data Sources":"Data Sources",
+            "Tags":"Tags",
+            "Profiles":"Profiles",
+            "Users":"Users",
+            "Network Overview":"Network Overview",
+            "Agent Command":"Agent Command",
+            "Mobile-devices":"Mobile Devices",
+            "Audit":"Audit",
+            "Backup / Restore":"Backup/Restore",
+            "Tags Export":"Raw Data Export",
+            "System Network Configuration":"System Network Configurations",
+            "Reset to Factory Defaults":"Reset to Factory Defaults"
         },
-        "sectionTwo":{
-            "title":"Information Core",
-            "events":"Events",
-            "event-categories":"Event Categories",
-            "event-codes":"Event Codes",
-            "schedule.products":"Products",
-            "equipmentmodels":"Equipment Models",
-            "equipments":"Equipments",
-            "equipments-events":"Equipments Events",
-            "schedule.equipment-products":"Equipments Products"
+        "Information Core":{
+            "Head": "Information Core",
+            "Events": "Events",
+            "Event Categories": "Event Categories",
+            "Event Codes": "Event Codes",
+            "Products":"Products",
+            "Equipment Models":"Equipment Models",
+            "Equipments":"Equipments",
+            "Equipment Events":"Equipments Events",
+            "Equipment Products":"Equipments Products"
         },
-        "sectionThree":{
-            "title":"OEE Configuration",
-            "oeeconfiguration":"OEE Configuration",
-            "delaycategories":"Delay Categories",
-            "delaycodes":"Delay Codes",
-            "oee-event-codes":"Events Codes",
-            "products":"Products",
-            "lineproducts":"Line Products",
-            "shifts":"Shifts",
-            "resettofactorydefaultsoee":"Reset to Factory Defaults",
-            "usermanualoee":"User Manual"
+        "OEE Configuration":{
+            "Head":"OEE Configuration",
+            "Lines and Machines":"OEE Configuration",
+            "Delay Categories":"Delay Categories",
+            "Delay Codes":"Delay Codes",
+            "Event Codes":"Events Codes",
+            "Products":"Products",
+            "Line Products":"Line Products",
+            "Shifts":"Shifts",
+            "Reset to Factory Defaults":"Reset to Factory Defaults",
+            "User Manual":"User Manual"
         },
-        "sectionFour":{
-            "title":"Tools",
-            "screenbuilder":"Mimic Builder"
+        "TOOLS":{
+            "Head":"Tools",
+            "Mimic Builder":"Mimic Builder"
         },
-        "sectionFive":{
-            "title":"About",
-            "about":"About",
-            "howto":"How To"
+        "About":{
+            "Head":"About",
+            "About":"About",
+            "HowTo":"How To"
         }
     },
     "PageNotFound":{

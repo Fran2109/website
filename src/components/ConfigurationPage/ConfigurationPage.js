@@ -3,104 +3,75 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { IoSettingsSharp } from "react-icons/io5";
-import {  Route, Switch } from 'react-router-dom';
+import DBContext from './../../context/DBContext';
+import { useContext } from 'react';
+import useWindowSize from './../../utils/useWindowSize/useWindowSize';
 /* import PageNotFound from './../PageNotFound/PageNotFound.tsx'; */
 
 const ConfigurationPage = () => {
-    const [configurations, setConfigurations] = useState([]);
-    const [width, setWidth] = useState(window.innerWidth);
+    const [configurationsOptions, setConfigurationsOptions] = useState([]);
+    const [width] = useWindowSize();
     const [visibility, setVisibility] = useState(false);
     const[t] = useTranslation("global");
-    const getConfigurations = new Promise((resolve, reject) => {
-        resolve([ 
-            {id: "1", previous:"ConfigurationPage.sectionOne.", name: "title", children:[
-                    {id: "2", name: "accountInformation"},
-                    {id: "3", name: "datasources"},
-                    {id: "4", name: "tags"},
-                    {id: "5", name: "securityprofiles"},
-                    {id: "6", name: "users"},
-                    {id: "7", name: "networkoverview"},
-                    {id: "8", name: "sendagentcommands"},
-                    {id: "9", name: "mobile-devices"},
-                    {id: "10", name: "audit"},
-                    {id: "11", name: "backupConfiguration"},
-                    {id: "12", name: "tagsexportconfiguration"},
-                    {id: "13", name: "systemnetworkconfiguration"},
-                    {id: "14", name: "resettofactorydefaults"}
-                ] },
-            {id: "15", previous:"ConfigurationPage.sectionTwo.", name: "title", children:[
-                    {id: "16", name: "events"},
-                    {id: "17", name: "event-categories"},
-                    {id: "18", name: "event-codes"},
-                    {id: "19", name: "schedule.products"},
-                    {id: "20", name: "equipmentmodels"},
-                    {id: "21", name: "equipments"},
-                    {id: "22", name: "equipments-events"},
-                    {id: "23", name: "schedule.equipment-products"}
-                ] },
-            {id: "24", previous:"ConfigurationPage.sectionThree.", name: "title", children:[
-                    {id: "25", name: "oeeconfiguration"},
-                    {id: "26", name: "delaycategories"},
-                    {id: "27", name: "delaycodes"},
-                    {id: "28", name: "oee-event-codes"},
-                    {id: "29", name: "products"},
-                    {id: "30", name: "lineproducts"},
-                    {id: "31", name: "shifts"},
-                    {id: "32", name: "resettofactorydefaultsoee"},
-                    {id: "33", name: "usermanualoee"}
-                ] },
-            {id: "34", previous:"ConfigurationPage.sectionFour.", name: "title", children:[
-                    {id: "35", name: "screenbuilder"}
-                ] },
-            {id: "36", previous:"ConfigurationPage.sectionFive.", name: "title", children:[
-                    {id: "37", name: "about"},
-                    {id: "38", name: "howto"}
-                ] }
-            ])
-    }); 
-
+    const DB= useContext(DBContext);
     useEffect(() => {
-        getConfigurations.then(configurations => {
-            setConfigurations(configurations);
+        setConfigurationsOptions(DB.configurationOptions);
+    }, [DB])
+    
+    function orderObject(obj){
+        obj.sort(function(a, b) {
+            if(a.Order < b.Order) return -1;
+            if(a.Order > b.Order) return 1;
+            return 0;
         });
-        const interval = setInterval(() => {
-            if (window.innerWidth !== width) {
-                setWidth(window.innerWidth);
-            }
-        }, 100);
-        return () => clearInterval(interval);
-      }, []);
-
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
+        return obj;
     }
+
+  const ifHasTranslation = (header, text) => {
+    let flag = true;
+    for (let i = 0; i < header.length; i++) {
+      if(header[i]!==text[i])
+      {
+        flag = false;
+      }
+    }
+    return flag?  false : true
+  }
 
     const OptionsConfiguration = () => {
         return(
             <div className="ConfigurationLeft">
-                {configurations.map((configuration) => {
-                    return(
-                        <div key={configuration.id} className="ConfigurationLeftContent" style={configuration.previous==="ConfigurationPage.sectionFive."? {marginBottom:"60px"} : null}>
-                            <h4>{t(configuration.previous+configuration.name)}</h4>
-                            <ul className="Options">
-                                {configuration.children.map((option) => {
-                                    return(
-                                        <>
-                                            {getRandomInt(0,3)!==0?
-                                            <Link to={`/IHBox/configuration/${option.name}`} key={option.id} >
-                                                <li >
-                                                    {t(configuration.previous+option.name)}
-                                                </li>    
-                                            </Link>
-                                            :
-                                            null}
-                                        </>
-                                    )
-                                })}
-                            </ul>
-                        </div>
-                    );
-                })}
+                {configurationsOptions!==undefined?
+                <>
+                    {configurationsOptions.map((configuration) => {
+                        return(
+                            <div /* key={configuration.Id} */ className="ConfigurationLeftContent" style={configuration.Name==="About"? {marginBottom:"60px"} : null}>
+                                {ifHasTranslation("ConfigurationPage."+configuration.Name, t("ConfigurationPage."+configuration.Name+".Head"))?
+                                <h4>{t("ConfigurationPage."+configuration.Name+".Head")}</h4>
+                                :
+                                <h4>{configuration.Name}</h4>}                  
+                                <ul className="Options">
+                                    {orderObject(configuration.Children).map((option) => {
+                                        return(
+                                            <>
+                                                <Link to={`/IHBox/configuration/${option.Name}`} >
+                                                    <li key={option.Id} >
+                                                        {ifHasTranslation("ConfigurationPage."+configuration.Name+"."+option.Name, t("ConfigurationPage."+configuration.Name+"."+option.Name))?
+                                                        t("ConfigurationPage."+configuration.Name+"."+option.Name)
+                                                        :
+                                                        option.Name}
+                                                    </li>    
+                                                </Link>
+                                            </>
+                                        )
+                                    })}
+                                </ul>
+                            </div>
+                        );
+                    })}
+                </>
+                :
+                null}
             </div>
         )
     }

@@ -48,53 +48,53 @@
     },
     "ConfigurationBtn":"Mala conexión",
     "ConfigurationPage":{
-        "sectionOne":{
-            "title":"Configuración de Plataforma",
-            "accountInformation":"Información de cuenta",
-            "datasources":"Fuentes de Datos",
-            "tags":"Tags",
-            "securityprofiles":"Perfiles",
-            "users":"Usuarios",
-            "networkoverview":"Esquema de Red",
-            "sendagentcommands":"Comando de Agente",
-            "mobile-devices":"Dispositivos Móviles",
-            "audit":"Auditoria",
-            "backupConfiguration":"Copia de Seguridad / Restaurar",
-            "tagsexportconfiguration":"Exportación Datos sin Procesar",
-            "systemnetworkconfiguration":"Configuración de Red",
-            "resettofactorydefaults":"Reiniciar a Ajustes de Fábrica"
+        "Configuration":{
+            "Head":"Configuración de Plataforma",
+            "Account Configuration":"Información de cuenta",
+            "Data Sources":"Fuentes de Datos",
+            "Tags":"Tags",
+            "Profiles":"Perfiles",
+            "Users":"Usuarios",
+            "Network Overview":"Esquema de Red",
+            "Agent Command":"Comando de Agente",
+            "Mobile-devices":"Dispositivos Móviles",
+            "Audit":"Auditoria",
+            "Backup / Restore":"Copia de Seguridad / Restaurar",
+            "Tags Export":"Exportación Datos sin Procesar",
+            "System Network Configuration":"Configuración de Red",
+            "Reset to Factory Defaults":"Reiniciar a Ajustes de Fábrica"
         },
-        "sectionTwo":{
-            "title":"Información de Core",
-            "events":"Events",
-            "event-categories":"Categorías de Evento",
-            "event-codes":"Códigos de Evento",
-            "schedule.products":"Productos",
-            "equipmentmodels":"Modelos de Equipo",
-            "equipments":"Equipos",
-            "equipments-events":"Eventos de Equipo",
-            "schedule.equipment-products":"Productos de Equipo"
+        "Information Core":{
+            "Head": "Información de Core",
+            "Events": "Events",
+            "Event Categories": "Categorías de Evento",
+            "Event Codes": "Códigos de Evento",
+            "Products":"Productos",
+            "Equipment Models":"Modelos de Equipo",
+            "Equipments":"Equipos",
+            "Equipment Events":"Eventos de Equipo",
+            "Equipment Products":"Productos de Equipo"
         },
-        "sectionThree":{
-            "title":"OEE Configuración",
-            "oeeconfiguration":"Configuración OEE",
-            "delaycategories":"Categorías de Paradas",
-            "delaycodes":"Códigos de Paradas",
-            "oee-event-codes":"Códigos de Eventos",
-            "products":"Productos",
-            "lineproducts":"Productos por Línea",
-            "shifts":"Turnos",
-            "resettofactorydefaultsoee":"Reinicias a Ajustes de Fábrica",
-            "usermanualoee":"Manual de Usuario"
+        "OEE Configuration":{
+            "Head":"Configuración OEE",
+            "Lines and Machines":"Configuración OEE",
+            "Delay Categories":"Categorías de Paradas",
+            "Delay Codes":"Códigos de Paradas",
+            "Event Codes":"Códigos de Eventos",
+            "Products":"Productos",
+            "Line Products":"Productos por Línea",
+            "Shifts":"Turnos",
+            "Reset to Factory Defaults":"Reiniciar a Ajustes de Fábrica",
+            "User Manual":"Manual de Usuario"
         },
-        "sectionFour":{
-            "title":"Herramientas",
-            "screenbuilder":"Constructor de Mímicos"
+        "TOOLS":{
+            "Head":"Herramientas",
+            "Mimic Builder":"Constructor de Mímicos"
         },
-        "sectionFive":{
-            "title":"Acerca de",
-            "about":"Acerca de",
-            "howto":"Como hacer"
+        "About":{
+            "Head":"Acerca de",
+            "About":"Acerca de",
+            "HowTo":"Como hacer"
         }
     },
     "PageNotFound":{
