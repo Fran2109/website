@@ -10,19 +10,20 @@ const Language = ({heightTitle="50px"}) => {
     const [languages, setLanguages] = useState([]); 
     const [t, i18n] = useTranslation("global");
     const [visibility, setVisibility] = useState(false);
-    const getLanguages = new Promise((resolve, reject) => {
-        resolve([
-            { id: 0, name: "ES" },
-            { id: 1, name: "EN" },
-            { id: 2, name: "PT" }])
-    });
+    
     useEffect(() => {
+        const getLanguages = new Promise((resolve, reject) => {
+            resolve([
+                { id: 0, name: "ES" },
+                { id: 1, name: "EN" },
+                { id: 2, name: "PT" }])
+        });
         getLanguages.then(
             result => {
                 setLanguages(result);
             }
         )
-        return () => setLanguages(languages);
+        return () => setLanguages([]);
     }, []);
     
     let domNode = useClickOutside(() => {

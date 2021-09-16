@@ -8,15 +8,15 @@ function setToken(userToken) {
   sessionStorage.setItem('token', userToken);
 }
 
-function getToken() {
+/* function getToken() {
   const tokenString = sessionStorage.getItem('token');
   const userToken = tokenString;
   return userToken?.token;
-}
+} */
 
 function App() {
 
-  const token = getToken();
+  /* const token = getToken(); */
 
   return (
     <div className="principal">

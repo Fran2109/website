@@ -1,31 +1,24 @@
 import './Login.css';
-import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { useState } from 'react';
+/* import PropTypes from 'prop-types'; */
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
 import Language from '../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
+import useWindowSize from './../../utils/useWindowSize/useWindowSize';
 
-async function loginUser(credentials) {
+/* async function loginUser(credentials) {
     return(credentials.username)
-   }
+   } */
 
 const Login = ({ setToken }) => {
     const[t] = useTranslation("global");
     const [username, setUserName] = useState();
     const [password, setPassword] = useState();
-    const [width, setWidth] = useState(window.innerWidth);
+    const [width] = useWindowSize();
     let history = useHistory();
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (window.innerWidth !== width) {
-                setWidth(window.innerWidth);
-            }
-        }, 100);
-        return () => clearInterval(interval);
-      }, []);
 
     function tryLogin(username, password) {
         window.SecurityLogin.Logoff();
@@ -103,8 +96,8 @@ const Login = ({ setToken }) => {
     )
 }
 
-Login.propTypes = {
+/* Login.propTypes = {
     setToken: PropTypes.func.isRequired
 }
-
+ */
 export default Login;
