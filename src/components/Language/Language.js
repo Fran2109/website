@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from 'react';
 import { IoLanguageSharp } from "react-icons/io5";
 import { VscTriangleDown } from "react-icons/vsc";
-import useClickOutside from './../../utils/useClickOutside/useClickOutside';
+import useClickOutside from '../../utils/useClickOutside/useClickOutside';
 import { useHistory } from "react-router-dom";
 
 const Language = ({heightTitle="50px"}) => {
@@ -19,7 +19,7 @@ const Language = ({heightTitle="50px"}) => {
                 { id: 2, name: "PT" }])
         });
         getLanguages.then(
-            result => {
+            (result) => {
                 setLanguages(result);
             }
         )

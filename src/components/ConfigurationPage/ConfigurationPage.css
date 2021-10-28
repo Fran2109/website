@@ -14,7 +14,7 @@
     left: 0;
     z-index: -1005;
     overflow: auto;
-    height: 100vh;
+    height: calc(100vh - 50px);
 }
 
 .ConfigurationPage .ConfigurationPageContent .ConfigurationLeft .ConfigurationLeftContent{

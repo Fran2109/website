@@ -2,20 +2,17 @@ import './IHBox.css';
 import { React, useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import Logo from './../../assets/images/logo.png';
-import ConfigurationPage from '../ConfigurationPage/ConfigurationPage';
+import ConfigurationPage from '../ConfigurationPage/ConfigurationPage.js';
 import Overview from './../Overview/Overview.tsx';
 import { Route, Switch } from 'react-router-dom';
 import PageNotFound from '../PageNotFound/PageNotFound.tsx';
-import DBContext from './../../context/DBContext';
+import DBContext from '../../context/DBContext';
 import menuData from './../../data/menuData';
 
 const IHBox = () => {
     const [headerOptions, setHeaderOptions] = useState();
     const [trendingOption, setTrendingOption] = useState();
     const [configurationOptions, setConfigurationOptions] = useState();
-
-
-
     useEffect(() => {
         window.Core.Json.CallProcedure("FrontEnd.GetMenuData", null, {
             onSuccess: function (data) {
@@ -114,7 +111,7 @@ const IHBox = () => {
                     return options;
                 }
                 
-                /* let categories=orderObject(data); */
+                //let categories=orderObject(data);
                 let categories=orderObject(menuData);
                 console.log(categories);
                 if(filterByGroup(categories, "navbar_left_with_modules").length > 0)

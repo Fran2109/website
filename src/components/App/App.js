@@ -29,16 +29,7 @@ function App() {
             <IHBox />
           </Route>
           <Route path="/" exact>
-            {
-            sessionStorage.getItem("token")!==undefined?
-            <>
-              <Redirect to="IHBox" />
-            </>
-            :
-            <>
-              <Redirect to="Login" />
-            </>
-            }
+            { sessionStorage.getItem("token")!==undefined? <Redirect to="IHBox" /> : <Redirect to="Login" /> }
           </Route>          
           <Route >
               <PageNotFound />

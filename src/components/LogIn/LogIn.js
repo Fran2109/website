@@ -3,11 +3,11 @@ import { useState } from 'react';
 /* import PropTypes from 'prop-types'; */
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
-import Language from '../Language/Language';
+import Language from '../Language/Language.js';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
-import useWindowSize from './../../utils/useWindowSize/useWindowSize';
+import useWindowSize from '../../utils/useWindowSize/useWindowSize';
 
 /* async function loginUser(credentials) {
     return(credentials.username)
@@ -25,12 +25,10 @@ const Login = ({ setToken }) => {
         document.cookie = "autoLogin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         var login = window.SecurityLogin.Login(username, password);
         if (login) {
-            console.log("Login OK");
             setToken(username);
             localStorage.setItem("ihBoxSystem_localstorage", true);
             history.push(`/IHBox`);
         } else {
-            console.log("Login NO OK");
             alert(t("Login.alertWrong"));
         }
     }

@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { IoSettingsSharp } from "react-icons/io5";
-import DBContext from './../../context/DBContext';
+import DBContext from '../../context/DBContext';
 import { useContext } from 'react';
-import useWindowSize from './../../utils/useWindowSize/useWindowSize';
+import useWindowSize from '../../utils/useWindowSize/useWindowSize';
 /* import PageNotFound from './../PageNotFound/PageNotFound.tsx'; */
 
 const ConfigurationPage = () => {
@@ -45,7 +45,7 @@ const ConfigurationPage = () => {
                 <>
                     {configurationsOptions.map((configuration) => {
                         return(
-                            <ul key={configuration.Id} className="ConfigurationLeftContent" style={configuration.Name==="About"? {marginBottom:"60px"} : null}>
+                            <ul key={configuration.Id} className="ConfigurationLeftContent" >
                                 {ifHasTranslation("ConfigurationPage."+configuration.Name, t("ConfigurationPage."+configuration.Name+".Head"))?
                                 <h4>{t("ConfigurationPage."+configuration.Name+".Head")}</h4>
                                 :

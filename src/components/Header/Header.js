@@ -2,14 +2,14 @@ import { React, useState, useEffect, useContext } from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
-import Clock from './../Clock/Clock';
+import Clock from './../Clock/Clock.tsx';
 import Trending from './../Trending/Trending.tsx';
-import Language from './../Language/Language';
+import Language from '../Language/Language.js';
 import Configuration from '../Configuration/Configuration.tsx';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
 import User from './../User/User';
-import DBContext from './../../context/DBContext';
+import DBContext from '../../context/DBContext';
 import useWindowSize from './../../utils/useWindowSize/useWindowSize';
 
 const Header = () => {
@@ -62,12 +62,9 @@ const Header = () => {
     return (
         <div className="header">
             { width > 1000?
-                <>
-                    <HeaderBasic />
-                </>
+                 <HeaderBasic />
                 :
                 <>
-
                     <div className="headerMobile">
                         <button className="menu" onClick={changeVisibility}>
                             {!visibility?
