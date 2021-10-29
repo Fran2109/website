@@ -2,21 +2,15 @@ import { React, useState, useEffect, useContext } from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
-import Clock from '../Clock/Clock.js';
-import Trending from './../Trending/Trending.tsx';
-import Language from './../Language/Language.tsx';
-import Configuration from './../Configuration/Configuration.tsx';
-import MenuOpen from './../../assets/icons/menuOpen.png';
-import MenuClose from './../../assets/icons/menuClose.png';
-import User from '../User/User';
-import DBContext from '../../context/DBContext';
+import Clock from '../Clock/Clock';
+import Trending from '../Trending/Trending';
+import Language from '../Language/Language';
+import Configuration from '../Configuration/Configuration';
+import MenuOpen from '../../assets/icons/menuOpen.png';
+import MenuClose from '../../assets/icons/menuClose.png';
+import User from '../User/User.tsx';
+import DBContext from '../../context/DBContext.ts';
 import useWindowSize from '../../utils/useWindowSize/useWindowSize';
-
-interface DBInterface{
-    headerOptions: any;
-    trendingOption: any;
-    configurationOptions: any;
-}
 
 const Header = () => {
     const [width] = useWindowSize();

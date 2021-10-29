@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { EuiPopover, EuiButton, EuiText } from '@elastic/eui';
 import './Clock.css';
 import { useTranslation } from "react-i18next";
-import clockData from './../../data/clockData';
+import { ClockInterface } from "../../utils/interfaces/interfaces";
+declare const window: any;
 
 const Clock = () => {
-  const [time, setTime] = useState();
+  const [time, setTime] = useState<string>("");
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const[t] = useTranslation("global");
-  
+
   const onButtonClick = () =>
     setIsPopoverOpen((isPopoverOpen) => !isPopoverOpen);
   const closePopover = () => setIsPopoverOpen(false);
@@ -17,23 +18,23 @@ const Clock = () => {
     const interval = setInterval(() => {
       var QP = new window.Core.Database.QueryParameters();
       window.Core.Json.CallProcedure("FRONTEND.SyncTimeWithServer", QP, {
-        onSuccess: function (data) {
-
-          //let time=clockData.Table[0].TimeStamp;
-          let time=data.Table[0].TimeStamp;
-          let year=time[0]+time[1]+time[2]+time[3];
-          let month=time[5]+time[6]-1;
-          let day=time[8]+time[9];
-          let hour=time[11]+time[12];
-          let minute=time[14]+time[15];
-          let second=time[17]+time[18];
+        onSuccess: function (data:ClockInterface) {
+          let time : string = data.Table[0].TimeStamp;
+          let year : number = Number(time[0]+time[1]+time[2]+time[3]);
+          let month : number = Number(time[5]+time[6]);
+          month++;
+          let day : number = Number(time[8]+time[9]);
+          let hour : number = Number(time[11]+time[12]);
+          let minute : number = Number(time[14]+time[15]);
+          let second : number = Number(time[17]+time[18]);
           let date = new Date(year, month, day, hour, minute, second);
-          setTime((date.getHours()<10?"0"+date.getHours():date.getHours())+":"+(date.getMinutes()<10?"0"+date.getMinutes():date.getMinutes()))
+          setTime((date.getHours()<10?"0"+date.getHours():date.getHours())+":"+(date.getMinutes()<10?"0"+date.getMinutes():date.getMinutes()));
         },
         Async: false
       }, "APP");
       return () => clearInterval(interval);
     }, 1000);
+    return()=>setTime("");
   }, []);
   
 

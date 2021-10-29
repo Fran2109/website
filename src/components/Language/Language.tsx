@@ -1,22 +1,22 @@
 import './Language.css';
 import { useTranslation } from "react-i18next";
-import React, { useState, useEffect } from 'react';
+import React, { useRef,  useState, useEffect } from 'react';
 import { IoLanguageSharp } from "react-icons/io5";
 import { VscTriangleDown } from "react-icons/vsc";
-import useClickOutside from '../../utils/useClickOutside/useClickOutside';
 import { useHistory } from "react-router-dom";
-
-interface LanguageInterface{
-    id: number;
-    name: string;
-    label: string;
-}
+import { useOnClickOutside } from 'usehooks-ts'
+import { LanguageInterface } from '../../utils/interfaces/interfaces';
 
 const Language = ({heightTitle="50px"}) => {
     const [languages, setLanguages] = useState<LanguageInterface[]>(); 
     const [t, i18n] = useTranslation("global");
     const [visibility, setVisibility] = useState(false);
-    
+    const ref = useRef(null)
+
+    const handleClickOutside = () => {
+        setVisibility(false);
+    }
+    useOnClickOutside(ref, handleClickOutside)
     useEffect(() => {
         const getLanguages = new Promise<LanguageInterface[]>((resolve, reject) => {
             resolve([
@@ -31,15 +31,11 @@ const Language = ({heightTitle="50px"}) => {
         )
         return () => setLanguages([]);
     }, []);
-    
-    /* let domNode = useClickOutside(() => {
-        setVisibility(false);
-    }); */
 
     let history = useHistory();
     return (
         <>
-            <li className="language"  /* ref={domNode} */ >
+            <li className="language"  >
                 <span className="language-title" style={{height: heightTitle}} onClick={()=>{setVisibility(!visibility)}}>
                     <IoLanguageSharp className="languageIcon"/>
                     {history.location.pathname!=="/Login"?
@@ -57,7 +53,7 @@ const Language = ({heightTitle="50px"}) => {
                     :
                     null}
                 </span>
-                <ul className={visibility? "language-list visible" : "language-list hidden"}>
+                <ul ref={ref} className={visibility? "language-list visible" : "language-list hidden"}>
                     {languages!==undefined? languages.map(language =>
                         <li className="language-item" key={language.id} onClick={() => {
                                                                     i18n.changeLanguage(language.name); 

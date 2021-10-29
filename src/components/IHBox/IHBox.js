@@ -5,8 +5,8 @@ import Logo from './../../assets/images/logo.png';
 import ConfigurationPage from '../ConfigurationPage/ConfigurationPage.js';
 import Overview from './../Overview/Overview.tsx';
 import { Route, Switch } from 'react-router-dom';
-import PageNotFound from '../PageNotFound/PageNotFound.tsx';
-import DBContext from '../../context/DBContext';
+import PageNotFound from '../PageNotFound/PageNotFound';
+import DBContext from '../../context/DBContext.ts';
 import menuData from './../../data/menuData';
 
 const IHBox = () => {
@@ -110,8 +110,8 @@ const IHBox = () => {
                     });
                     return options;
                 }
-                //let categories=orderObject(data);
-                let categories=orderObject(menuData);
+                let categories=orderObject(data);
+                //let categories=orderObject(menuData);
                 //console.log(categories);
                 if(filterByGroup(categories, "navbar_left_with_modules").length > 0)
                 {

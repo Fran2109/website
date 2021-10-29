@@ -1,0 +1,1030 @@
+{
+    "Table": [
+        {
+            "ModuleId": 6,
+            "Code": "ihconfiguration_tags_configuration",
+            "Name": "Tags Configuration",
+            "Value": true
+        },
+        {
+            "ModuleId": 7,
+            "Code": "ihconfiguration_users",
+            "Name": "Users",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "Code": "ihconfiguration_data_sources",
+            "Name": "Data Sources",
+            "Value": true
+        },
+        {
+            "ModuleId": 9,
+            "Code": "ihconfiguration_network_overview",
+            "Name": "Network Overview",
+            "Value": true
+        },
+        {
+            "ModuleId": 11,
+            "Code": "ihconfiguration_security_profiles",
+            "Name": "Profiles",
+            "Value": true
+        },
+        {
+            "ModuleId": 12,
+            "Code": "trending",
+            "Name": "Trending",
+            "Value": true
+        },
+        {
+            "ModuleId": 14,
+            "Code": "ihconfiguration_reset_to_factory_defaults",
+            "Name": "Reset to Factory Defaults",
+            "Value": true
+        },
+        {
+            "ModuleId": 15,
+            "Code": "ihconfiguration_tags_export",
+            "Name": "Tags Export",
+            "Value": true
+        },
+        {
+            "ModuleId": 17,
+            "Code": "SCREEN_BUILDER.screenBuilder",
+            "Name": "Screen Builder",
+            "Value": true
+        },
+        {
+            "ModuleId": 18,
+            "Code": "ihconfiguration_audit",
+            "Name": "Audit",
+            "Value": true
+        },
+        {
+            "ModuleId": 19,
+            "Code": "BACKUP.backup-configuration",
+            "Name": "Backup || Backup Configuration",
+            "Value": true
+        },
+        {
+            "ModuleId": 20,
+            "Code": "OEE.oee",
+            "Name": "OEE || OEE",
+            "Value": true
+        },
+        {
+            "ModuleId": 21,
+            "Code": "OEE.oee-overview",
+            "Name": "OEE || Overview",
+            "Value": true
+        },
+        {
+            "ModuleId": 22,
+            "Code": "OEE.oee-batch",
+            "Name": "OEE || OEE Batch",
+            "Value": true
+        },
+        {
+            "ModuleId": 23,
+            "Code": "OEE.oee-report",
+            "Name": "OEE || Report",
+            "Value": true
+        },
+        {
+            "ModuleId": 25,
+            "Code": "OEE.delays-1",
+            "Name": "OEE || Delays Manager",
+            "Value": true
+        },
+        {
+            "ModuleId": 26,
+            "Code": "OEE.delays-3",
+            "Name": "OEE || Delays Report",
+            "Value": true
+        },
+        {
+            "ModuleId": 27,
+            "Code": "OEE.delays-simple",
+            "Name": "OEE || Delays Declare",
+            "Value": true
+        },
+        {
+            "ModuleId": 28,
+            "Code": "OEE.delay-codes",
+            "Name": "OEE || Delay Codes",
+            "Value": true
+        },
+        {
+            "ModuleId": 29,
+            "Code": "OEE.oee-configuration",
+            "Name": "OEE || Configuration",
+            "Value": true
+        },
+        {
+            "ModuleId": 30,
+            "Code": "OEE.delay-categories",
+            "Name": "OEE || Delay Categories",
+            "Value": true
+        },
+        {
+            "ModuleId": 31,
+            "Code": "OEE.products",
+            "Name": "OEE || Products",
+            "Value": true
+        },
+        {
+            "ModuleId": 32,
+            "Code": "OEE.shifts",
+            "Name": "OEE || Shifts",
+            "Value": true
+        },
+        {
+            "ModuleId": 33,
+            "Code": "OEE.line-products",
+            "Name": "OEE || Line Products",
+            "Value": true
+        },
+        {
+            "ModuleId": 34,
+            "Code": "OEE.reset-to-factory-defaults-oee",
+            "Name": "OEE || Reset to Factory Defaults",
+            "Value": true
+        },
+        {
+            "ModuleId": 35,
+            "Code": "OEE.user-manual-oee",
+            "Name": "OEE || User Manual",
+            "Value": true
+        },
+        {
+            "ModuleId": 36,
+            "Code": "OEE.last24hoursreport",
+            "Name": "OEE || Last 24 Hours",
+            "Value": true
+        },
+        {
+            "ModuleId": 1057,
+            "Code": "ihconfiguration_send_agend_commands",
+            "Name": "Dash Commands",
+            "Value": true
+        },
+        {
+            "ModuleId": 1059,
+            "Code": "OEE.prodexcelconfig",
+            "Name": "OEE || Production Excel Configuration",
+            "Value": true
+        },
+        {
+            "ModuleId": 1060,
+            "Code": "OEE.oeeprodimportreport",
+            "Name": "OEE || OEE Production Import Report",
+            "Value": true
+        },
+        {
+            "ModuleId": 1088,
+            "Code": "DMT.editor",
+            "Name": "DMT || Editor",
+            "Value": true
+        },
+        {
+            "ModuleId": 1089,
+            "Code": "DMT.script-status",
+            "Name": "DMT || Status",
+            "Value": true
+        },
+        {
+            "ModuleId": 1090,
+            "Code": "ihconfiguration_system_network_configuration",
+            "Name": "System Network Configuration",
+            "Value": true
+        },
+        {
+            "ModuleId": 1091,
+            "Code": "equipments",
+            "Name": "EQUIPMENTS - Equipments",
+            "Value": true
+        },
+        {
+            "ModuleId": 1092,
+            "Code": "equipment-models",
+            "Name": "EQUIPMENTS - Equipment Models",
+            "Value": true
+        },
+        {
+            "ModuleId": 1093,
+            "Code": "equipment-events",
+            "Name": "EVENT - Equipment Events",
+            "Value": true
+        },
+        {
+            "ModuleId": 1094,
+            "Code": "OEE.losses",
+            "Name": "OEE || Losses",
+            "Value": true
+        },
+        {
+            "ModuleId": 1095,
+            "Code": "OEE.production",
+            "Name": "OEE || Production",
+            "Value": true
+        },
+        {
+            "ModuleId": 1096,
+            "Code": "SCHEDULE.products",
+            "Name": "SCHEDULE || Products",
+            "Value": true
+        },
+        {
+            "ModuleId": 1097,
+            "Code": "SCHEDULE.equipment-products",
+            "Name": "SCHEDULE || Equipment Products",
+            "Value": true
+        },
+        {
+            "ModuleId": 1098,
+            "Code": "OEE.line-production",
+            "Name": "OEE || Line Production",
+            "Value": true
+        },
+        {
+            "ModuleId": 1099,
+            "Code": "event-codes",
+            "Name": "EVENT || Event Codes",
+            "Value": true
+        },
+        {
+            "ModuleId": 1100,
+            "Code": "event-categories",
+            "Name": "EVENT || Event Categories",
+            "Value": true
+        },
+        {
+            "ModuleId": 1101,
+            "Code": "OEE.oee-event-codes",
+            "Name": "OEE || Event Codes",
+            "Value": true
+        },
+        {
+            "ModuleId": 1102,
+            "Code": "events",
+            "Name": "EVENT || Events",
+            "Value": true
+        },
+        {
+            "ModuleId": 1103,
+            "Code": "OEE.events-summary-report",
+            "Name": "OEE || Events Report",
+            "Value": true
+        },
+        {
+            "ModuleId": 1104,
+            "Code": "LogicBuilder.Script23",
+            "Name": "DMT-LogicBuilder - Script[CheckUpdate]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1105,
+            "Code": "LogicBuilder.Script22",
+            "Name": "DMT-LogicBuilder - Script[UpdateInstaller]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1106,
+            "Code": "LogicBuilder.Script5",
+            "Name": "DMT-LogicBuilder - Script[SystemResources]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1107,
+            "Code": "LogicBuilder.Script24",
+            "Name": "DMT-LogicBuilder - Script[IHDataManagerMonitorTables]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1108,
+            "Code": "LogicBuilder.Script4",
+            "Name": "DMT-LogicBuilder - Script[IHDataManagerClientScript]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1109,
+            "Code": "ihconfiguration_account_information",
+            "Name": "Account Information",
+            "Value": true
+        },
+        {
+            "ModuleId": 1110,
+            "Code": "about_about",
+            "Name": "About",
+            "Value": true
+        },
+        {
+            "ModuleId": 1111,
+            "Code": "about_howto",
+            "Name": "Howto",
+            "Value": true
+        },
+        {
+            "ModuleId": 1112,
+            "Code": "SCHEDULE.schedule",
+            "Name": "SCHEDULE || Schedule",
+            "Value": true
+        },
+        {
+            "ModuleId": 1115,
+            "Code": "mobile-devices",
+            "Name": "IHConfiguration || Mobile devices",
+            "Value": true
+        },
+        {
+            "ModuleId": 1147,
+            "Code": "SCREEN_BUILDER.Screen32",
+            "Name": "Screen [New Item]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1149,
+            "Code": "SCREEN_BUILDER.Screen34",
+            "Name": "Screen [new_node_text]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1150,
+            "Code": "SCREEN_BUILDER.Screen35",
+            "Name": "Screen [new_node_text]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1151,
+            "Code": "SCREEN_BUILDER.Screen36",
+            "Name": "Screen [new_node_text]",
+            "Value": true
+        },
+        {
+            "ModuleId": 1152,
+            "Code": "SCREEN_BUILDER.Screen37",
+            "Name": "Screen [new_node_text]",
+            "Value": true
+        }
+    ],
+    "Table1": [
+        {
+            "ModuleId": 6,
+            "ActionId": 8,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 6,
+            "ActionId": 9,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 7,
+            "ActionId": 10,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 7,
+            "ActionId": 11,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 13,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 14,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 9,
+            "ActionId": 15,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 11,
+            "ActionId": 16,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 11,
+            "ActionId": 17,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 12,
+            "ActionId": 18,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 14,
+            "ActionId": 19,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 15,
+            "ActionId": 21,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 12,
+            "ActionId": 23,
+            "Code": "mGlobalViews",
+            "Name": "ManageGlobalViews",
+            "Value": true
+        },
+        {
+            "ModuleId": 12,
+            "ActionId": 24,
+            "Code": "mGroups",
+            "Name": "ManageGroups",
+            "Value": true
+        },
+        {
+            "ModuleId": 17,
+            "ActionId": 28,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 18,
+            "ActionId": 29,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 19,
+            "ActionId": 30,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 19,
+            "ActionId": 31,
+            "Code": "alterConfig",
+            "Name": "Allow Change Backup Configuration",
+            "Value": true
+        },
+        {
+            "ModuleId": 19,
+            "ActionId": 32,
+            "Code": "allowRestore",
+            "Name": "Allow Restore Backup",
+            "Value": true
+        },
+        {
+            "ModuleId": 20,
+            "ActionId": 33,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 20,
+            "ActionId": 34,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 21,
+            "ActionId": 35,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 22,
+            "ActionId": 36,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 23,
+            "ActionId": 37,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 25,
+            "ActionId": 39,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 26,
+            "ActionId": 40,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 27,
+            "ActionId": 41,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 28,
+            "ActionId": 42,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 29,
+            "ActionId": 43,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 30,
+            "ActionId": 44,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 31,
+            "ActionId": 45,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 32,
+            "ActionId": 46,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 33,
+            "ActionId": 47,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 34,
+            "ActionId": 48,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 35,
+            "ActionId": 49,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 36,
+            "ActionId": 50,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1057,
+            "ActionId": 1071,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1059,
+            "ActionId": 1073,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1059,
+            "ActionId": 1074,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1060,
+            "ActionId": 1075,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1088,
+            "ActionId": 1104,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1088,
+            "ActionId": 1105,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1089,
+            "ActionId": 1106,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1089,
+            "ActionId": 1107,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1090,
+            "ActionId": 2145,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1091,
+            "ActionId": 2146,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1091,
+            "ActionId": 2147,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1092,
+            "ActionId": 2148,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1092,
+            "ActionId": 2149,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1093,
+            "ActionId": 2150,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1093,
+            "ActionId": 2151,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1094,
+            "ActionId": 2152,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1095,
+            "ActionId": 2153,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1095,
+            "ActionId": 2154,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1096,
+            "ActionId": 2155,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1096,
+            "ActionId": 2156,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1097,
+            "ActionId": 2157,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1097,
+            "ActionId": 2158,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1099,
+            "ActionId": 2159,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1099,
+            "ActionId": 2160,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1100,
+            "ActionId": 2161,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1100,
+            "ActionId": 2162,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1101,
+            "ActionId": 2163,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1101,
+            "ActionId": 2164,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1102,
+            "ActionId": 2165,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1102,
+            "ActionId": 2166,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1098,
+            "ActionId": 2167,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1098,
+            "ActionId": 2168,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1103,
+            "ActionId": 2169,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1104,
+            "ActionId": 2170,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1105,
+            "ActionId": 2171,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1106,
+            "ActionId": 2172,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1107,
+            "ActionId": 2173,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1108,
+            "ActionId": 2174,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 11,
+            "ActionId": 2175,
+            "Code": "APM",
+            "Name": "Anonymous Profile Management",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2176,
+            "Code": "AB",
+            "Name": "Download Agent Allen-Bradley",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2177,
+            "Code": "LB",
+            "Name": "Download Agent Logic-Builder",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2178,
+            "Code": "OPC",
+            "Name": "Download Agent OPC",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2179,
+            "Code": "S7",
+            "Name": "Download Agent Siemens S7",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2180,
+            "Code": "Local_AB",
+            "Name": "Install Agent Allen-Bradley",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2181,
+            "Code": "Local_LB",
+            "Name": "Install Agent Logic-Builder",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2182,
+            "Code": "Local_OPC",
+            "Name": "Install Agent OPC",
+            "Value": true
+        },
+        {
+            "ModuleId": 8,
+            "ActionId": 2183,
+            "Code": "Local_S7",
+            "Name": "Install Agent Siemens S7",
+            "Value": true
+        },
+        {
+            "ModuleId": 1109,
+            "ActionId": 2184,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1110,
+            "ActionId": 2185,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1111,
+            "ActionId": 2186,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1112,
+            "ActionId": 2187,
+            "Code": "read",
+            "Name": "Read",
+            "Value": true
+        },
+        {
+            "ModuleId": 1112,
+            "ActionId": 2188,
+            "Code": "write",
+            "Name": "Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1115,
+            "ActionId": 2191,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1147,
+            "ActionId": 2223,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1149,
+            "ActionId": 2225,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1150,
+            "ActionId": 2226,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1151,
+            "ActionId": 2227,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        },
+        {
+            "ModuleId": 1152,
+            "ActionId": 2228,
+            "Code": "readWrite",
+            "Name": "Read/Write",
+            "Value": true
+        }
+    ]
+}

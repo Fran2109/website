@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { IoSettingsSharp } from "react-icons/io5";
-import DBContext from '../../context/DBContext';
+import DBContext from '../../context/DBContext.ts';
 import { useContext } from 'react';
 import useWindowSize from '../../utils/useWindowSize/useWindowSize';
 /* import PageNotFound from './../PageNotFound/PageNotFound.tsx'; */
@@ -16,6 +16,21 @@ const ConfigurationPage = () => {
     const DB= useContext(DBContext);
     useEffect(() => {
         setConfigurationsOptions(DB.configurationOptions);
+        
+        var that = this,
+            QP = new window.Core.Database.QueryParameters();
+
+
+        window.Core.Json.CallProcedure("[IHBoxSystem].FrontEnd.GetUserSecurityModulesActions", QP, {
+            onSuccess: function (data) {
+                console.log(data);
+            },
+            Async: false,
+            CachePerUser: true, 
+        }, "APP");
+
+
+
     }, [DB])
     
     function orderObject(obj){
@@ -27,16 +42,16 @@ const ConfigurationPage = () => {
         return obj;
     }
 
-  const ifHasTranslation = (header, text) => {
-    let flag = true;
-    for (let i = 0; i < header.length; i++) {
-      if(header[i]!==text[i])
-      {
-        flag = false;
-      }
+    const ifHasTranslation = (header, text) => {
+        let flag = true;
+        for (let i = 0; i < header.length; i++) {
+        if(header[i]!==text[i])
+        {
+            flag = false;
+        }
+        }
+        return flag?  false : true
     }
-    return flag?  false : true
-  }
 
     const OptionsConfiguration = () => {
         return(
