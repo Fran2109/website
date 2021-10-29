@@ -1,6 +1,6 @@
 import './App.css';
 import IHBox from '../IHBox/IHBox.js';
-import Login from './../Login/Login';
+import Login from '../Login/Login.js';
 import PageNotFound from '../PageNotFound/PageNotFound.tsx';
 import {  Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 

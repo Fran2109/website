@@ -3,7 +3,7 @@ import { useState } from 'react';
 /* import PropTypes from 'prop-types'; */
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
-import Language from '../Language/Language.js';
+import Language from './../Language/Language.tsx';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";

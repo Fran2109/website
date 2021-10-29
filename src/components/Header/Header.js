@@ -2,15 +2,21 @@ import { React, useState, useEffect, useContext } from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
-import Clock from './../Clock/Clock.tsx';
+import Clock from '../Clock/Clock.js';
 import Trending from './../Trending/Trending.tsx';
-import Language from '../Language/Language.js';
-import Configuration from '../Configuration/Configuration.tsx';
+import Language from './../Language/Language.tsx';
+import Configuration from './../Configuration/Configuration.tsx';
 import MenuOpen from './../../assets/icons/menuOpen.png';
 import MenuClose from './../../assets/icons/menuClose.png';
-import User from './../User/User';
+import User from '../User/User';
 import DBContext from '../../context/DBContext';
-import useWindowSize from './../../utils/useWindowSize/useWindowSize';
+import useWindowSize from '../../utils/useWindowSize/useWindowSize';
+
+interface DBInterface{
+    headerOptions: any;
+    trendingOption: any;
+    configurationOptions: any;
+}
 
 const Header = () => {
     const [width] = useWindowSize();
@@ -30,6 +36,7 @@ const Header = () => {
         return (
             <>
                 <ul className="headerLeft">
+                    {console.log(DB)}
                     {menuOptions!==undefined?
                         menuOptions.map((option) => {
                             return( 
