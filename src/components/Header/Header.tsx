@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'react';
 
 import './Header.css';
 import MenuItem from '../MenuItem/MenuItem';
@@ -8,16 +8,17 @@ import Language from '../Language/Language';
 import Configuration from '../Configuration/Configuration';
 import MenuOpen from '../../assets/icons/menuOpen.png';
 import MenuClose from '../../assets/icons/menuClose.png';
-import User from '../User/User.tsx';
-import DBContext from '../../context/DBContext.ts';
+import User from '../User/User';
+import DBContext from '../../context/DBContext';
 import useWindowSize from '../../utils/useWindowSize/useWindowSize';
+import { MenuItemInterface, DBOptionsInterface } from '../../utils/interfaces/interfaces';
 
 const Header = () => {
     const [width] = useWindowSize();
-    const[menuOptions, setMenuOptions] = useState();
-    const[trendingOption, setTrendingOption] = useState();
+    const[menuOptions, setMenuOptions] = useState<MenuItemInterface[]>();
+    const[trendingOption, setTrendingOption] = useState<MenuItemInterface[]>();
     const [visibility, setVisibility] = useState(false);
-    const DB= useContext(DBContext);
+    const DB= useContext<DBOptionsInterface>(DBContext);
     useEffect(() => {
         setMenuOptions(DB.headerOptions);
         setTrendingOption(DB.trendingOption);

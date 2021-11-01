@@ -3,26 +3,29 @@ import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { useTranslation } from "react-i18next";
 import { IoSettingsSharp } from "react-icons/io5";
-import DBContext from '../../context/DBContext.ts';
+import DBContext from '../../context/DBContext';
 import { useContext } from 'react';
 import useWindowSize from '../../utils/useWindowSize/useWindowSize';
+import { PermissionsInterface, MenuItemInterface, DBOptionsInterface } from '../../utils/interfaces/interfaces';
+declare const window: any;
+
 /* import PageNotFound from './../PageNotFound/PageNotFound.tsx'; */
 
 const ConfigurationPage = () => {
-    const [configurationsOptions, setConfigurationsOptions] = useState([]);
+    const [configurationsOptions, setConfigurationsOptions] = useState<MenuItemInterface[]>();
     const [width] = useWindowSize();
     const [visibility, setVisibility] = useState(false);
     const[t] = useTranslation("global");
-    const DB= useContext(DBContext);
+    const DB= useContext<DBOptionsInterface>(DBContext);
+
     useEffect(() => {
+        console.log(DB);
         setConfigurationsOptions(DB.configurationOptions);
         
-        var that = this,
-            QP = new window.Core.Database.QueryParameters();
-
+        var QP = new window.Core.Database.QueryParameters();
 
         window.Core.Json.CallProcedure("[IHBoxSystem].FrontEnd.GetUserSecurityModulesActions", QP, {
-            onSuccess: function (data) {
+            onSuccess: function (data : PermissionsInterface) {
                 console.log(data);
             },
             Async: false,
@@ -33,7 +36,7 @@ const ConfigurationPage = () => {
 
     }, [DB])
     
-    function orderObject(obj){
+    function orderObject(obj:MenuItemInterface[]){
         obj.sort(function(a, b) {
             if(a.Order < b.Order) return -1;
             if(a.Order > b.Order) return 1;
@@ -42,7 +45,7 @@ const ConfigurationPage = () => {
         return obj;
     }
 
-    const ifHasTranslation = (header, text) => {
+    const ifHasTranslation = (header : string, text : string) => {
         let flag = true;
         for (let i = 0; i < header.length; i++) {
         if(header[i]!==text[i])
@@ -112,11 +115,7 @@ const ConfigurationPage = () => {
                 </>
                 }
                 <div className="ConfigurationRight">
-                {/* <Switch>
-                    <Route >
-                        <PageNotFound />
-                    </Route>
-                </Switch> */}
+                    
                 </div>
             </div>
         </div>

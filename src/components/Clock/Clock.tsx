@@ -6,7 +6,7 @@ import { ClockInterface } from "../../utils/interfaces/interfaces";
 declare const window: any;
 
 const Clock = () => {
-  const [time, setTime] = useState<string>("");
+  const [time, setTime] = useState<string>("  ");
   const [isPopoverOpen, setIsPopoverOpen] = useState(false);
   const[t] = useTranslation("global");
 

@@ -1,39 +1,41 @@
+import * as React from "react";
 import './Login.css';
 import { useState } from 'react';
 /* import PropTypes from 'prop-types'; */
 import FourIPlatform from './../../assets/images/4IPlatform.png';
 import FourIPlatformSecond from './../../assets/images/4IPlatform2.png';
-import Language from './../Language/Language.tsx';
+import Language from './../Language/Language';
 import { useTranslation } from "react-i18next";
 import { useHistory } from 'react-router-dom';
 import { FaUser } from "react-icons/fa";
 import useWindowSize from '../../utils/useWindowSize/useWindowSize';
-
+import { LoginToken } from '../../utils/interfaces/interfaces';
+declare const window: any;
 /* async function loginUser(credentials) {
     return(credentials.username)
    } */
 
-const Login = ({ setToken }) => {
+const Login = ({ setToken = (username: string) => {} }: LoginToken) => {
     const[t] = useTranslation("global");
-    const [username, setUserName] = useState();
-    const [password, setPassword] = useState();
+    const [username, setUserName] = useState("");
+    const [password, setPassword] = useState("");
     const [width] = useWindowSize();
     let history = useHistory();
 
-    function tryLogin(username, password) {
+    function tryLogin(username : string, password :string) {
         window.SecurityLogin.Logoff();
         document.cookie = "autoLogin=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
         var login = window.SecurityLogin.Login(username, password);
         if (login) {
             setToken(username);
-            localStorage.setItem("ihBoxSystem_localstorage", true);
+            localStorage.setItem("ihBoxSystem_localstorage", true.toString());
             history.push(`/IHBox`);
         } else {
             alert(t("Login.alertWrong"));
         }
     }
 
-    const handleSubmit = async e => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         if (username===undefined || password===undefined)
         {
@@ -68,10 +70,10 @@ const Login = ({ setToken }) => {
                     <div className="LoginContent">
                         <form className="Form" onSubmit={handleSubmit} >
                             <label>
-                                <input className="username" type="text" placeholder={t("Login.username")} style={{textAlign: "center"}} onChange={e => setUserName(e.target.value)}/>
+                                <input className="username" type="text" placeholder={t("Login.username")} style={{textAlign: "center"}} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserName(e.target.value)}/>
                             </label>
                             <label>
-                                <input className="password" type="password" placeholder={t("Login.password")} style={{textAlign: "center"}} onChange={e => setPassword(e.target.value)}/>
+                                <input className="password" type="password" placeholder={t("Login.password")} style={{textAlign: "center"}} onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}/>
                             </label>
                             <button type="submit">
                                 {t("Login.submit")}

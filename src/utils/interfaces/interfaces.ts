@@ -16,7 +16,7 @@ export interface MenuItemInterface{
     Id: number;
     Name: string;
     Order: number;
-    Parameters: null;
+    Parameters: MenuItemPropertiesInterface;
     Parent: number;
     Properties: MenuItemPropertiesInterface;
     Route: string;
@@ -24,10 +24,33 @@ export interface MenuItemInterface{
     URL: string;
     Visible: Boolean;
 }
+
+export interface DBOptionsInterface{
+    headerOptions: MenuItemInterface[];
+    trendingOption: MenuItemInterface[];
+    configurationOptions: MenuItemInterface[];
+}
+
 interface TableTime {
     TimeStamp: string;
 } 
 
 export interface ClockInterface{
     Table: TableTime[];
+}
+
+export interface ModuleIterface{
+    ModuleId : number;
+    ActionId? : number;
+    Code : string;
+    Name : string;
+    Value : boolean;
+}
+export interface PermissionsInterface{
+    Table: ModuleIterface[];
+    Table1: ModuleIterface[];
+}
+
+export interface LoginToken{
+    setToken: (username: string)=>void
 }
