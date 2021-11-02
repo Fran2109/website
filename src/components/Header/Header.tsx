@@ -31,7 +31,6 @@ const Header = () => {
         return (
             <>
                 <ul className="headerLeft">
-                    {console.log(DB)}
                     {menuOptions!==undefined?
                         menuOptions.map((option) => {
                             return( 

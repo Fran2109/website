@@ -1,6 +1,7 @@
 .ConfigurationPage{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .ConfigurationPage .ConfigurationPageContent{
@@ -12,7 +13,7 @@
     width: 25vw;    
     position: fixed;
     left: 0;
-    z-index: -1005;
+    z-index: 100;
     overflow: auto;
     height: calc(100vh - 50px);
 }
@@ -69,6 +70,11 @@
 .ConfigurationPage .ConfigurationPageContent .ConfigurationLeft .ConfigurationLeftContent ul.Options a:hover{
     color: #ffffff;
 }
+
+.ConfigurationPage .ConfigurationPageContent .ConfigurationRight{
+    margin-left: 25vw;
+}
+
 
 @media screen and (max-width: 1000px){
     .ConfigurationPage .ConfigurationPageContent .ConfigurationLeft{

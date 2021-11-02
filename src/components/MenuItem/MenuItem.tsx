@@ -20,9 +20,9 @@ const MenuItem = ({item} : {item:MenuItemInterface}) => {
   return(
     <li className="dropdown-parent"  ref={ref} >
         {item.URL!==null ? 
-          <Link to={item.URL} className="Link">
+          <Link to={item.URL!==undefined ? item.URL : "/"} className="Link">
             <IoOptions style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-            <p>{t("Header.Label."+item.Name.toString()+".Head")}</p>
+            {item.Name!==null? <p>{t("Header.Label."+item.Name.toString()+".Head")}</p> : null}
           </Link>
           :
           <span onClick={()=>setVisibility(!visibility)}>
@@ -39,7 +39,7 @@ const MenuItem = ({item} : {item:MenuItemInterface}) => {
             :
             <>
               <IoBarChartSharp style={{width:"20px", height:"20px", marginRight:"10px", color:"white"}} />
-              <p>{t("Header.Label."+item.Name.toString()+".Head")}</p>
+              {item.Name!==null? <p>{t("Header.Label."+item.Name.toString()+".Head")}</p> : null}
               <VscTriangleDown className="IoTriangle"/>
             </>}
           </span>

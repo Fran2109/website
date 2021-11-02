@@ -1,0 +1,22 @@
+{
+    "Table": [
+        {
+            "UserID": 1027,
+            "AccountID": 1,
+            "Email": null,
+            "Validated": true,
+            "Number": "100020",
+            "RecoveryPassword": false,
+            "AccountType": 3,
+            "FirstTimeLogin": true,
+            "DebugMode": false,
+            "TimeZoneOffset": null,
+            "TimeZoneName": null,
+            "TimeZoneIsDST": null,
+            "TimeZoneAbbreviation": null,
+            "MaxAgents": -1,
+            "MaxTags": 200,
+            "IHServerHost": "IHBOX-3260B2"
+        }
+    ]
+}

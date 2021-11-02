@@ -1,5 +1,5 @@
 import './App.css';
-import IHBox from '../IHBox/IHBox.js';
+import IHBox from '../IHBox/IHBox';
 import Login from '../Login/Login';
 import PageNotFound from '../PageNotFound/PageNotFound';
 import {  Route, Switch, Redirect, HashRouter } from 'react-router-dom';

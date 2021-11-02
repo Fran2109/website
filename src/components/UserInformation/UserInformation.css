@@ -1,0 +1,23 @@
+.UserInformation{
+    margin-left: 50px;
+    margin-top: 20px;
+    text-align: left;
+    color: black;
+}
+
+.UserInformation h1{
+    font-size: 25px;  
+}
+
+.UserInformation h3{
+    font-size: 18px; 
+}
+
+.UserInformation ul li{
+    list-style-type: disc;
+}
+
+.UserInformation ul li ul li{
+    list-style-type: circle;
+    margin-left: 20px;
+}
