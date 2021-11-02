@@ -17,6 +17,7 @@ import {
     UserInfoTableInterface
 } from '../../utils/interfaces/interfaces';
 import UserInformation from '../UserInformation/UserInformation';
+import Products from '../Products/Products';
 import permissionsData from '../../data/permissionsData.json';
 import userinfoData from '../../data/userinfoData.json';
 
@@ -193,6 +194,9 @@ const ConfigurationPage = () => {
                     <Switch>
                         <Route path="/IHBox/configuration/35" exact>
                             <UserInformation />
+                        </Route>
+                        <Route path="/IHBox/configuration/70951" exact>
+                            <Products />
                         </Route>
                     </Switch>  
                 </div>

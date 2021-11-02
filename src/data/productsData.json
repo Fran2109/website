@@ -1,0 +1,372 @@
+[
+	{
+		"nodeId": "0",
+		"text": "Company",
+		"icon": "Business",
+		"color": "#3c8039",
+		"bgColor": "#e6f4ea",
+		"type": "/",
+		"actions": [
+			{ "name": "Delete", "action": "delete" },
+			{ "name": "Assign existing model", "action": "assignExistingModel" },
+			{ "name": "Add new model", "action": "addNewModel" },
+			{ "name": "Select", "action": "select" }
+		],
+		"childs": [
+			{
+				"nodeId": "1",
+				"text": "Factory",
+				"icon": "Business",
+				"color": "#3c8039",
+				"bgColor": "#e6f4ea",
+				"type": "Productive Group",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{ "name": "Assign existing model", "action": "assignExistingModel" },
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"childs": [
+					{
+						"nodeId": "2",
+						"text": "Friends",
+						"icon": "PeopleAlt",
+						"color": "#e3742f",
+						"type": "Productive Unit",
+						"actions": [
+							{ "name": "Delete", "action": "delete" },
+							{
+								"name": "Assign existing model",
+								"action": "assignExistingModel"
+							},
+							{ "name": "Add new model", "action": "addNewModel" },
+							{ "name": "Select", "action": "select" }
+						],
+						"bgColor": "#fcefe3"
+					},
+					{
+						"nodeId": "3",
+						"text": "Shares",
+						"icon": "Share",
+						"type": "Productive Unit",
+						"color": "#e3742f",
+						"actions": [
+							{ "name": "Delete", "action": "delete" },
+							{
+								"name": "Assign existing model",
+								"action": "assignExistingModel"
+							},
+							{ "name": "Add new model", "action": "addNewModel" },
+							{ "name": "Select", "action": "select" }
+						],
+						"bgColor": "#fcefe3"
+					}
+				]
+			},
+			{
+				"nodeId": "4",
+				"text": "Promotions",
+				"icon": "Info",
+				"color": "#3c8039",
+				"type": "Productive Group",
+				"bgColor": "#e6f4ea",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{ "name": "Assign existing model", "action": "assignExistingModel" },
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"childs": [
+					{
+						"nodeId": "5",
+						"text": "Twitter",
+						"icon": "Twitter",
+						"type": "Productive Unit",
+						"color": "#e3742f",
+						"actions": [
+							{ "name": "Delete", "action": "delete" },
+							{
+								"name": "Assign existing model",
+								"action": "assignExistingModel"
+							},
+							{ "name": "Add new model", "action": "addNewModel" },
+							{ "name": "Select", "action": "select" }
+						],
+						"bgColor": "#fcefe3"
+					},
+					{
+						"nodeId": "6",
+						"text": "Facebook",
+						"icon": "Facebook",
+						"color": "#e3742f",
+						"type": "Productive Unit",
+						"actions": [
+							{ "name": "Delete", "action": "delete" },
+							{
+								"name": "Assign existing model",
+								"action": "assignExistingModel"
+							},
+							{ "name": "Add new model", "action": "addNewModel" },
+							{ "name": "Select", "action": "select" }
+						],
+						"bgColor": "#fcefe3"
+					}
+				]
+			},
+			{
+				"nodeId": "7",
+				"text": "Plant",
+				"icon": "Build",
+				"color": "#3c8039",
+				"type": "Productive Group",
+				"bgColor": "#e6f4ea",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{ "name": "Assign existing model", "action": "assignExistingModel" },
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"childs": [
+					{
+						"nodeId": "8",
+						"text": "Product1",
+						"icon": "SportsEsports",
+						"type": "Product",
+						"color": "#e3742f",
+						"actions": [
+							{ "name": "Delete", "action": "delete" },
+							{
+								"name": "Assign existing model",
+								"action": "assignExistingModel"
+							},
+							{ "name": "Add new model", "action": "addNewModel" },
+							{ "name": "Select", "action": "select" }
+						],
+						"bgColor": "#fcefe3"
+					},
+					{
+						"nodeId": "9",
+						"text": "Product2",
+						"icon": "SportsEsports",
+						"color": "#e3742f",
+						"type": "Product",
+						"actions": [
+							{ "name": "Delete", "action": "delete" },
+							{
+								"name": "Assign existing model",
+								"action": "assignExistingModel"
+							},
+							{ "name": "Add new model", "action": "addNewModel" },
+							{ "name": "Select", "action": "select" }
+						],
+						"bgColor": "#fcefe3"
+					}
+				]
+			},
+			{
+				"nodeId": "10",
+				"text": "Plant2",
+				"icon": "SportsEsports",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "11",
+				"text": "Plant3",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "12",
+				"text": "Plant4",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "13",
+				"text": "Plant5",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "14",
+				"text": "Plant6",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "15",
+				"text": "Plant7",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "16",
+				"text": "Plant8",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "17",
+				"text": "Plant23",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "18",
+				"text": "Plant9",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "19",
+				"text": "Plant10",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "20",
+				"text": "Plant11",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			},
+			{
+				"nodeId": "21",
+				"text": "Plant12",
+				"icon": "Build",
+				"type": "Productive Unit",
+				"color": "#e3742f",
+				"actions": [
+					{ "name": "Delete", "action": "delete" },
+					{
+						"name": "Assign existing model",
+						"action": "assignExistingModel"
+					},
+					{ "name": "Add new model", "action": "addNewModel" },
+					{ "name": "Select", "action": "select" }
+				],
+				"bgColor": "#fcefe3"
+			}
+		]
+	}
+]

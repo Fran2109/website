@@ -130,9 +130,9 @@ const IHBox = () => {
                     });
                     return options;
                 }
-                let categories=orderObject(data);
-                /* const mData = menuData as MenuDataInterface;
-                let categories=orderObject(mData); */
+                //let categories=orderObject(data);
+                const mData = menuData as MenuDataInterface;
+                let categories=orderObject(mData);
                 
                 if(filterByGroup(categories, "navbar_left_with_modules").length > 0)
                 {

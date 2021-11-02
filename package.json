@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "./",
   "dependencies": {
-    "@4iplatform/ui-components": "^0.0.9",
     "@elastic/datemath": "^5.0.3",
     "@elastic/eui": "^35.1.0",
     "@testing-library/jest-dom": "^5.11.4",
